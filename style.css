@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+
+/*----------------------------------------------
+                    BASIC
+----------------------------------------------*/
+body {
+    width: 100vw;
+    font-family: Jaldi, sans-serif;
+    background-color: #fafafa;
+    color: #424242;
+    font-size: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none
+}
+
+/*----------------------------------------------
+                    HEADER
+----------------------------------------------*/
+header {
+    width: 100vw;
+
+}
+
+.div-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/*-------------- LOGO ----------------*/
+.div-logo {
+    display: flex;
+}
+
+h1 {
+    font-family: Satisfy;
+    color: #4949e7;
+    font-weight: 900;
+    font-size: 35px;
+    margin-top: 6px;
+    margin-left: 10px;
+    text-shadow: 2px 2px 4px #00af80;
+}
+
+.img-logo {
+    width: 35px;
+}
+
+
+/*-------------- CARRITO ----------------*/
+.div-carrito {
+    display: flex;
+    align-items: center;    
+}
+
+.img-carrito {
+    width: 40px;
+    font-weight: bold;
+}
+
+.p-carrito {
+    margin-right: 15px;
+}
+
+/*----------------------------------------------
+                    BANNER
+----------------------------------------------*/
+.div-banner {
+    display: flex;
+    flex-basis: 100vw;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/banner-getting-there.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.div-p-banner {
+    background-color: rgba(55, 73, 87, 0.4);
+}
+
+.p-banner {
+    padding: 10px;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #fafafa;
+    font-style: italic;
+    text-shadow: 2px 2px 4px #4949e7;
+}
+
+.span-gt {
+    font-family: Satisfy;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/*----------------------------------------------
+                SECCIÓN PRINCIPAL
+----------------------------------------------*/
+.seccion-principal {
+    display: flex;
+    background-color: rgba(55, 73, 87, 0.1);
+}
+
+/*----------------------------------------------
+                    ASIDE
+----------------------------------------------*/
+.filtro-puntaje, .filtro-categoria, .filtro-busqueda, .formulario-aside  {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.aside {
+    flex-basis: 22vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    margin: 10px;
+    padding: 20px;
+}
+
+/*-------------- FILTROS ----------------*/
+.aside-filtros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul-aside {
+    list-style: none;
+}
+
+/*-------------- BÚSQUEDA ----------------*/
+.input-busqueda {
+    border: none;
+    border-bottom: 2px solid #374957;
+    padding: 5px; 
+}
+
+.star-icon {
+    width: 22px;
+}
+
+/*-------------- CATEGORÍA ----------------*/
+.label-categoría {
+    padding-left: 5px;
+}
+
+/*----------------------------------------------
+                    VIAJES
+----------------------------------------------*/
+.div-viajes {
+    flex-basis: 760vw;
+    background-color: #fafafa;
+    margin: 10px;
+    padding: 20px;
+}
+
+.nav-viajes {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*-------------- TARJETAS ----------------*/
+.seccion-tarjetas {
+    max-width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.div-tarjeta {
+    width: 295px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid #37495760;
+    align-items: center;
+    margin: 10px;
+}
+
+.div-img-tarjeta {
+    flex-basis: 150px;
+    margin-top: 20px;
+    
+}
+
+.img-tarjeta {
+    width: 250px;
+    height: auto;
+}
+
+.p-tarjeta-titulo {
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+.p-tarjeta-valor {
+    margin-top: 10px;
+    font-size: 18px;
+
+}
+
+/*----------------------------------------------
+                    FOOTER
+----------------------------------------------*/
+.seccion-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.div-footer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    margin: 15px 0;  
+}
+
+.firma-footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.p-footer {
+    font-size: 22px;
+    font-style: italic;
+    margin-top: 5px;
+
+}
+
+.span-footer {
+    font-family: Satisfy;
+    font-weight: bold;
+
+}
+
+.img-logo-footer {
+    width: 22px;
+    margin: 5px;
+}
+
+.span-mate {
+    font-style: normal;
+}
+
+/*----------------------------------------------
+                    NOTAS
+----------------------------------------------*/
+
+/* ::placeholder  para cambiar el color de texto que viene por defecto */
+
+/* sacar outline con none y agregar estilo a ::focus */
+
+.lolipop {
+    color: #00af80; /* VERDE */
+    color: #4949E7; /* PÚRPURA */
+    color: #EA3457; /* MAGENTA  */
+    color: #374957; /* AÑIL */
+}

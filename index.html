@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting there!</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        
+        <div class="div-header">
+            <div class="div-logo">
+                <img src="./images/gettingthere.svg" class="img-logo" alt="logo-getting-there">
+                <h1 class="p-logo">Getting there!</h1>
+            </div>
+            
+            <div class="div-carrito">
+                <img class="img-carrito" src="./images/icons8-shopping-cart-80.png" alt="">
+                <p class="p-carrito">Carrito (<span id="items-carrito">0</span> Items)</p>
+            </div>
+        </div>
+       
+
+    </header>
+
+    <div class="div-banner">
+        <!--<img class="img-banner" src="" alt="banner">-->
+        <div class="div-p-banner">
+            <p class="p-banner">It's not about the destination... it's about <span class="span-gt">Getting there!</span></p>
+        </div>
+        
+    </div>
+
+
+    <section class="seccion-principal">
+
+        <div class="aside">
+            <!-- FILTROS -->
+            <div class="aside-filtros">
+                <h4>FILTROS</h4>
+                <ul class="ul-aside">
+                    <li class="li-aside">
+                    <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                    Limpiar
+                    </li>
+                </ul>
+            </div>
+
+            <!-- FORM inicio -->
+            <div class="formulario-aside">
+                <form action="" method="GET">
+                    
+                    <!-- BUSQUEDA -->
+                    <div class="filtro-busqueda">
+                        <h4>BÚSQUEDA</h4>
+                        <label for="search">
+                            <input type="text" name="search" class="input-busqueda" placeholder="Buscá tu viaje" />
+                        </label>
+                    </div>
+
+                    <!-- CATEGORIA -->
+                    <div class="filtro-categoria">
+                        <h4>CATEGORÍA</h4>
+                    
+                        <label class="label-categoria" for="uno">
+                        <input type="checkbox" name="uno" id="iduno">
+                        UNO</label>
+
+                        <label class="label-categoria" for="dos">
+                        <input type="checkbox" name="dos" id="iddos">
+                        DOS</label>
+                        
+                        <label class="label-categoria" for="tres">
+                        <input type="checkbox" name="tres" id="idtres">
+                        TRES</label>
+
+                        <label class="label-categoria" for="cuatro">
+                        <input type="checkbox" name="cuatro" id="idcuatro">
+                        CUATRO</label>
+                        
+                        <label class="label-categoria" for="cinco">
+                        <input type="checkbox" name="cinco" id="idcinco">
+                        CINCO</label>
+                    
+                    </div>
+
+                    <!-- PUNTAJE -->                        
+                    <div class="filtro-puntaje">
+                        <h4>PUNTAJE</h4>
+                        
+                        <!-- CINCO ESTRELLAS -->
+                        <label for="five-stars">
+                            <input type="checkbox" name="five-stars">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            (5)
+                        </label>
+                        
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <label for="four-stars">
+                            <input type="checkbox" value="CONSOLAS" name="four-stars">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            (4)
+                        </label>
+
+                        <!-- TRES ESTRELLAS -->                                
+                        <label for="four-stars">
+                            <input type="checkbox" value="CONSOLAS" name="four-stars">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            (3)
+                        </label>
+
+                        <!-- DOS ESTRELLAS -->                                
+                        <label for="two-stars">
+                            <input type="checkbox" value="CONSOLAS" name="four-stars">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            (2)
+                        </label>
+
+                        <!-- UNA ESTRELLA -->                                
+                        <label for="one-star">
+                            <input type="checkbox" value="CONSOLAS" name="four-stars">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            (1)
+                        </label>
+
+                    </div>
+
+                </form>
+                <!-- FORM fin -->
+
+            </div>
+
+
+        </div>
+
+        <!-- VIAJES -->
+        <div class="div-viajes">
+            <nav class="nav-viajes">
+                <div>
+                <p>Mostrando <span>12</span> viaje(s) de <span>12</span></p>
+                </div>
+
+                <div>
+                    <p>Ver como</p>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </nav>
+
+            <div class="seccion-tarjetas">
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+                <!-- TARJETA -->
+                <div class="div-tarjeta">
+                    <div class="div-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="p-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="p-tarjeta-valor">$22499</p>
+                    <div class="tarjeta-stars">
+                        <!-- CUATRO ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer class="seccion-footer">
+        <div class="div-footer">
+            <div class="firma-footer">
+                <img src="./images/gettingthere.svg" class="img-logo-footer" alt="logo-getting-there">
+                <p class="p-footer"><span class="span-footer"> Getting there!</span> ~ Gracias por visitarnos! <span class="span-mate">🧉</span></p>
+            </div>
+            <p>🇦🇷 🇨🇦 🇺🇸 🇬🇧 🇳🇿</p>
+        </div>
+    </footer>
+
+    <!-- GRACIAS A LOS RECURSOS GRATUITOS -->
+    <!-- 
+        <a href="https://icons8.com/icon/xKm_QFedMmWy/starfish">Starfish icon by Icons8</a> 
+        <a target="_blank" href="https://icons8.com/icons/set/shopping-cart">Shopping Cart icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    -->
+    
+
+    <!-- JAVASCRIPT -->
+    <script src="main.js"></script>
+
+
+</body>
+</html>
