@@ -5,7 +5,6 @@
                     BASIC
 ----------------------------------------------*/
 body {
-    width: 100vw;
     font-family: Jaldi, sans-serif;
     background-color: #fafafa;
     color: #424242;
@@ -25,19 +24,14 @@ a {
 /*----------------------------------------------
                     HEADER
 ----------------------------------------------*/
-header {
-    width: 100vw;
-
-}
-
-.div-header {
+.contenedor-header {
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
 
 /*-------------- LOGO ----------------*/
-.div-logo {
+.contenedor-logo {
     display: flex;
 }
 
@@ -57,7 +51,7 @@ h1 {
 
 
 /*-------------- CARRITO ----------------*/
-.div-carrito {
+.contenedor-carrito {
     display: flex;
     align-items: center;    
 }
@@ -67,29 +61,25 @@ h1 {
     font-weight: bold;
 }
 
-.p-carrito {
+.texto-carrito {
     margin-right: 15px;
 }
 
 /*----------------------------------------------
                     BANNER
 ----------------------------------------------*/
-.div-banner {
+.contenedor-banner {
     display: flex;
-    flex-basis: 100vw;
-    height: 300px;
     justify-content: center;
     align-items: center;
-    background-image: url(./images/banner-getting-there.png);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.div-p-banner {
+.contenedor-texto-banner {
     background-color: rgba(55, 73, 87, 0.4);
+    position: absolute;
 }
 
-.p-banner {
+.texto-banner {
     padding: 10px;
     margin: 0 15px;
     font-weight: bold;
@@ -97,12 +87,21 @@ h1 {
     color: #fafafa;
     font-style: italic;
     text-shadow: 2px 2px 4px #4949e7;
+    position: relative;
 }
 
-.span-gt {
+.texto-logo-gt {
     font-family: Satisfy;
     font-size: 35px;
     font-weight: bold;
+}
+
+.contenedor-img-banner {
+    position: relative;   
+}
+
+.img-banner {
+    width: 100%;
 }
 
 /*----------------------------------------------
@@ -116,14 +115,14 @@ h1 {
 /*----------------------------------------------
                     ASIDE
 ----------------------------------------------*/
-.filtro-puntaje, .filtro-categoria, .filtro-busqueda, .formulario-aside  {
+.contenedor-filtro-puntaje, .contenedor-filtro-categoria, .contenedor-filtro-busqueda, .formulario-aside  {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
 }
 
 .aside {
-    flex-basis: 22vw;
+    flex-basis: 20vw;
     display: flex;
     flex-direction: column;
     background-color: #fafafa;
@@ -137,37 +136,44 @@ h1 {
     justify-content: space-between;
 }
 
-.ul-aside {
+.boton-limpiar {
     list-style: none;
 }
 
 /*-------------- BÚSQUEDA ----------------*/
-.input-busqueda {
-    border: none;
-    border-bottom: 2px solid #374957;
-    padding: 5px; 
+.contenedor-filtro-busqueda {
+    margin-top: 0;
+
 }
 
-.star-icon {
-    width: 22px;
+.filtro-busqueda {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #374957;
+    padding-bottom: 5px;
 }
 
 /*-------------- CATEGORÍA ----------------*/
-.label-categoría {
-    padding-left: 5px;
+.filtro-categoria {
+    padding-left: 2px;
+}
+
+/*-------------- PUNTAJE ----------------*/
+.star-icon {
+    width: 22px;
 }
 
 /*----------------------------------------------
                     VIAJES
 ----------------------------------------------*/
-.div-viajes {
-    flex-basis: 760vw;
+.seccion-viajes {
+    flex-basis: 80vw;
     background-color: #fafafa;
     margin: 10px;
     padding: 20px;
 }
 
-.nav-viajes {
+.barra-viajes {
     display: flex;
     justify-content: space-between;
 }
@@ -178,10 +184,10 @@ h1 {
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.div-tarjeta {
+.contenedor-tarjeta {
     width: 295px;
     height: 350px;
     display: flex;
@@ -190,9 +196,10 @@ h1 {
     border: 1px solid #37495760;
     align-items: center;
     margin: 10px;
+    flex-basis: 3;
 }
 
-.div-img-tarjeta {
+.contenedor-img-tarjeta {
     flex-basis: 150px;
     margin-top: 20px;
     
@@ -203,12 +210,12 @@ h1 {
     height: auto;
 }
 
-.p-tarjeta-titulo {
+.texto-tarjeta-titulo {
     margin-top: 25px;
     font-size: 25px;
 }
 
-.p-tarjeta-valor {
+.texto-tarjeta-valor {
     margin-top: 10px;
     font-size: 18px;
 
@@ -222,7 +229,7 @@ h1 {
     justify-content: center;
 }
 
-.div-footer {
+.contenedor-footer {
     display: flex;
     flex-direction: column; 
     align-items: center;    
@@ -235,11 +242,9 @@ h1 {
     padding: 15px;
 }
 
-.p-footer {
+.texto-footer {
     font-size: 22px;
-    font-style: italic;
     margin-top: 5px;
-
 }
 
 .span-footer {
@@ -253,9 +258,7 @@ h1 {
     margin: 5px;
 }
 
-.span-mate {
-    font-style: normal;
-}
+
 
 /*----------------------------------------------
                     NOTAS
