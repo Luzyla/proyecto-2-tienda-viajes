@@ -24,7 +24,7 @@
                 <h1 class="texto-logo">Getting there!</h1>
             </div>
             
-            <div class="contenedor-carrito">
+            <div class="contenedor-carrito" id="">
                 <img class="img-carrito" src="./images/icons8-shopping-cart-80.png" alt="">
                 <p class="texto-carrito">Carrito (<span id="items-carrito">0</span> Items)</p>
             </div>
@@ -32,6 +32,30 @@
 
     </header>
 
+    <!-- CARRITO MENÚ DESPLEGABLE -->
+    <section class="overlay" id="contenedor-overlay">
+        <div class="overlay-fondo" id="fondo-overlay">
+        </div>
+
+        <div class="contenedor-carrito-menu" id="carrito-menu">
+            <div class="carrito-titulo">
+                <h2>Carrito</h2>
+                <img id="cerrar" class="equis" src="./images/icons8-close-window-100.png" alt="Botón para cerrar el carrito">
+            </div>
+            <p><span>2</span> producto(s) agregado(s)</p>
+
+            <div id="productos-carrito">
+            </div>
+
+            <p>Subtotal <span id="subtotal-carrito">$10.000</span></p>
+
+            <button id="boton-comprar" class="button-buy">COMPRAR</button>
+            <button id="boton-vaciar" class="button-empty">VACIAR</button>
+        </div>
+
+    </section>
+
+    <!-- BANNER -->
     <div class="contenedor-banner">
         <div class="contenedor-img-banner">
             <img class="img-banner" src="./images/banner-getting-there.png" alt="banner">
@@ -66,8 +90,9 @@
                         <label for="search">
                             <h4>BÚSQUEDA</h4>
                             <TextField id="standard-basic" label="Standard" />
-                            <input type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje" />
+                            <input type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje" id="search" />
                         </label>
+                        <img src="./images/icons8-search.svg" alt="search-icon" class="lupita">
                     </div>
 
                     <!-- CATEGORIA -->
@@ -76,23 +101,23 @@
                     
                         <label class="filtro-categoria" for="iduno">
                         <input type="checkbox" name="uno" id="iduno">
-                        UNO</label>
+                        AVENTURA</label>
 
                         <label class="filtro-categoria" for="iddos">
                         <input type="checkbox" name="dos" id="iddos">
-                        DOS</label>
+                        CITY TOUR</label>
                         
                         <label class="filtro-categoria" for="idtres">
                         <input type="checkbox" name="tres" id="idtres">
-                        TRES</label>
+                        MONTAÑA</label>
 
                         <label class="filtro-categoria" for="idcuatro">
                         <input type="checkbox" name="cuatro" id="idcuatro">
-                        CUATRO</label>
+                        PLAYA</label>
                         
                         <label class="filtro-categoria" for="idcinco">
                         <input type="checkbox" name="cinco" id="idcinco">
-                        CINCO</label>
+                        OTROS</label>
                     
                     </div>
 
@@ -174,20 +199,24 @@
 
                 <div class="ver-como">
                     <p>Ver como</p>
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img class="icono-grilla" src="./images/icons8-grid-view-52.png" alt="">
+                    <img class="icono-lista" src="./images/icons8-list-64.png" alt="">
                 </div>
             </nav>
 
             <div class="seccion-tarjetas">
 
                 <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
+                <article class="product contenedor-tarjeta" 
+                data-destino="Cataratas del Niagara"
+                data-categoria="Aventura"
+                data-stars="4"                
+                >
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
                     </div>
                     <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
-                    <p class="texto-tarjeta-valor">$22499</p>
+                    <p class="texto-tarjeta-valor">$22.500.-</p>
                     <div class="contenedor-stars-tarjeta">
                         <!-- ESTRELLAS -->                                
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
@@ -196,44 +225,56 @@
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                     </div>
-                </div>
+                </article>
 
                 <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
+                <article class="product contenedor-tarjeta"  
+                data-destino="Alpes suizos"
+                data-categoria="Montaña"
+                data-stars="5"
+                >
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
                     </div>
-                    <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
-                    <p class="texto-tarjeta-valor">$22499</p>
+                    <p class="texto-tarjeta-titulo">ALPES SUIZOS</p>
+                    <p class="texto-tarjeta-valor">$50.000.-</p>
                     <div class="contenedor-stars-tarjeta">
                         <!-- ESTRELLAS -->                                
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                     </div>
-                </div>
+                </article>
 
                 <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
+                <article class="product contenedor-tarjeta"  
+                data-destino="Londres"
+                data-categoria="City tour"
+                data-stars="3"                
+                >
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
                     </div>
-                    <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
-                    <p class="texto-tarjeta-valor">$22499</p>
+                    <p class="texto-tarjeta-titulo">LONDRES</p>
+                    <p class="texto-tarjeta-valor">$15.000.-</p>
                     <div class="contenedor-stars-tarjeta">
                         <!-- ESTRELLAS -->                                
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                     </div>
-                </div>
+                </article>
                 
                 <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
+                <article class="product contenedor-tarjeta"   
+                data-destino="Cataratas del Niagara"
+                data-categoria="Aventura"
+                data-stars="4"                
+                >
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
                     </div>
@@ -247,15 +288,19 @@
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                     </div>
-                </div>
+                </article>
                 
                 <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
+                <article class="product contenedor-tarjeta" 
+                data-destino="Cataratas del Niagara"
+                data-categoria="Aventura"
+                data-stars="4"                
+                >
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
                     </div>
                     <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
-                    <p class="texto-tarjeta-valor">$22499</p>
+                    <p class="texto-tarjeta-valor">$22.500.-</p>
                     <div class="contenedor-stars-tarjeta">
                         <!-- ESTRELLAS -->                                
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
@@ -264,10 +309,56 @@
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                     </div>
-                </div>
+                </article>
+
+                <!-- TARJETA -->
+                <article class="product contenedor-tarjeta"  
+                data-destino="Alpes suizos"
+                data-categoria="Montaña"
+                data-stars="5"
+                >
+                    <div class="contenedor-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="texto-tarjeta-titulo">ALPES SUIZOS</p>
+                    <p class="texto-tarjeta-valor">$50.000.-</p>
+                    <div class="contenedor-stars-tarjeta">
+                        <!-- ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                    </div>
+                </article>
+
+                <!-- TARJETA -->
+                <article class="product contenedor-tarjeta"  
+                data-destino="Londres"
+                data-categoria="City tour"
+                data-stars="3"                
+                >
+                    <div class="contenedor-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
+                    </div>
+                    <p class="texto-tarjeta-titulo">LONDRES</p>
+                    <p class="texto-tarjeta-valor">$15.000.-</p>
+                    <div class="contenedor-stars-tarjeta">
+                        <!-- ESTRELLAS -->                                
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                    </div>
+                </article>
                 
                 <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
+                <article class="product contenedor-tarjeta"   
+                data-destino="Cataratas del Niagara"
+                data-categoria="Aventura"
+                data-stars="4"                
+                >
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
                     </div>
@@ -281,58 +372,7 @@
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                     </div>
-                </div>
-                
-                <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
-                    <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
-                    </div>
-                    <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
-                    <p class="texto-tarjeta-valor">$22499</p>
-                    <div class="contenedor-stars-tarjeta">
-                        <!-- ESTRELLAS -->                                
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                    </div>
-                </div>
-                
-                <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
-                    <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
-                    </div>
-                    <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
-                    <p class="texto-tarjeta-valor">$22499</p>
-                    <div class="contenedor-stars-tarjeta">
-                        <!-- ESTRELLAS -->                                
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                    </div>
-                </div>
-                
-                <!-- TARJETA -->
-                <div class="contenedor-tarjeta">
-                    <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/3Falls_Niagara.jpg" alt="">
-                    </div>
-                    <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
-                    <p class="texto-tarjeta-valor">$22499</p>
-                    <div class="contenedor-stars-tarjeta">
-                        <!-- ESTRELLAS -->                                
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                        <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                    </div>
-                </div>
+                </article>
                 
             </div>
         </div>

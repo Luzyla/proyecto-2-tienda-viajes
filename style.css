@@ -50,7 +50,7 @@ h1 {
 }
 
 
-/*-------------- CARRITO ----------------*/
+/*-------------- BOTÓN CARRITO ----------------*/
 .contenedor-carrito {
     display: flex;
     align-items: center;    
@@ -66,12 +66,69 @@ h1 {
 }
 
 /*----------------------------------------------
+            CARRITO MENÚ DESPLEGABLE
+----------------------------------------------*/
+.overlay {
+    display: flex;
+}
+
+.overlay-fondo {
+    background-color: #424242;
+    opacity: 0.4;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -110%;
+    z-index: 1;
+}
+
+.contenedor-carrito-menu {
+    width: 25vw;
+    height: 100vh;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -340px;
+    z-index: 2;
+    padding: 25px;
+    transition: 1.5s;
+}
+
+.mostrar {
+    top: 0;
+    right: 0;
+}
+
+.equis {
+    width: 35px;
+    height: 35px;
+}
+
+.carrito-titulo {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*----------------------------------------------
                     BANNER
 ----------------------------------------------*/
 .contenedor-banner {
+    background-color: rgba(55, 73, 87, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.contenedor-img-banner {
+    position: relative;
+}
+
+.img-banner {
+    height: 100%;
 }
 
 .contenedor-texto-banner {
@@ -87,21 +144,12 @@ h1 {
     color: #fafafa;
     font-style: italic;
     text-shadow: 2px 2px 4px #4949e7;
-    position: relative;
 }
 
 .texto-logo-gt {
     font-family: Satisfy;
     font-size: 35px;
     font-weight: bold;
-}
-
-.contenedor-img-banner {
-    position: relative;   
-}
-
-.img-banner {
-    width: 100%;
 }
 
 /*----------------------------------------------
@@ -126,7 +174,7 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: #fafafa;
-    margin: 10px;
+    margin: 5px 10px 25px 15px;
     padding: 20px;
 }
 
@@ -143,6 +191,7 @@ h1 {
 /*-------------- BÚSQUEDA ----------------*/
 .contenedor-filtro-busqueda {
     margin-top: 0;
+    position: relative;
 
 }
 
@@ -151,6 +200,13 @@ h1 {
     border: none;
     border-bottom: 2px solid #374957;
     padding-bottom: 5px;
+}
+
+.lupita {
+    width: 30px;
+    position: absolute;
+    left: 195px;
+    top: 25px;
 }
 
 /*-------------- CATEGORÍA ----------------*/
@@ -169,13 +225,32 @@ h1 {
 .seccion-viajes {
     flex-basis: 80vw;
     background-color: #fafafa;
-    margin: 10px;
+    margin: 5px 15px 25px 10px;
     padding: 20px;
 }
+
 
 .barra-viajes {
     display: flex;
     justify-content: space-between;
+}
+/*-------------- MOSTRANDO ----------------*/
+
+/*-------------- VER COMO ----------------*/
+.ver-como {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icono-grilla {
+    width: 30px;
+    padding-left: 10px;
+}
+
+.icono-lista {
+    width: 34px;
+    padding-left: 10px;
 }
 
 /*-------------- TARJETAS ----------------*/
@@ -227,6 +302,7 @@ h1 {
 .seccion-footer {
     display: flex;
     justify-content: center;
+    background-color:  rgba(55, 73, 87, 0.1);
 }
 
 .contenedor-footer {
@@ -273,4 +349,8 @@ h1 {
     color: #4949E7; /* PÚRPURA */
     color: #EA3457; /* MAGENTA  */
     color: #374957; /* AÑIL */
+}
+
+.hidden {
+    display: none;
 }
