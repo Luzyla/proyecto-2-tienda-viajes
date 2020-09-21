@@ -1,3 +1,5 @@
+// CARRITO MENÚ DESPLEGABLE
+
 const carrito = document.querySelector(".contenedor-carrito")
 const menuCarrito = document.getElementById("carrito-menu")
 const overlay = document.getElementById("fondo-overlay")
@@ -12,7 +14,65 @@ carrito.onclick = () => {
 cerrar.onclick = () => {
     menuCarrito.classList.remove("mostrar")
     overlay.classList.remove("mostrar")
+
 }
+
+// FILTRO X CATEGORIA
+const filtroCategorias = document.querySelectorAll(".filtro-categoria")
+const articles = document.querySelectorAll(".product")
+
+// console.log(filtroCategorias)
+// console.log(articles)
+
+for (let checkbox of filtroCategorias) {
+    checkbox.onclick = () => {
+        for (card of articles) {
+            // if (checkbox.checked) {
+                if (checkbox.dataset.categoria === card.dataset.categoria) {
+                    card.classList.remove('hidden');
+                }
+                else {
+                    card.classList.add('hidden');
+                }
+            // }
+            // else {
+            //      card.classList.remove('hidden');
+            // }
+        }
+            
+    };
+}
+
+
+// FILTRO X STARS
+const filtroPuntajes = document.querySelectorAll(".filtro-puntaje")
+// const articles = document.querySelectorAll(".product")
+
+console.log(filtroPuntajes)
+console.log(articles)
+
+for (let checkbox of filtroPuntajes) {
+    checkbox.onclick = () => {
+        for (card of articles) {
+            // if (checkbox.checked) {
+                if (checkbox.dataset.stars === card.dataset.stars) {
+                    card.classList.remove('hidden');
+                }
+                else {
+                    card.classList.add('hidden');
+                }
+            // }
+            // else {
+            //      card.classList.remove('hidden');
+            // }
+        }
+            
+    };
+}
+
+    
+     
+
 
 
 

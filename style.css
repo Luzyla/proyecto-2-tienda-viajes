@@ -112,6 +112,27 @@ h1 {
     justify-content: space-between;
 }
 
+.button-buy {
+    height: 45px;
+    background-color: #58aa12;
+    border-radius: 5px;
+    border: 2px solid #58aa12;
+    color: #fafafa;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.button-empty {
+    height: 45px;
+    background-color: #fafafa;
+    border: 2px solid #e71837;
+    border-radius: 5px;
+    color: #e71837;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px;
+}
 
 /*----------------------------------------------
                     BANNER
@@ -282,7 +303,8 @@ h1 {
 
 .img-tarjeta {
     width: 250px;
-    height: auto;
+    height: 165px;
+    overflow: hidden;
 }
 
 .texto-tarjeta-titulo {
@@ -334,7 +356,12 @@ h1 {
     margin: 5px;
 }
 
-
+/*----------------------------------------------
+                    FILTROS
+----------------------------------------------*/
+.hidden {
+    display: none;
+}
 
 /*----------------------------------------------
                     NOTAS
@@ -351,6 +378,3 @@ h1 {
     color: #374957; /* AÑIL */
 }
 
-.hidden {
-    display: none;
-}
