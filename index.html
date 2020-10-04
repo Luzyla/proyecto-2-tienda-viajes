@@ -49,8 +49,91 @@
 
             <p>Subtotal <span id="subtotal-carrito">$10.000</span></p>
 
-            <button id="boton-comprar" class="button-buy">COMPRAR</button>
-            <button id="boton-vaciar" class="button-empty">VACIAR</button>
+            <button id="boton-comprar" class="button-buy button-basic">COMPRAR</button>
+            <button id="boton-vaciar" class="button-empty button-basic">VACIAR</button>
+        </div>
+
+    </section>
+
+    <!-- MODAL PAGAR COMPRA -->
+    <section class="overlay" id="contenedor-overlay-modal">
+        
+        <div class="overlay-fondo-modal" id="fondo-overlay-modal">
+        </div>
+        
+        <div class="contenedor-confirmar-compra">
+            <div class="modal-formularios">
+                
+                <!-- FORM inicio -->
+                <form class="contenedor-formulario-confirmar-compra">
+
+                    <div class="datos-personales" id="personal-info">
+
+                        <h3>Datos personales</h3>
+
+                        <label for="nombre">Nombre y apellido *
+                            <input type="text" name="nombre" id="nombre" placeholder="ej. Ada Lovelace" required>
+                        </label>
+
+                        <label for="mail">Email *
+                            <input type="email" name="mail" id="mail" placeholder="ej. ada.lovelace@gmail.com" required>
+                        </label>
+
+                    </div>
+
+                    <div class="opciones-pago" id="buy-ways">
+                    
+                        <h3>Opciones de pago</h3>
+
+                        <label for="efectivo-debito">
+                            <input type="radio" name="pago" id="efectivo-debito" value="efectivo-debito">
+                            Efectivo / Débito
+                        </label>
+
+                        <label for="tarjeta">
+                            <input type="radio" name="pago" id="tarjeta">
+                            Tarjeta de crédito
+                        </label>
+
+                        <label for="">
+                            <input type="checkbox" name="envio" id="con-envio">
+                            Necesito envío
+                        </label>
+
+                        <label for="dto">
+                            <input type="checkbox" name="descuento" id="dto">
+                            Tengo tarjeta de descuento
+                        </label>
+
+                    </div>
+                
+                </form>
+                <!-- FORM fin -->
+
+                <div class="resumen-compra" id="buying">
+                    <h3>Resumen</h3>
+                    <div id="resumen-productos-elegidos">
+                    </div>
+
+                    <div class="formato-resumen">
+                        <h4>Subtotal $<span>0</span></h4>
+                        <p>Envío $<span>0</span></p>
+                        <p class="descuento-compra">Descuento 10% $<span>0</span></p>
+                        <p class="recargo-compra">Recargo $<span>0</span></p>
+                        <h2 class="total-compra">Total $<span>0</span></h2>
+                    </div>
+
+                </div>
+            
+            </div>
+
+            <div>
+                <button class="button-basic" id="button-buying">SEGUIR COMPRANDO</button>
+                <button class="button-buy button-basic" id="button-ends">FINALIZAR</button>
+            </div>
+        </div>
+        
+        <div class="overlay-fondo-modal" id="fondo-overlay-modal">
         </div>
 
     </section>
@@ -89,7 +172,7 @@
                     <div class="contenedor-filtro-busqueda">
                         <label for="search">
                             <h4>BÚSQUEDA</h4>
-                            <TextField id="standard-basic" label="Standard" />
+                            <!-- <TextField id="standard-basic" label="Standard" /> -->
                             <input type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje" id="search" />
                         </label>
                         <img src="./images/icons8-search.svg" alt="search-icon" class="lupita">
@@ -131,67 +214,86 @@
                         <h4>PUNTAJE</h4>
                         
                         <!-- CINCO ESTRELLAS -->
-                        <label for="idfive-stars"
-                        class="filtro-puntaje"
-                        data-stars="5">
-                            <input type="checkbox" name="five-stars" id="idfive-stars">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                        <label for="idfive-stars">
+                            <input 
+                            type="checkbox" 
+                            name="five-stars" 
+                            id="idfive-stars"
+                            class="filtro-puntaje"
+                            data-stars="5">
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                             (5)
                         </label>
                         
                         <!-- CUATRO ESTRELLAS -->                                
-                        <label for="idfour-stars"
-                        class="filtro-puntaje"
-                        data-stars="4">
-                            <input type="checkbox" value="CONSOLAS" name="four-stars" id="idfour-stars">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                        <label for="idfour-stars">
+                            <input 
+                            type="checkbox" 
+                            value="CONSOLAS" 
+                            name="four-stars" 
+                            id="idfour-stars"
+                            class="filtro-puntaje"
+                            data-stars="4">
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                             (4)
                         </label>
 
                         <!-- TRES ESTRELLAS -->                                
-                        <label for="idthree-stars"
-                        class="filtro-puntaje"
-                        data-stars="3">
-                            <input type="checkbox" value="CONSOLAS" name="three-stars" id="idthree-stars"> 
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                        <label for="idthree-stars">
+                            <input 
+                            type="checkbox" 
+                            value="CONSOLAS" 
+                            name="three-stars" 
+                            id="idthree-stars"
+                            class="filtro-puntaje"
+                            data-stars="3"> 
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                             (3)
                         </label>
 
                         <!-- DOS ESTRELLAS -->                                
-                        <label for="idtwo-stars"
-                        class="filtro-puntaje"
-                        data-stars="2">
-                            <input type="checkbox" value="CONSOLAS" name="two-stars" id="idtwo-stars">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                        <label for="idtwo-stars">
+                            <input 
+                            type="checkbox" 
+                            value="CONSOLAS" 
+                            name="two-stars" 
+                            id="idtwo-stars"
+                            class="filtro-puntaje"
+                            data-stars="2">
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                             (2)
                         </label>
 
                         <!-- UNA ESTRELLA -->                                
-                        <label for="idone-star"
-                        class="filtro-puntaje"
-                        data-stars="1">
-                            <input type="checkbox" value="CONSOLAS" name="one-stars" id="idone-star">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                        <label for="idone-star">
+                            <input 
+                            type="checkbox" 
+                            value="CONSOLAS" 
+                            name="one-stars" 
+                            id="idone-star"
+                            class="filtro-puntaje"
+                            data-stars="1">
+                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                             (1)
                         </label>
 
@@ -231,6 +333,7 @@
                         <img class="img-tarjeta" src="./images/lugares/cataratasniagara.jpeg" alt="Foto de las Cataratas del Niágara">
                     </div>
                     <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
+                    <p class="detalle-viaje hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa libero veniam maiores nobis. Praesentium, magni, odit commodi reiciendis ullam architecto fugit vero, perspiciatis voluptatum consequatur voluptatem nihil! Sint illo blanditiis, laboriosam consequuntur officia quisquam, recusandae pariatur consequatur tenetur est voluptatum.</p>
                     <p class="texto-tarjeta-valor">$10.000</p>
                     <div class="contenedor-stars-tarjeta">
                         <!-- ESTRELLAS -->                                
@@ -240,6 +343,7 @@
                         <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
                         <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
                     </div>
+                    <button id="buy-item" class="button-basic">COMPRAR</button>
                 </article>
 
                 <!-- TARJETA -->

@@ -1,10 +1,27 @@
-// CARRITO MENÚ DESPLEGABLE
-
+//VARIABLES
 const carrito = document.querySelector(".contenedor-carrito")
 const menuCarrito = document.getElementById("carrito-menu")
 const overlay = document.getElementById("fondo-overlay")
 const cerrar = document.getElementById("cerrar")
 
+// FILTRO X CATEGORIA
+const filtroCategorias = document.querySelectorAll(".filtro-categoria")
+const articles = document.querySelectorAll(".product")
+
+// FILTRO X STARS
+const filtroPuntajes = document.querySelectorAll(".filtro-puntaje")
+// const articles = document.querySelectorAll(".product")
+
+// MODAL CIERRE DE COMPRA
+const botonComprar = document.getElementById("boton-comprar")
+const botonVaciar = document.getElementById("boton-vaciar")
+const confirmarCompra = document.querySelector(".contenedor-confirmar-compra")
+const overlay2 = document.getElementById("fondo-overlay-modal")
+const botonSeguirComprando = document.getElementById("button-buying")
+const botonFinalizarCompra = document.getElementById("button-ends")
+
+
+// CARRITO MENÚ DESPLEGABLE
 carrito.onclick = () => {
     menuCarrito.classList.add("mostrar")
     overlay.classList.add("mostrar")
@@ -17,9 +34,23 @@ cerrar.onclick = () => {
 
 }
 
+// CARRITO MODAL FIN DE COMPRA
+botonComprar.onclick = () => {
+    confirmarCompra.classList.add("mostrar")
+    overlay2.classList.add("mostrar")
+
+}
+
+botonSeguirComprando.onclick = () => {
+    confirmarCompra.classList.remove("mostrar")
+    overlay2.classList.remove("mostrar")
+    menuCarrito.classList.remove("mostrar")
+    overlay.classList.remove("mostrar")
+}
+
+
+
 // FILTRO X CATEGORIA
-const filtroCategorias = document.querySelectorAll(".filtro-categoria")
-const articles = document.querySelectorAll(".product")
 
 // console.log(filtroCategorias)
 // console.log(articles)
@@ -45,8 +76,6 @@ for (let checkbox of filtroCategorias) {
 
 
 // FILTRO X STARS
-const filtroPuntajes = document.querySelectorAll(".filtro-puntaje")
-// const articles = document.querySelectorAll(".product")
 
 console.log(filtroPuntajes)
 console.log(articles)
@@ -54,17 +83,17 @@ console.log(articles)
 for (let checkbox of filtroPuntajes) {
     checkbox.onclick = () => {
         for (card of articles) {
-            // if (checkbox.checked) {
+            if (checkbox.checked) {
                 if (checkbox.dataset.stars === card.dataset.stars) {
                     card.classList.remove('hidden');
                 }
                 else {
                     card.classList.add('hidden');
                 }
-            // }
-            // else {
-            //      card.classList.remove('hidden');
-            // }
+            }
+            else {
+                 card.classList.remove('hidden');
+            }
         }
             
     };

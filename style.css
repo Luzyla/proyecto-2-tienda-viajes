@@ -21,6 +21,49 @@ a {
     text-decoration: none
 }
 
+/*-------------- TEXTO ----------------*/
+.formato-resumen {
+    margin-left: 20px;
+
+}
+
+/*-------------- BOTONES ----------------*/
+.button-basic {
+    height: 45px;
+    width: 200px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    border: 1px solid #37495780;
+    color: #374957;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.button-buy {
+    background-color: #58aa12;
+    border: 2px solid #58aa12;
+    color: #fafafa;
+}
+
+.button-empty {
+    background-color: #fafafa;
+    border: 2px solid #e71837;
+    color: #e71837;
+}
+
+.button-basic:hover {
+    background-color: #eaeaea;
+}
+
+.button-buy:hover {
+    background-color: #58aa1280;
+}
+
+.button-empty:hover {
+    background-color: #ffdfdb;
+}
+
 /*----------------------------------------------
                     HEADER
 ----------------------------------------------*/
@@ -42,7 +85,7 @@ h1 {
     font-size: 35px;
     margin-top: 6px;
     margin-left: 10px;
-    text-shadow: 2px 2px 4px #00af80;
+    text-shadow: 1px 1px 2px #00af80;
 }
 
 .img-logo {
@@ -50,7 +93,7 @@ h1 {
 }
 
 
-/*-------------- BOTÓN CARRITO ----------------*/
+/*-------------- CARRITO ----------------*/
 .contenedor-carrito {
     display: flex;
     align-items: center;    
@@ -97,11 +140,6 @@ h1 {
     transition: 1.5s;
 }
 
-.mostrar {
-    top: 0;
-    right: 0;
-}
-
 .equis {
     width: 35px;
     height: 35px;
@@ -112,26 +150,71 @@ h1 {
     justify-content: space-between;
 }
 
-.button-buy {
-    height: 45px;
-    background-color: #58aa12;
-    border-radius: 5px;
-    border: 2px solid #58aa12;
-    color: #fafafa;
-    font-weight: bold;
-    font-size: 14px;
-    margin: 5px;
+/*----------------------------------------------
+            MODAL CIERRE COMPRA
+----------------------------------------------*/
+.overlay {
+    display: flex;
+    flex-direction: column;
 }
 
-.button-empty {
-    height: 45px;
+.overlay-fondo-modal {
+    background-color: #424242;
+    opacity: 0.4;
+    flex-basis: 1;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: -110%; 
+    z-index: 3; 
+}
+
+.contenedor-confirmar-compra {
+    flex-basis: 1.5;
+    height: 100vh;
     background-color: #fafafa;
-    border: 2px solid #e71837;
-    border-radius: 5px;
-    color: #e71837;
-    font-weight: bold;
-    font-size: 14px;
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    /* right: -900px; */
+    z-index: 4;
+    padding: 25px;
+    transition: 1.5s;
+}
+
+.modal-formularios {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-formulario-confirmar-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.datos-personales {
+    width: 40%;
+    margin: 20px;
+}
+
+.opciones-pago {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+}
+
+.resumen-compra {
+    width: 40%;
+    background-color: rgba(55, 73, 87, 0.1);
+    margin: 20px;
+}
+
+h3 {
+    margin-left: 20px;
 }
 
 /*----------------------------------------------
@@ -213,7 +296,6 @@ h1 {
 .contenedor-filtro-busqueda {
     margin-top: 0;
     position: relative;
-
 }
 
 .filtro-busqueda {
@@ -257,6 +339,9 @@ h1 {
 }
 /*-------------- MOSTRANDO ----------------*/
 
+
+
+
 /*-------------- VER COMO ----------------*/
 .ver-como {
     display: flex;
@@ -274,6 +359,8 @@ h1 {
     padding-left: 10px;
 }
 
+
+
 /*-------------- TARJETAS ----------------*/
 .seccion-tarjetas {
     max-width: 100%;
@@ -285,7 +372,7 @@ h1 {
 
 .contenedor-tarjeta {
     width: 295px;
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -359,6 +446,17 @@ h1 {
 /*----------------------------------------------
                     FILTROS
 ----------------------------------------------*/
+.ver-como-lista {
+    flex-basis: 100%;
+    flex-direction: column;
+
+}
+
+.mostrar {
+    top: 0;
+    right: 0;
+}
+
 .hidden {
     display: none;
 }
