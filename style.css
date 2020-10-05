@@ -24,6 +24,7 @@ a {
 /*-------------- TEXTO ----------------*/
 .formato-resumen {
     margin-left: 20px;
+    text-align: right;
 
 }
 
@@ -48,7 +49,7 @@ a {
 
 .button-empty {
     background-color: #fafafa;
-    border: 2px solid #e71837;
+    border: 2px solid #e71837; #58aa12
     color: #e71837;
 }
 
@@ -108,6 +109,19 @@ h1 {
     margin-right: 15px;
 }
 
+/*-------------- CHECKOUT ----------------*/
+.total-compra {
+    font-weight: bold;
+}
+
+.descuento-compra {
+    color: #58aa12;
+}
+
+.recargo-compra {
+    color: #e71837;
+}
+
 /*----------------------------------------------
             CARRITO MENÚ DESPLEGABLE
 ----------------------------------------------*/
@@ -124,6 +138,7 @@ h1 {
     top: 0;
     right: -110%;
     z-index: 1;
+    overflow: hidden;
 }
 
 .contenedor-carrito-menu {
@@ -134,7 +149,7 @@ h1 {
     flex-direction: column;
     position: absolute;
     top: 0;
-    right: -340px;
+    right: -1000px;
     z-index: 2;
     padding: 25px;
     transition: 1.5s;
@@ -151,13 +166,8 @@ h1 {
 }
 
 /*----------------------------------------------
-            MODAL CIERRE COMPRA
+            CHECKOUT COMPRA
 ----------------------------------------------*/
-.overlay {
-    display: flex;
-    flex-direction: column;
-}
-
 .overlay-fondo-modal {
     background-color: #424242;
     opacity: 0.4;
@@ -166,7 +176,8 @@ h1 {
     position: absolute;
     top: 0;
     right: -110%; 
-    z-index: 3; 
+    z-index: 3;
+    overflow: hidden; 
 }
 
 .contenedor-confirmar-compra {
@@ -177,7 +188,7 @@ h1 {
     flex-direction: column;
     position: absolute;
     top: 0;
-    /* right: -900px; */
+    right: -2000px;
     z-index: 4;
     padding: 25px;
     transition: 1.5s;
@@ -193,11 +204,18 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 30px;
+    overflow: hidden; 
 }
 
 .datos-personales {
     width: 40%;
     margin: 20px;
+}
+
+hr {
+    width: 80%;
+    border: 1px solid rgba(55, 73, 87, 0.2);
+    margin: 20px 0;
 }
 
 .opciones-pago {
@@ -210,12 +228,21 @@ h1 {
 .resumen-compra {
     width: 40%;
     background-color: rgba(55, 73, 87, 0.1);
-    margin: 20px;
+    padding: 25px;
 }
 
-h3 {
-    margin-left: 20px;
+.resumen-compra h3 {
+    margin-left: 5px;
 }
+
+.contenedor-botones-checkout {
+    flex-basis: 1;
+    padding: 30px;
+}
+
+
+
+
 
 /*----------------------------------------------
                     BANNER

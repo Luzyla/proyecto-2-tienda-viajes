@@ -62,6 +62,9 @@
         </div>
         
         <div class="contenedor-confirmar-compra">
+            
+            <h2>Checkout</h2>
+
             <div class="modal-formularios">
                 
                 <!-- FORM inicio -->
@@ -80,13 +83,15 @@
                         </label>
 
                     </div>
-
+                    
+                    <hr />
+                    
                     <div class="opciones-pago" id="buy-ways">
                     
                         <h3>Opciones de pago</h3>
 
                         <label for="efectivo-debito">
-                            <input type="radio" name="pago" id="efectivo-debito" value="efectivo-debito">
+                            <input type="radio" name="pago" id="efectivo-debito" value="efectivo-debito" checked>
                             Efectivo / Débito
                         </label>
 
@@ -95,8 +100,8 @@
                             Tarjeta de crédito
                         </label>
 
-                        <label for="">
-                            <input type="checkbox" name="envio" id="con-envio">
+                        <label for="envio">
+                            <input type="checkbox" name="envio" id="envio">
                             Necesito envío
                         </label>
 
@@ -116,18 +121,18 @@
                     </div>
 
                     <div class="formato-resumen">
-                        <h4>Subtotal $<span>0</span></h4>
-                        <p>Envío $<span>0</span></p>
-                        <p class="descuento-compra">Descuento 10% $<span>0</span></p>
-                        <p class="recargo-compra">Recargo $<span>0</span></p>
-                        <h2 class="total-compra">Total $<span>0</span></h2>
+                        <h4 id="suma-productos">Subtotal $<span id="valor-subtotal">0</span></h4>
+                        <p id="con-envio" class="hidden">Envío $<span id="valor-envio">0</span></p>
+                        <p id="con-descuento" class="descuento-compra hidden">Descuento 15% $<span id="valor-descuento">0</span></p>
+                        <p id="con-recargo" class="recargo-compra hidden">Recargo $<span id="valor-recargo">0</span></p>
+                        <h2 id="suma-total" class="total-compra">Total $<span id="valor total">0</span></h2>
                     </div>
 
                 </div>
             
             </div>
 
-            <div>
+            <div class="contenedor-botones-checkout">
                 <button class="button-basic" id="button-buying">SEGUIR COMPRANDO</button>
                 <button class="button-buy button-basic" id="button-ends">FINALIZAR</button>
             </div>
