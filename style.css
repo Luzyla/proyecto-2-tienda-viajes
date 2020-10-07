@@ -9,6 +9,7 @@ body {
     background-color: #fafafa;
     color: #424242;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 * {
@@ -42,6 +43,7 @@ a {
 }
 
 .button-buy {
+
     background-color: #58aa12;
     border: 2px solid #58aa12;
     color: #fafafa;
@@ -49,7 +51,7 @@ a {
 
 .button-empty {
     background-color: #fafafa;
-    border: 2px solid #e71837; #58aa12
+    border: 2px solid #e71837; 
     color: #e71837;
 }
 
@@ -127,6 +129,7 @@ h1 {
 ----------------------------------------------*/
 .overlay {
     display: flex;
+    /* overflow-y: hidden; */
 }
 
 .overlay-fondo {
@@ -138,11 +141,11 @@ h1 {
     top: 0;
     right: -110%;
     z-index: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .contenedor-carrito-menu {
-    width: 25vw;
+    width: 35vw;
     height: 100vh;
     background-color: #fafafa;
     display: flex;
@@ -165,6 +168,30 @@ h1 {
     justify-content: space-between;
 }
 
+.contenedor-productos-agregados {
+    width: 100%;
+    height: 50%;
+    margin: 10px;
+    overflow: scroll;
+    scrollbar-width: thin;    
+}
+
+.contenedor-resumen-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cantidad-productos-agregados {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.contenedor-botones-carrito {
+    display: flex;
+    margin-top: 20px;
+}
+
 /*----------------------------------------------
             CHECKOUT COMPRA
 ----------------------------------------------*/
@@ -177,7 +204,13 @@ h1 {
     top: 0;
     right: -110%; 
     z-index: 3;
-    overflow: hidden; 
+    /* overflow: hidden;  */
+}
+
+.contenedor-titulo-checkout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .contenedor-confirmar-compra {
@@ -192,6 +225,7 @@ h1 {
     z-index: 4;
     padding: 25px;
     transition: 1.5s;
+    /* overflow: hidden;  */
 }
 
 .modal-formularios {
@@ -203,8 +237,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 30px;
-    overflow: hidden; 
+    /* overflow: hidden;  */
 }
 
 .datos-personales {
@@ -226,7 +259,7 @@ hr {
 }
 
 .resumen-compra {
-    width: 40%;
+    width: 50%;
     background-color: rgba(55, 73, 87, 0.1);
     padding: 25px;
 }
@@ -236,11 +269,22 @@ hr {
 }
 
 .contenedor-botones-checkout {
-    flex-basis: 1;
+    display: flex;
+    justify-content: space-between;
     padding: 30px;
+    
 }
 
+.etiquetas-datos-personales {
+    margin-top: 10px;
+}
 
+.espacio-datos-personales {
+    border: none;
+    border-bottom: 1px solid #424242;
+    padding: 5px;
+    margin-bottom: 10px;
+}
 
 
 
@@ -397,7 +441,7 @@ hr {
     justify-content: space-evenly;
 }
 
-.contenedor-tarjeta {
+.contenedor-tarjeta { /*ARTICLE*/
     width: 295px;
     height: 400px;
     display: flex;
@@ -422,15 +466,22 @@ hr {
 }
 
 .texto-tarjeta-titulo {
-    margin-top: 25px;
+    /* margin-top: 20px; */
     font-size: 25px;
+}
+
+.contenedor-contenido-viaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .texto-tarjeta-valor {
     margin-top: 10px;
     font-size: 18px;
-
+    
 }
+
 
 /*----------------------------------------------
                     FOOTER
@@ -473,12 +524,39 @@ hr {
 /*----------------------------------------------
                     FILTROS
 ----------------------------------------------*/
-.ver-como-lista {
+/*-------------- VER COMO LISTA ----------------*/
+.ver-como-lista { /* APLICA AL CONTENEDOR ARTICLE */
     flex-basis: 100%;
-    flex-direction: column;
-
+    height: auto;
+    flex-direction: row;
+    align-items: none;
 }
 
+.margen-como-lista { /* APLICA AL CONTENEDOR contenedor-img-tarjeta */
+    margin: 20px;
+    align-items: center;
+}
+
+.img-como-lista { /* APLICA A LA IMAGEN img-tarjeta */
+    width: 340px;
+    height: 265px;
+}
+
+/* .titulo-como-lista { /* APLICA AL P DEL TÍTULO texto-tarjeta-titulo
+    margin-top: 0;
+} */
+
+.contenedor-contenido-viaje-lista { /* AGREGAR ESTA CLASE AL CONTENEDOR */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* RECORDAR REMOVER HIDDEN DEL P detalle-viaje
+poner ID a todos los elementos para llamarlos desde JS*/
+
+/*-------------- FILTROS GENERALES ----------------*/
 .mostrar {
     top: 0;
     right: 0;
@@ -486,6 +564,10 @@ hr {
 
 .hidden {
     display: none;
+}
+
+.agrega-overflow {
+    overflow-y: hidden;
 }
 
 /*----------------------------------------------

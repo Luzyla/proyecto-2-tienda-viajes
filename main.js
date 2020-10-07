@@ -1,8 +1,13 @@
+/*----------------------------------------
+        VARIABLES CONSTANTES
+---------------------------------------- */
+
 //VARIABLES
 const carrito = document.querySelector(".contenedor-carrito")
 const menuCarrito = document.getElementById("carrito-menu")
 const overlay = document.getElementById("fondo-overlay")
-const cerrar = document.getElementById("cerrar")
+const cerrarCarrito = document.getElementById("cerrar")
+const cerrarCheckout = document.getElementById("cerrar-checkout")
 
 // FILTRO X CATEGORIA
 const filtroCategorias = document.querySelectorAll(".filtro-categoria")
@@ -15,10 +20,13 @@ const filtroPuntajes = document.querySelectorAll(".filtro-puntaje")
 // CHECKOUT COMPRA
 const botonComprar = document.getElementById("boton-comprar")
 const botonVaciar = document.getElementById("boton-vaciar")
+
 const confirmarCompra = document.querySelector(".contenedor-confirmar-compra")
 const overlay2 = document.getElementById("fondo-overlay-modal")
+
 const botonSeguirComprando = document.getElementById("button-buying")
 const botonFinalizarCompra = document.getElementById("button-ends")
+
 const sumaProductos = document.getElementById("suma-productos")
 const valorSubtotal = document.getElementById("valor-subtotal")
 const conEnvio = document.getElementById("con-envio")
@@ -35,34 +43,64 @@ const radioTarjeta = document.getElementById("tarjeta")
 const checkboxEnvio = document.getElementById("envio")
 const checkboxDescuento = document.getElementById("dto")
 
+const cuerpo = document.getElementById("cuerpo-html")
 
+const verComoLista = document.getElementById("ver-lista")
+const verComoGrilla = document.getElementById("ver-grilla")
+
+//VER COMO GRILLA O LISTA
+const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
+console.log(todosLosViajes)
+const todasLasFotosDeViajes = document.querySelectorAll(".img-tarjeta")
+const contenedorDeTodasLasFotos = document.querySelectorAll(".contenedor-img-tarjeta")
+const contenedorDeLaInfo = document.querySelectorAll(".contenedor-contenido-viaje")
+const contenedorDescripciones = document.querySelectorAll(".detalle-viaje")
+
+
+/*----------------------------------------
+        VER COMO GRILLA O LISTA
+---------------------------------------- */
 // CARRITO MENÚ DESPLEGABLE
 carrito.onclick = () => {
     menuCarrito.classList.add("mostrar")
     overlay.classList.add("mostrar")
+    cuerpo.classList.add("agrega-overflow")
 
 }
 
-cerrar.onclick = () => {
+cerrarCarrito.onclick = () => {
     menuCarrito.classList.remove("mostrar")
     overlay.classList.remove("mostrar")
-
+    cuerpo.classList.remove("agrega-overflow")
 }
 
-// CARRITO MODAL FIN DE COMPRA
+/*----------------------------------------
+        VER COMO GRILLA O LISTA
+---------------------------------------- */
+// CHECKOUT
 botonComprar.onclick = () => {
     confirmarCompra.classList.add("mostrar")
     overlay2.classList.add("mostrar")
 
 }
 
+cerrarCheckout.onclick = () => {
+    confirmarCompra.classList.remove("mostrar")
+    overlay2.classList.remove("mostrar")
+}
+
+
 botonSeguirComprando.onclick = () => {
     confirmarCompra.classList.remove("mostrar")
     overlay2.classList.remove("mostrar")
     menuCarrito.classList.remove("mostrar")
     overlay.classList.remove("mostrar")
+    cuerpo.classList.remove("agrega-overflow")
 }
 
+/*----------------------------------------
+        VER COMO GRILLA O LISTA
+---------------------------------------- */
 // OPERACIONES DEL CHECKOUT
 radioEfectivo.oninput = () => {
     conRecargo.classList.add("hidden")
@@ -78,7 +116,6 @@ const sumarRecargo = (sumaProductos, porcentaje) => {
     let recargo = sumaProductos * porcentaje
     recargo.textContent = recargo
 }
-console.log(sumarRecargo())
 
 checkboxEnvio.oninput = () => {
     conEnvio.classList.toggle("hidden")
@@ -95,8 +132,65 @@ const sumarDescuento = (sumaProductos, porcentaje) => {
     let descuento = sumaProductos * porcentaje
     valorEnvio.textContent = descuento
 }
-console.log(sumarDescuento())
 
+/*----------------------------------------
+        VER COMO GRILLA O LISTA
+---------------------------------------- */
+verComoLista.onclick = () => {
+    agregaClasesATodasLasTarjetas()
+}
+
+const agregaClasesATodasLasTarjetas = () => {
+    for (let viaje of todosLosViajes) {
+        viaje.classList.add("ver-como-lista")
+    }
+
+    for (let foto of todasLasFotosDeViajes) {
+        foto.classList.add("img-como-lista")
+    }
+
+    for (let contenedor of contenedorDeTodasLasFotos) {
+        contenedor.classList.add("margen-como-lista")
+    }
+
+    for (let info of contenedorDeLaInfo) {
+        info.classList.add("contenedor-contenido-viaje-lista")
+    }
+
+    for (let descripcion of contenedorDescripciones) {
+        descripcion.classList.remove("hidden")
+    }
+}
+
+verComoGrilla.onclick = () => {
+    eliminaClasesATodasLasTarjetas()
+}
+
+const eliminaClasesATodasLasTarjetas = () => {
+    for (let viaje of todosLosViajes) {
+        viaje.classList.remove("ver-como-lista")
+    }
+
+    for (let foto of todasLasFotosDeViajes) {
+        foto.classList.remove("img-como-lista")
+    }
+
+    for (let contenedor of contenedorDeTodasLasFotos) {
+        contenedor.classList.remove("margen-como-lista")
+    }
+
+    for (let info of contenedorDeLaInfo) {
+        info.classList.remove("contenedor-contenido-viaje-lista")
+    }
+
+    for (let descripcion of contenedorDescripciones) {
+        descripcion.classList.add("hidden")
+    }
+}
+
+
+
+// --------------------------------------
 
 // FILTRO X CATEGORIA
 
@@ -125,8 +219,8 @@ for (let checkbox of filtroCategorias) {
 
 // FILTRO X STARS
 
-console.log(filtroPuntajes)
-console.log(articles)
+// console.log(filtroPuntajes)
+// console.log(articles)
 
 for (let checkbox of filtroPuntajes) {
     checkbox.onclick = () => {
