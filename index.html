@@ -20,12 +20,12 @@
         
         <div class="contenedor-header">
             <div class="contenedor-logo">
-                <img src="./images/gettingthere.svg" class="img-logo" alt="logo-getting-there">
+                <img src="./images/gettingthere.svg" class="img-logo" alt="El logo de Gettin there! es un globoterráqueo con diferentes puntos marcados, queriendo figurar los destinos a los que queremos llegar y conocer.">
                 <h1 class="texto-logo">Getting there!</h1>
             </div>
             
             <div class="contenedor-carrito" id="">
-                <img class="img-carrito" src="./images/icons8-shopping-cart-80.png" alt="">
+                <input type="image" name="carrito" style="width: 35px;" class="img-carrito" src="./images/icons8-shopping-cart-80.png" alt="Botón que permite ingresar al carrito de compras para visualizar su contenido">
                 <p class="texto-carrito">Carrito (<span id="items-carrito">0</span> Items)</p>
             </div>
         </div>
@@ -41,7 +41,7 @@
             
             <div class="carrito-titulo">
                 <h2>Carrito</h2>
-                <img id="cerrar" class="equis" src="./images/icons8-close-window-100.png" alt="Botón para cerrar el carrito">
+                <input type="image" name="cerrar-carrito" style="width: 35px;" id="cerrar" class="equis" src="./images/icons8-close-window-100.png" alt="Botón para cerrar el carrito">
             </div>
             
             <p class="cantidad-productos-agregados"><span id="numero-productos-agregados">0</span> producto(s) agregado(s)</p>
@@ -71,7 +71,7 @@
             
             <div class="contenedor-titulo-checkout">
                 <h2>Checkout</h2>
-                <img id="cerrar-checkout" class="equis" src="./images/icons8-close-window-100.png" alt="Botón para cerrar el checkout">
+                <input type="image" name="cerrar-checkout" style="width: 35px;" id="cerrar-checkout" class="equis" src="./images/icons8-close-window-100.png" alt="Botón para cerrar el checkout">
             </div>
 
             <div class="modal-formularios">
@@ -116,7 +116,7 @@
 
                         <label for="dto">
                             <input type="checkbox" name="descuento" id="dto">
-                            Tengo tarjeta de descuento
+                            Tengo tarjeta de descuento [15%]
                         </label>
 
                     </div>
@@ -133,7 +133,7 @@
                     <div class="formato-resumen">
                         <h4 id="suma-productos">Subtotal $<span id="valor-subtotal">0</span></h4>
                         <p id="con-envio" class="hidden">Envío $<span id="valor-envio">0</span></p>
-                        <p id="con-descuento" class="descuento-compra hidden">Descuento 15% $<span id="valor-descuento">0</span></p>
+                        <p id="con-descuento" class="descuento-compra hidden">Descuento $<span id="valor-descuento">0</span></p>
                         <p id="con-recargo" class="recargo-compra hidden">Recargo $<span id="valor-recargo">0</span></p>
                         <h2 id="suma-total" class="total-compra">Total $<span id="valor total">0</span></h2>
                     </div>
@@ -156,7 +156,7 @@
     <!-- BANNER -->
     <div class="contenedor-banner">
         <div class="contenedor-img-banner">
-            <img class="img-banner" src="./images/banner-getting-there.png" alt="Foto de Newfoundland and Labrador usada como banner">
+            <img class="img-banner" src="./images/banner-getting-there.png" alt="">
         </div>
         
         <div class="contenedor-texto-banner">
@@ -171,12 +171,12 @@
             <!-- FILTROS -->
             <div class="aside-filtros">
                 <h4>FILTROS</h4>
-                <ul class="boton-limpiar">
-                    <li class="texto-limpiar">
-                    <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                <div class="contenedor-boton-limpiar">
+                    <label for="trash" class="texto-limpiar">
+                    <input type="image" name="trash" src="./images/icons8-trash2.svg" style="width: 25px; height: 25px;" class="trash">
                     Limpiar
-                    </li>
-                </ul>
+                    </label>
+                </div>
             </div>
 
             <!-- FORM inicio -->
@@ -190,7 +190,7 @@
                             <!-- <TextField id="standard-basic" label="Standard" /> -->
                             <input type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje" id="search" />
                         </label>
-                        <img src="./images/icons8-search.svg" alt="search-icon" class="lupita">
+                        <input type="image" name="lupita" style="width: 30px;" src="./images/icons8-search.svg" alt="search-icon" class="lupita">
                     </div>
 
                     <!-- CATEGORIA -->
@@ -331,8 +331,8 @@
 
                 <div class="ver-como">
                     <p>Ver como</p>
-                    <img id="ver-grilla" class="icono-grilla" src="./images/icons8-grid-view-52.png" alt="Click aquí para visualizar las opciones de viajes en forma de grilla">
-                    <img id="ver-lista" class="icono-lista" src="./images/icons8-list-64.png" alt="Click aquí para visualizar las opciones de viajes en forma de lista">
+                    <input type="image" name="ver-grilla" id="ver-grilla" class="icono-grilla" src="./images/icons8-grid-100.png"  alt="Click aquí para visualizar las opciones de viajes en forma de grilla">
+                    <input type="image" name="ver-lista" id="ver-lista" class="icono-lista" src="./images/icons8-list-100.png" alt="Click aquí para visualizar las opciones de viajes en forma de lista">
                 </div>
             </nav>
 
@@ -689,7 +689,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="main.js"></script>
-
+    <!-- @Luzyla -->
 
 </body>
 </html>

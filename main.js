@@ -1,13 +1,15 @@
 /*----------------------------------------
         VARIABLES CONSTANTES
 ---------------------------------------- */
-
-//VARIABLES
+// CARRITO
 const carrito = document.querySelector(".contenedor-carrito")
 const menuCarrito = document.getElementById("carrito-menu")
 const overlay = document.getElementById("fondo-overlay")
 const cerrarCarrito = document.getElementById("cerrar")
 const cerrarCheckout = document.getElementById("cerrar-checkout")
+const botonComprar = document.getElementById("boton-comprar")
+const botonVaciar = document.getElementById("boton-vaciar")
+const cuerpo = document.getElementById("cuerpo-html")
 
 // FILTRO X CATEGORIA
 const filtroCategorias = document.querySelectorAll(".filtro-categoria")
@@ -15,18 +17,14 @@ const articles = document.querySelectorAll(".product")
 
 // FILTRO X STARS
 const filtroPuntajes = document.querySelectorAll(".filtro-puntaje")
-// const articles = document.querySelectorAll(".product")
 
 // CHECKOUT COMPRA
-const botonComprar = document.getElementById("boton-comprar")
-const botonVaciar = document.getElementById("boton-vaciar")
-
 const confirmarCompra = document.querySelector(".contenedor-confirmar-compra")
 const overlay2 = document.getElementById("fondo-overlay-modal")
-
 const botonSeguirComprando = document.getElementById("button-buying")
 const botonFinalizarCompra = document.getElementById("button-ends")
 
+// RESUMEN CHECKOUT
 const sumaProductos = document.getElementById("suma-productos")
 const valorSubtotal = document.getElementById("valor-subtotal")
 const conEnvio = document.getElementById("con-envio")
@@ -38,23 +36,22 @@ const valorRecargo = document.getElementById("valor-recargo")
 const sumaTotal = document.getElementById("suma-total")
 const valorTotal = document.getElementById("valor-total")
 
+// OPCIONES DE PAGO
 const radioEfectivo = document.getElementById("efectivo-debito")
 const radioTarjeta = document.getElementById("tarjeta")
 const checkboxEnvio = document.getElementById("envio")
 const checkboxDescuento = document.getElementById("dto")
 
-const cuerpo = document.getElementById("cuerpo-html")
-
+//VER COMO GRILLA O LISTA
 const verComoLista = document.getElementById("ver-lista")
 const verComoGrilla = document.getElementById("ver-grilla")
-
-//VER COMO GRILLA O LISTA
-const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
-console.log(todosLosViajes)
 const todasLasFotosDeViajes = document.querySelectorAll(".img-tarjeta")
 const contenedorDeTodasLasFotos = document.querySelectorAll(".contenedor-img-tarjeta")
 const contenedorDeLaInfo = document.querySelectorAll(".contenedor-contenido-viaje")
 const contenedorDescripciones = document.querySelectorAll(".detalle-viaje")
+
+// TODAS LAS TARJETAS DE VIAJES
+const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
 
 
 /*----------------------------------------
@@ -188,6 +185,23 @@ const eliminaClasesATodasLasTarjetas = () => {
     }
 }
 
+/*----------------------------------------
+        FILTROS DE BÚSQUEDA
+---------------------------------------- */
+
+
+
+const filtrarViajes = () => {
+    for (let viaje of todosLosViajes) {
+        if (pasaFiltros(card)) {
+            mostrarViaje(card)
+        }
+        else {
+            ocultarViaje(card)
+        }
+    }
+}
+
 
 
 // --------------------------------------
@@ -207,10 +221,7 @@ for (let checkbox of filtroCategorias) {
                 else {
                     card.classList.add('hidden');
                 }
-            // }
-            // else {
-            //      card.classList.remove('hidden');
-            // }
+            
         }
             
     };

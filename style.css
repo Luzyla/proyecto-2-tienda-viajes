@@ -16,10 +16,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+}
+
+label {
+    cursor: pointer;
 }
 
 /*-------------- TEXTO ----------------*/
@@ -43,7 +48,6 @@ a {
 }
 
 .button-buy {
-
     background-color: #58aa12;
     border: 2px solid #58aa12;
     color: #fafafa;
@@ -65,6 +69,11 @@ a {
 
 .button-empty:hover {
     background-color: #ffdfdb;
+}
+
+input:focus {
+    outline-style: solid;
+    outline-width: thin;
 }
 
 /*----------------------------------------------
@@ -129,19 +138,17 @@ h1 {
 ----------------------------------------------*/
 .overlay {
     display: flex;
-    /* overflow-y: hidden; */
 }
 
 .overlay-fondo {
-    background-color: #424242;
-    opacity: 0.4;
     width: 100vw;
     height: 100vh;
+    background-color: #424242;
+    opacity: 0.4;
     position: absolute;
     top: 0;
     right: -110%;
     z-index: 1;
-    /* overflow: hidden; */
 }
 
 .contenedor-carrito-menu {
@@ -155,7 +162,7 @@ h1 {
     right: -1000px;
     z-index: 2;
     padding: 25px;
-    transition: 1.5s;
+    transition: 0.8s;
 }
 
 .equis {
@@ -359,8 +366,17 @@ hr {
     justify-content: space-between;
 }
 
-.boton-limpiar {
-    list-style: none;
+.contenedor-boton-limpiar {
+    position: relative;
+}
+
+.texto-limpiar {
+
+}
+
+.trash {
+    position: absolute;
+    left: -28px;
 }
 
 /*-------------- BÚSQUEDA ----------------*/
@@ -377,9 +393,8 @@ hr {
 }
 
 .lupita {
-    width: 30px;
     position: absolute;
-    left: 195px;
+    left: 145px;
     top: 25px;
 }
 
@@ -420,16 +435,9 @@ hr {
     align-items: center;
 }
 
-.icono-grilla {
-    width: 30px;
-    padding-left: 10px;
+.ver-como input {
+    width: 40px;
 }
-
-.icono-lista {
-    width: 34px;
-    padding-left: 10px;
-}
-
 
 
 /*-------------- TARJETAS ----------------*/
@@ -541,10 +549,6 @@ hr {
     width: 340px;
     height: 265px;
 }
-
-/* .titulo-como-lista { /* APLICA AL P DEL TÍTULO texto-tarjeta-titulo
-    margin-top: 0;
-} */
 
 .contenedor-contenido-viaje-lista { /* AGREGAR ESTA CLASE AL CONTENEDOR */
     display: flex;
