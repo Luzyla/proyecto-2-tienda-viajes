@@ -5,8 +5,8 @@
                     BASIC
 ----------------------------------------------*/
 body {
-    font-family: Jaldi, sans-serif;
     background-color: #fafafa;
+    font-family: Jaldi, sans-serif;
     color: #424242;
     font-size: 18px;
     overflow-x: hidden;
@@ -120,6 +120,7 @@ h1 {
     margin-right: 15px;
 }
 
+
 /*-------------- CHECKOUT ----------------*/
 .total-compra {
     font-weight: bold;
@@ -198,6 +199,45 @@ h1 {
     display: flex;
     margin-top: 20px;
 }
+
+/*----------------------------------------------
+            CONFIRMA VACIAR
+----------------------------------------------*/
+.overlay-confirma-vaciar {
+    position: relative;
+}
+
+.overlay-fondo-confirma-vaciar {
+    width: 100vw;
+    height: 100vh;
+    background-color: #424242;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    right: -110%;
+    z-index: 3;
+}
+
+.contenedor-confirma-vaciar {
+    width: 45vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    position: absolute;
+    top: 25%;
+    right: -110%;
+    z-index: 4;
+    transition: 0.8s;
+}
+
+.texto-vaciar-carrito {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 
 /*----------------------------------------------
             CHECKOUT COMPRA
@@ -466,7 +506,7 @@ hr {
 }
 
 .contenedor-img-tarjeta {
-    flex-basis: 150px;
+    /* flex-basis: 1; */
     margin-top: 20px;
     
 }
@@ -478,7 +518,6 @@ hr {
 }
 
 .texto-tarjeta-titulo {
-    /* margin-top: 20px; */
     font-size: 25px;
 }
 

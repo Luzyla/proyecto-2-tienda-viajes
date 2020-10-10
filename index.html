@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="" id="cuerpo-html">
+<body id="cuerpo-html">
 
     <header>
 
@@ -31,7 +31,7 @@
                     src="./images/icons8-shopping-cart-80.png"
                     alt="Botón que permite ingresar al carrito de compras para visualizar su contenido"
                     tabindex="1">
-                <p class="texto-carrito">Carrito (<span id="items-carrito">0</span> Items)</p>
+                <p class="texto-carrito" id="items-carrito">Carrito (0 Items)</p>
             </div>
         </div>
 
@@ -69,6 +69,22 @@
         </div>
 
     </section>
+
+    <!-- CONFIRMA VACIAR CARRITO -->
+    <div class="overlay-confirma-vaciar" id="overlay-vaciar-carrito">
+    
+        <div class="overlay-fondo-confirma-vaciar" id="fondo-overlay-vaciar" tabindex="-1">
+        </div>
+        
+        <div class="contenedor-confirma-vaciar" id="contenedor-vaciar-carrito" tabindex="-1">
+            <p class="texto-vaciar-carrito">Estás por vaciar el carrito, ¿quieres continuar?</p>
+            <div class="contenedor-botones-carrito">
+                <button id="boton-cancelar" class="button-cancel button-basic" tabindex="-1">CANCELAR</button>
+                <button id="boton-vaciar-carrito" class="button-empty button-basic button-confirma" tabindex="-1">VACIAR</button>
+            </div>
+        </div>
+
+    </div>
 
     <!-- CHECKOUT PAGAR COMPRA -->
     <section class="overlay" id="contenedor-overlay-modal">
@@ -248,11 +264,11 @@
                         <label for="idfive-stars">
                             <input type="checkbox" name="five-stars" id="idfive-stars" class="filtro-puntaje"
                                 data-stars="5">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
                             (5)
                         </label>
 
@@ -260,11 +276,11 @@
                         <label for="idfour-stars">
                             <input type="checkbox" value="CONSOLAS" name="four-stars" id="idfour-stars"
                                 class="filtro-puntaje" data-stars="4">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             (4)
                         </label>
 
@@ -272,11 +288,11 @@
                         <label for="idthree-stars">
                             <input type="checkbox" value="CONSOLAS" name="three-stars" id="idthree-stars"
                                 class="filtro-puntaje" data-stars="3">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             (3)
                         </label>
 
@@ -284,11 +300,11 @@
                         <label for="idtwo-stars">
                             <input type="checkbox" value="CONSOLAS" name="two-stars" id="idtwo-stars"
                                 class="filtro-puntaje" data-stars="2">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             (2)
                         </label>
 
@@ -296,11 +312,11 @@
                         <label for="idone-star">
                             <input type="checkbox" value="CONSOLAS" name="one-stars" id="idone-star"
                                 class="filtro-puntaje" data-stars="1">
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             (1)
                         </label>
 
@@ -353,11 +369,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -380,11 +396,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -405,11 +421,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -430,11 +446,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -456,11 +472,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -482,11 +498,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -508,11 +524,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -533,11 +549,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -558,11 +574,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -584,11 +600,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -610,11 +626,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
@@ -636,11 +652,11 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
