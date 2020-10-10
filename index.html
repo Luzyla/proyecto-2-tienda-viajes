@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getting there! tu viaje soñado...</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    
+
     <!-- CSS -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -17,15 +18,19 @@
 <body class="" id="cuerpo-html">
 
     <header>
-        
+
         <div class="contenedor-header">
             <div class="contenedor-logo">
-                <img src="./images/gettingthere.svg" class="img-logo" alt="El logo de Gettin there! es un globoterráqueo con diferentes puntos marcados, queriendo figurar los destinos a los que queremos llegar y conocer.">
+                <img src="./images/gettingthere.svg" class="img-logo"
+                    alt="El logo de Gettin there! es un globoterráqueo con diferentes puntos marcados, queriendo figurar los destinos a los que queremos llegar y conocer.">
                 <h1 class="texto-logo">Getting there!</h1>
             </div>
-            
+
             <div class="contenedor-carrito" id="">
-                <input type="image" name="carrito" style="width: 35px;" class="img-carrito" src="./images/icons8-shopping-cart-80.png" alt="Botón que permite ingresar al carrito de compras para visualizar su contenido">
+                <input type="image" name="carrito" style="width: 35px;" class="img-carrito"
+                    src="./images/icons8-shopping-cart-80.png"
+                    alt="Botón que permite ingresar al carrito de compras para visualizar su contenido"
+                    tabindex="1">
                 <p class="texto-carrito">Carrito (<span id="items-carrito">0</span> Items)</p>
             </div>
         </div>
@@ -33,19 +38,23 @@
     </header>
 
     <!-- CARRITO MENÚ DESPLEGABLE -->
-    <section class="overlay" id="contenedor-overlay">
+    <section class="overlay" id="contenedor-overlay" tabindex="-1">
         <div class="overlay-fondo" id="fondo-overlay">
         </div>
 
         <div class="contenedor-carrito-menu" id="carrito-menu">
-            
+
             <div class="carrito-titulo">
                 <h2>Carrito</h2>
-                <input type="image" name="cerrar-carrito" style="width: 35px;" id="cerrar" class="equis" src="./images/icons8-close-window-100.png" alt="Botón para cerrar el carrito">
+                <input type="image" name="cerrar-carrito" style="width: 35px;" id="cerrar" class="equis"
+                    src="./images/icons8-close-window-100.png" alt="Botón para cerrar el carrito"
+                    tabindex="-1"
+                >
             </div>
-            
-            <p class="cantidad-productos-agregados"><span id="numero-productos-agregados">0</span> producto(s) agregado(s)</p>
-            
+
+            <p class="cantidad-productos-agregados"><span id="numero-productos-agregados">0</span> producto(s)
+                agregado(s)</p>
+
             <div class="contenedor-resumen-carrito">
                 <div id="productos-carrito" class="contenedor-productos-agregados">
                 </div>
@@ -53,8 +62,8 @@
                 <h4>Subtotal $<span id="subtotal-carrito">0</span></h4>
 
                 <div class="contenedor-botones-carrito">
-                    <button id="boton-vaciar" class="button-empty button-basic">VACIAR</button>
-                    <button id="boton-comprar" class="button-buy button-basic">COMPRAR</button>
+                    <button id="boton-vaciar" class="button-empty button-basic" tabindex="-1">VACIAR</button>
+                    <button id="boton-comprar" class="button-buy button-basic" tabindex="-1">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -63,19 +72,22 @@
 
     <!-- CHECKOUT PAGAR COMPRA -->
     <section class="overlay" id="contenedor-overlay-modal">
-        
+
         <div class="overlay-fondo-modal" id="fondo-overlay-modal">
         </div>
-        
+
         <div class="contenedor-confirmar-compra">
-            
+
             <div class="contenedor-titulo-checkout">
                 <h2>Checkout</h2>
-                <input type="image" name="cerrar-checkout" style="width: 35px;" id="cerrar-checkout" class="equis" src="./images/icons8-close-window-100.png" alt="Botón para cerrar el checkout">
+                <input type="image" name="cerrar-checkout" style="width: 35px;" id="cerrar-checkout" class="equis"
+                    src="./images/icons8-close-window-100.png" alt="Botón para cerrar el checkout" 
+                    tabindex="-1"
+                >
             </div>
 
             <div class="modal-formularios">
-                
+
                 <!-- FORM inicio -->
                 <form class="contenedor-formulario-confirmar-compra">
 
@@ -84,70 +96,75 @@
                         <h3>Datos personales</h3>
 
                         <label for="nombre" class="etiquetas-datos-personales">Nombre y apellido*
-                            <input type="text" class="espacio-datos-personales" name="nombre" id="nombre" placeholder="ej. Ada Lovelace" required>
+                            <input type="text" class="espacio-datos-personales" name="nombre" id="nombre"
+                                placeholder="ej. Ada Lovelace" tabindex="-1" required
+                            >
                         </label>
 
                         <label for="mail" class="etiquetas-datos-personales">Email*
-                            <input type="email" class="espacio-datos-personales" name="mail" id="mail" placeholder="ej. adalovelace@gmail.com" required>
+                            <input type="email" class="espacio-datos-personales" name="mail" id="mail"
+                                placeholder="ej. adalovelace@gmail.com" tabindex="-1" required
+                            >
                         </label>
 
                     </div>
-                    
+
                     <hr />
-                    
+
                     <div class="opciones-pago" id="buy-ways">
-                    
+
                         <h3>Opciones de pago</h3>
 
                         <label for="efectivo-debito">
-                            <input type="radio" name="pago" id="efectivo-debito" value="efectivo-debito" checked>
+                            <input type="radio" name="pago" id="efectivo-debito" value="efectivo-debito"  tabindex="-1" checked>
                             Efectivo / Débito
                         </label>
 
                         <label for="tarjeta">
-                            <input type="radio" name="pago" id="tarjeta">
+                            <input type="radio" name="pago" id="tarjeta" value="tarjeta" tabindex="-1">
                             Tarjeta de crédito
                         </label>
 
                         <label for="envio">
-                            <input type="checkbox" name="envio" id="envio">
+                            <input type="checkbox" name="envio" id="envio" tabindex="-1">
                             Necesito envío
                         </label>
 
                         <label for="dto">
-                            <input type="checkbox" name="descuento" id="dto">
+                            <input type="checkbox" name="descuento" id="dto" tabindex="-1">
                             Tengo tarjeta de descuento [15%]
                         </label>
 
                     </div>
-                
+
                 </form>
                 <!-- FORM fin -->
 
                 <div class="resumen-compra" id="buying">
                     <h3>Resumen</h3>
-                    
+
                     <div id="resumen-productos-elegidos" class="contenedor-productos-agregados">
                     </div>
 
                     <div class="formato-resumen">
                         <h4 id="suma-productos">Subtotal $<span id="valor-subtotal">0</span></h4>
-                        <p id="con-envio" class="hidden">Envío $<span id="valor-envio">0</span></p>
-                        <p id="con-descuento" class="descuento-compra hidden">Descuento $<span id="valor-descuento">0</span></p>
+                        <p id="con-envio" class="hidden">Envío $<span id="valor-envio">300</span></p>
+                        <p id="con-descuento" class="descuento-compra hidden">Descuento $<span
+                                id="valor-descuento">0</span></p>
                         <p id="con-recargo" class="recargo-compra hidden">Recargo $<span id="valor-recargo">0</span></p>
                         <h2 id="suma-total" class="total-compra">Total $<span id="valor total">0</span></h2>
                     </div>
 
                 </div>
-            
+
             </div>
 
             <div class="contenedor-botones-checkout">
-                <button class="button-basic" id="button-buying">SEGUIR COMPRANDO</button>
-                <button class="button-buy button-basic" id="button-ends">FINALIZAR</button>
+                <button class="button-basic" id="button-buying" tabindex="-1">SEGUIR COMPRANDO</button>
+                <button class="button-buy button-basic" id="button-ends" tabindex="-1">FINALIZAR</button>
             </div>
         </div>
-        
+
         <div class="overlay-fondo-modal" id="fondo-overlay-modal">
         </div>
 
@@ -158,9 +175,10 @@
         <div class="contenedor-img-banner">
             <img class="img-banner" src="./images/banner-getting-there.png" alt="">
         </div>
-        
+
         <div class="contenedor-texto-banner">
-            <p class="texto-banner">It's not about the destination... it's about <span class="texto-logo-gt">Getting there!</span></p>
+            <p class="texto-banner">It's not about the destination... it's about <span class="texto-logo-gt">Getting
+                    there!</span></p>
         </div>
     </div>
 
@@ -173,8 +191,9 @@
                 <h4>FILTROS</h4>
                 <div class="contenedor-boton-limpiar">
                     <label for="trash" class="texto-limpiar">
-                    <input type="image" name="trash" src="./images/icons8-trash2.svg" style="width: 25px; height: 25px;" class="trash">
-                    Limpiar
+                        <input type="image" name="trash" src="./images/icons8-trash2.svg"
+                            style="width: 25px; height: 25px;" class="trash">
+                        Limpiar
                     </label>
                 </div>
             </div>
@@ -182,133 +201,106 @@
             <!-- FORM inicio -->
             <div class="formulario-aside">
                 <form action="" method="">
-                    
+
                     <!-- BUSQUEDA -->
                     <div class="contenedor-filtro-busqueda">
                         <label for="search">
                             <h4>BÚSQUEDA</h4>
-                            <!-- <TextField id="standard-basic" label="Standard" /> -->
-                            <input type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje" id="search" />
+                            <input type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje"
+                                id="search"
+                            >
                         </label>
-                        <input type="image" name="lupita" style="width: 30px;" src="./images/icons8-search.svg" alt="search-icon" class="lupita">
+                        <input type="image" name="lupita" style="width: 30px;" src="./images/icons8-search.svg"
+                            alt="search-icon" class="lupita" tabindex="-1">
                     </div>
 
                     <!-- CATEGORIA -->
                     <div class="contenedor-filtro-categoria">
                         <h4>CATEGORÍA</h4>
-                    
-                        <label class="filtro-categoria" for="idaventure" 
-                        data-categoria="aventura">
-                        <input type="checkbox" name="uno" id="idaventure">
-                        AVENTURA</label>
 
-                        <label class="filtro-categoria" for="idcitytour"
-                        data-categoria="citytour">
-                        <input type="checkbox" name="dos" id="idcitytour">
-                        CITY TOUR</label>
-                        
-                        <label class="filtro-categoria" for="idmountain"
-                        data-categoria="montaña">
-                        <input type="checkbox" name="tres" id="idmountain">
-                        MONTAÑA</label>
+                        <label class="filtro-categoria" for="idaventure" data-categoria="aventura">
+                            <input type="checkbox" name="uno" id="idaventure">
+                            AVENTURA</label>
 
-                        <label class="filtro-categoria" for="idbeach"
-                        data-categoria="playa">
-                        <input type="checkbox" name="cuatro" id="idbeach">
-                        PLAYA</label>
-                        
-                        <label class="filtro-categoria" for="idotros"
-                        data-categoria="otros">
-                        <input type="checkbox" name="cinco" id="idotros">
-                        OTROS</label>
-                    
+                        <label class="filtro-categoria" for="idcitytour" data-categoria="citytour">
+                            <input type="checkbox" name="dos" id="idcitytour">
+                            CITY TOUR</label>
+
+                        <label class="filtro-categoria" for="idmountain" data-categoria="montaña">
+                            <input type="checkbox" name="tres" id="idmountain">
+                            MONTAÑA</label>
+
+                        <label class="filtro-categoria" for="idbeach" data-categoria="playa">
+                            <input type="checkbox" name="cuatro" id="idbeach">
+                            PLAYA</label>
+
+                        <label class="filtro-categoria" for="idotros" data-categoria="otros">
+                            <input type="checkbox" name="cinco" id="idotros">
+                            OTROS</label>
+
                     </div>
 
-                    <!-- PUNTAJE -->                        
+                    <!-- PUNTAJE -->
                     <div class="contenedor-filtro-puntaje">
                         <h4>PUNTAJE</h4>
-                        
+
                         <!-- CINCO ESTRELLAS -->
                         <label for="idfive-stars">
-                            <input 
-                            type="checkbox" 
-                            name="five-stars" 
-                            id="idfive-stars"
-                            class="filtro-puntaje"
-                            data-stars="5">
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <input type="checkbox" name="five-stars" id="idfive-stars" class="filtro-puntaje"
+                                data-stars="5">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
                             (5)
                         </label>
-                        
-                        <!-- CUATRO ESTRELLAS -->                                
+
+                        <!-- CUATRO ESTRELLAS -->
                         <label for="idfour-stars">
-                            <input 
-                            type="checkbox" 
-                            value="CONSOLAS" 
-                            name="four-stars" 
-                            id="idfour-stars"
-                            class="filtro-puntaje"
-                            data-stars="4">
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <input type="checkbox" value="CONSOLAS" name="four-stars" id="idfour-stars"
+                                class="filtro-puntaje" data-stars="4">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                             (4)
                         </label>
 
-                        <!-- TRES ESTRELLAS -->                                
+                        <!-- TRES ESTRELLAS -->
                         <label for="idthree-stars">
-                            <input 
-                            type="checkbox" 
-                            value="CONSOLAS" 
-                            name="three-stars" 
-                            id="idthree-stars"
-                            class="filtro-puntaje"
-                            data-stars="3"> 
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <input type="checkbox" value="CONSOLAS" name="three-stars" id="idthree-stars"
+                                class="filtro-puntaje" data-stars="3">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                             (3)
                         </label>
 
-                        <!-- DOS ESTRELLAS -->                                
+                        <!-- DOS ESTRELLAS -->
                         <label for="idtwo-stars">
-                            <input 
-                            type="checkbox" 
-                            value="CONSOLAS" 
-                            name="two-stars" 
-                            id="idtwo-stars"
-                            class="filtro-puntaje"
-                            data-stars="2">
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <input type="checkbox" value="CONSOLAS" name="two-stars" id="idtwo-stars"
+                                class="filtro-puntaje" data-stars="2">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                             (2)
                         </label>
 
-                        <!-- UNA ESTRELLA -->                                
+                        <!-- UNA ESTRELLA -->
                         <label for="idone-star">
-                            <input 
-                            type="checkbox" 
-                            value="CONSOLAS" 
-                            name="one-stars" 
-                            id="idone-star"
-                            class="filtro-puntaje"
-                            data-stars="1">
-                                <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                                <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <input type="checkbox" value="CONSOLAS" name="one-stars" id="idone-star"
+                                class="filtro-puntaje" data-stars="1">
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                             (1)
                         </label>
 
@@ -326,82 +318,81 @@
         <div class="seccion-viajes">
             <nav class="barra-viajes">
                 <div class="mostrando-busqueda">
-                <p>Mostrando <span id="mostrando-busqueda-viajes">12</span> viaje(s) de <span id="mostrando-total-viajes">12</span></p>
+                    <p>Mostrando <span id="mostrando-busqueda-viajes">12</span> viaje(s) de <span
+                            id="mostrando-total-viajes">12</span></p>
                 </div>
 
                 <div class="ver-como">
                     <p>Ver como</p>
-                    <input type="image" name="ver-grilla" id="ver-grilla" class="icono-grilla" src="./images/icons8-grid-100.png"  alt="Click aquí para visualizar las opciones de viajes en forma de grilla">
-                    <input type="image" name="ver-lista" id="ver-lista" class="icono-lista" src="./images/icons8-list-100.png" alt="Click aquí para visualizar las opciones de viajes en forma de lista">
+                    <input type="image" name="ver-grilla" id="ver-grilla" class="icono-grilla"
+                        src="./images/icons8-grid-100.png"
+                        alt="Click aquí para visualizar las opciones de viajes en forma de grilla">
+                    <input type="image" name="ver-lista" id="ver-lista" class="icono-lista"
+                        src="./images/icons8-list-100.png"
+                        alt="Click aquí para visualizar las opciones de viajes en forma de lista">
                 </div>
             </nav>
 
             <div class="seccion-tarjetas">
 
                 <!-- TARJETA -->
-                                <!--ver-como-lista-->
-                <article class="product contenedor-tarjeta"  
-                data-destino="cataratas del niagara"
-                data-categoria="aventura"
-                data-stars="4"
-                data-precio="10000"
-                > 
-                                    
+                <!--ver-como-lista-->
+                <article class="product contenedor-tarjeta" data-destino="cataratas del niagara"
+                    data-categoria="aventura" data-stars="4" data-precio="10000">
+
                     <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/cataratasniagara.jpeg" alt="Foto de las Cataratas del Niágara">
+                        <img class="img-tarjeta" src="./images/lugares/cataratasniagara.jpeg"
+                            alt="Foto de las Cataratas del Niágara">
                     </div>
-                                        
-                    <div class="contenedor-contenido-viaje"> 
+
+                    <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">CATARATAS DEL NIÁGARA</p>
                         <p class="texto-tarjeta-valor">$10.000</p>
-                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"  
-                data-destino="chateau frontenac"
-                data-categoria="citytour"
-                data-stars="3"
-                data-precio="50000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="chateau frontenac" data-categoria="citytour"
+                    data-stars="3" data-precio="50000">
                     <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/ChateauFrontenac.jpeg" alt="Foto del Chateau Fontenac">
+                        <img class="img-tarjeta" src="./images/lugares/ChateauFrontenac.jpeg"
+                            alt="Foto del Chateau Fontenac">
                     </div>
 
                     <!--contenedor-contenido-viaje-lista-->
                     <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">CHATEAU FRONTENAC</p>
                         <p class="texto-tarjeta-valor">$50.000.-</p>
-                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"  
-                data-destino="disney"
-                data-categoria="aventura"
-                data-stars="5"
-                data-precio="15000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="disney" data-categoria="aventura"
+                    data-stars="5" data-precio="15000">
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/lugares/disney.jpg" alt="Foto de Disneyworld">
                     </div>
@@ -409,261 +400,252 @@
                     <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">DISNEYWORLD</p>
                         <p class="texto-tarjeta-valor">$15.000</p>
-                        <p class="detalle-viaje hidden">🇺🇸 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇺🇸 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
-                
+
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"   
-                data-destino="ojo de londres"
-                data-categoria="citytour"
-                data-stars="2"
-                data-precio="5000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="ojo de londres" data-categoria="citytour"
+                    data-stars="2" data-precio="5000">
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/lugares/ojodelondres.jpeg" alt="Foto del Ojo de Londres">
                     </div>
-                    
-                    <div class="contenedor-contenido-viaje"> 
+
+                    <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">OJO DE LONDRES</p>
                         <p class="texto-tarjeta-valor">$5.000</p>
-                        <p class="detalle-viaje hidden">🇬🇧 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇬🇧 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
-                
+
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta" 
-                data-destino="parque nacional banff"
-                data-categoria="montaña"
-                data-stars="4"
-                data-precio="22500"
-                >
+                <article class="product contenedor-tarjeta" data-destino="parque nacional banff"
+                    data-categoria="montaña" data-stars="4" data-precio="22500">
                     <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/parquenacionalbanff-canada.jpg" alt="Foto del Parque Nacional Banff en Canadá">
+                        <img class="img-tarjeta" src="./images/lugares/parquenacionalbanff-canada.jpg"
+                            alt="Foto del Parque Nacional Banff en Canadá">
                     </div>
 
-                    <div class="contenedor-contenido-viaje"> 
+                    <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">PARQUE NACIONAL BANFF</p>
                         <p class="texto-tarjeta-valor">$22.500</p>
-                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"  
-                data-destino="parque nacional jasper"
-                data-categoria="montaña"
-                data-stars="5"
-                data-precio="10000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="parque nacional jasper"
+                    data-categoria="montaña" data-stars="5" data-precio="10000">
                     <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/parquenacionaljasper.jpeg" alt="Foto del Parque Nacional Jasper">
+                        <img class="img-tarjeta" src="./images/lugares/parquenacionaljasper.jpeg"
+                            alt="Foto del Parque Nacional Jasper">
                     </div>
-                    
-                    <div class="contenedor-contenido-viaje"> 
+
+                    <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">PARQUE NACIONAL JASPER</p>
                         <p class="texto-tarjeta-valor">$10.000</p>
-                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"  
-                data-destino="221b baker street sherlock holmes"
-                data-categoria="citytour"
-                data-stars="4"
-                data-precio="15000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="221b baker street sherlock holmes"
+                    data-categoria="citytour" data-stars="4" data-precio="15000">
                     <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/sherlock-holmes-house.jpg" alt="Foto de 221B Baker Street, el museo de lo que fue la casa de Sherlock Holmes">
+                        <img class="img-tarjeta" src="./images/lugares/sherlock-holmes-house.jpg"
+                            alt="Foto de 221B Baker Street, el museo de lo que fue la casa de Sherlock Holmes">
                     </div>
-                    
-                    <div class="contenedor-contenido-viaje"> 
+
+                    <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">221B BAKER STREET</p>
                         <p class="texto-tarjeta-valor">$15.000</p>
-                        <p class="detalle-viaje hidden">🇬🇧 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇬🇧 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                        </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
-                    </div>
-                </article>
-                
-                <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"   
-                data-destino="puente colgante capilano vancouver"
-                data-categoria="aventura"
-                data-stars="5"
-                data-precio="8000"
-                >
-                    <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/puentecolgantecapilano-vancouver.jpeg" alt="Foto del puente colgante Capilano en Vancouver, Canadá">
-                    </div>
-                    <div class="contenedor-contenido-viaje"> 
-                        <p class="texto-tarjeta-titulo">PUENTE CAPILANO</p>
-                        <p class="texto-tarjeta-valor">$8.000</p>
-                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
-                        <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"   
-                data-destino="titlis"
-                data-categoria="montaña"
-                data-stars="2"
-                data-precio="50000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="puente colgante capilano vancouver"
+                    data-categoria="aventura" data-stars="5" data-precio="8000">
+                    <div class="contenedor-img-tarjeta">
+                        <img class="img-tarjeta" src="./images/lugares/puentecolgantecapilano-vancouver.jpeg"
+                            alt="Foto del puente colgante Capilano en Vancouver, Canadá">
+                    </div>
+                    <div class="contenedor-contenido-viaje">
+                        <p class="texto-tarjeta-titulo">PUENTE CAPILANO</p>
+                        <p class="texto-tarjeta-valor">$8.000</p>
+                        <p class="detalle-viaje hidden">🇨🇦 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
+                        <div class="contenedor-stars-tarjeta">
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                        </div>
+                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                    </div>
+                </article>
+
+                <!-- TARJETA -->
+                <article class="product contenedor-tarjeta" data-destino="titlis" data-categoria="montaña"
+                    data-stars="2" data-precio="50000">
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/lugares/titlis-suiza.jpeg" alt="Foto de Titlis, Suiza">
                     </div>
-                    
+
                     <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">TITLIS SUIZA</p>
                         <p class="texto-tarjeta-valor">$50.000</p>
-                        <p class="detalle-viaje hidden">🇨🇭 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇨🇭 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"   
-                data-destino="whiteheaven beach"
-                data-categoria="playa"
-                data-stars="4"
-                data-precio="60000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="whiteheaven beach" data-categoria="playa"
+                    data-stars="4" data-precio="60000">
                     <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/whiteheavenbeach-australia.jpeg" alt="Foto de Whiteheaven beach, en Australia">
+                        <img class="img-tarjeta" src="./images/lugares/whiteheavenbeach-australia.jpeg"
+                            alt="Foto de Whiteheaven beach, en Australia">
                     </div>
 
-                    <div class="contenedor-contenido-viaje"> 
+                    <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">WHITEHEAVEN BEACH</p>
                         <p class="texto-tarjeta-valor">$60.000</p>
-                        <p class="detalle-viaje hidden">🇳🇿 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇳🇿 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"   
-                data-destino="hogwartz express"
-                data-categoria="citytour"
-                data-stars="3"
-                data-precio="4000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="hogwartz express" data-categoria="citytour"
+                    data-stars="3" data-precio="4000">
                     <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/hogwartzexpress.jpg" alt="Foto del tren Howartz Express, plataforma 9 3/4">
+                        <img class="img-tarjeta" src="./images/lugares/hogwartzexpress.jpg"
+                            alt="Foto del tren Howartz Express, plataforma 9 3/4">
                     </div>
-                    
-                    <div class="contenedor-contenido-viaje"> 
+
+                    <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">HOGWARTZ EXPRESS</p>
                         <p class="texto-tarjeta-valor">$4.000</p>
-                        <p class="detalle-viaje hidden">🇬🇧 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇬🇧 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta"   
-                data-destino="opera sidney australia"
-                data-categoria="otros"
-                data-stars="1"
-                data-precio="12000"
-                >
+                <article class="product contenedor-tarjeta" data-destino="opera sidney australia" data-categoria="otros"
+                    data-stars="1" data-precio="12000">
                     <div class="contenedor-img-tarjeta">
-                        <img class="img-tarjeta" src="./images/lugares/operadesidney.jpeg" alt="Foto de la ópera de Sidney, australia">
+                        <img class="img-tarjeta" src="./images/lugares/operadesidney.jpeg"
+                            alt="Foto de la ópera de Sidney, australia">
                     </div>
 
                     <div class="contenedor-contenido-viaje">
                         <p class="texto-tarjeta-titulo">ÓPERA DE SIDNEY</p>
                         <p class="texto-tarjeta-valor">$12.000</p>
-                        <p class="detalle-viaje hidden">🇳🇿 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea consequatur, officia corporis provident?</p>
+                        <p class="detalle-viaje hidden">🇳🇿 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Minima, voluptatem error repudiandae maxime porro iste sit enim quo quas eveniet ea
+                            consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
-                            <!-- ESTRELLAS -->                                
-                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
-                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png"/>
+                            <!-- ESTRELLAS -->
+                            <img class="star-icon" src="https://img.icons8.com/plasticine/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
+                            <img class="star-icon" src="https://img.icons8.com/carbon-copy/100/000000/starfish.png" />
                         </div>
                         <button id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
-                
+
             </div>
         </div>
 
@@ -674,7 +656,8 @@
         <div class="contenedor-footer">
             <div class="firma-footer">
                 <img src="./images/gettingthere.svg" class="img-logo-footer" alt="logo-getting-there">
-                <p class="texto-footer"><span class="span-footer"> Getting there!</span> ~ Gracias por visitarnos! 🧉</p>
+                <p class="texto-footer"><span class="span-footer"> Getting there!</span> ~ Gracias por visitarnos! 🧉
+                </p>
             </div>
             <p>🇦🇷 🇨🇦 🇺🇸 🇬🇧 🇳🇿 🇨🇭</p>
         </div>
@@ -685,11 +668,12 @@
         <a href="https://icons8.com/icon/xKm_QFedMmWy/starfish">Starfish icon by Icons8</a> 
         <a target="_blank" href="https://icons8.com/icons/set/shopping-cart">Shopping Cart icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
     -->
-    
+
 
     <!-- JAVASCRIPT -->
     <script src="main.js"></script>
     <!-- @Luzyla -->
 
 </body>
+
 </html>

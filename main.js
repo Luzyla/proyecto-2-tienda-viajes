@@ -1,6 +1,12 @@
 /*----------------------------------------
         VARIABLES CONSTANTES
 ---------------------------------------- */
+// FOCUS tabindex
+// document.getElementsByTagName('div')[0].focus();
+// console.log(document.getElementsByTagName('div')[0].focus();
+
+// document.getElementById("myAnchor3").tabIndex = "1";
+
 // CARRITO
 const carrito = document.querySelector(".contenedor-carrito")
 const menuCarrito = document.getElementById("carrito-menu")
@@ -62,7 +68,7 @@ carrito.onclick = () => {
     menuCarrito.classList.add("mostrar")
     overlay.classList.add("mostrar")
     cuerpo.classList.add("agrega-overflow")
-
+    modificaSignoTabIndex() // hacer función que cambie de negativo a positivo y viceversa
 }
 
 cerrarCarrito.onclick = () => {
@@ -131,66 +137,91 @@ const sumarDescuento = (sumaProductos, porcentaje) => {
 }
 
 /*----------------------------------------
-        VER COMO GRILLA O LISTA
+            VER COMO LISTA
 ---------------------------------------- */
 verComoLista.onclick = () => {
-    agregaClasesATodasLasTarjetas()
+    agregaClaseATodasLasTarjetas()
+    agregaClaseALasImagenesDeLasTarjetas()
+    agregaClaseALosContenedoresDeImagenesDeLasTarjetas()
+    agregaClaseAlContenedorDeInfoDeLasTarjetas()
+    eliminaClaseDescripciónDeLasTarjetas()
 }
 
-const agregaClasesATodasLasTarjetas = () => {
+const agregaClaseATodasLasTarjetas = () => {
     for (let viaje of todosLosViajes) {
         viaje.classList.add("ver-como-lista")
     }
+}
 
+const agregaClaseALasImagenesDeLasTarjetas = () => {
     for (let foto of todasLasFotosDeViajes) {
         foto.classList.add("img-como-lista")
     }
+}
 
+const agregaClaseALosContenedoresDeImagenesDeLasTarjetas = () => {
     for (let contenedor of contenedorDeTodasLasFotos) {
         contenedor.classList.add("margen-como-lista")
-    }
+    }    
+}
 
+const agregaClaseAlContenedorDeInfoDeLasTarjetas = () => {
     for (let info of contenedorDeLaInfo) {
         info.classList.add("contenedor-contenido-viaje-lista")
-    }
+    }    
+}
 
+const eliminaClaseDescripciónDeLasTarjetas = () => {
     for (let descripcion of contenedorDescripciones) {
         descripcion.classList.remove("hidden")
-    }
+    }    
 }
 
+/*----------------------------------------
+            VER COMO GRILLA
+---------------------------------------- */
 verComoGrilla.onclick = () => {
-    eliminaClasesATodasLasTarjetas()
+    eliminaClaseATodasLasTarjetas()
+    eliminaClaseALasImagenesDeLasTarjetas()
+    eliminaClaseALosContenedoresDeImagenesDeLasTarjetas()
+    eliminalaseAlContenedorDeInfoDeLasTarjetas()
+    agregaClaseDescripciónDeLasTarjetas()
 }
 
-const eliminaClasesATodasLasTarjetas = () => {
+const eliminaClaseATodasLasTarjetas = () => {
     for (let viaje of todosLosViajes) {
         viaje.classList.remove("ver-como-lista")
     }
+}
 
+const eliminaClaseALasImagenesDeLasTarjetas = () => {
     for (let foto of todasLasFotosDeViajes) {
         foto.classList.remove("img-como-lista")
     }
+}
 
+const eliminaClaseALosContenedoresDeImagenesDeLasTarjetas = () => {
     for (let contenedor of contenedorDeTodasLasFotos) {
         contenedor.classList.remove("margen-como-lista")
     }
+}
 
+const eliminalaseAlContenedorDeInfoDeLasTarjetas = () => {
     for (let info of contenedorDeLaInfo) {
         info.classList.remove("contenedor-contenido-viaje-lista")
     }
+}
 
+const agregaClaseDescripciónDeLasTarjetas = () => {
     for (let descripcion of contenedorDescripciones) {
         descripcion.classList.add("hidden")
     }
 }
 
+
 /*----------------------------------------
         FILTROS DE BÚSQUEDA
 ---------------------------------------- */
-
-
-
 const filtrarViajes = () => {
     for (let viaje of todosLosViajes) {
         if (pasaFiltros(card)) {
