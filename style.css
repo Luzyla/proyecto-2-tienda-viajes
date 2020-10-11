@@ -214,7 +214,7 @@ h1 {
     opacity: 0.4;
     position: absolute;
     top: 0;
-    right: -110%;
+    right: -110vw;
     z-index: 3;
 }
 
@@ -227,8 +227,8 @@ h1 {
     align-items: center;
     background-color: #fafafa;
     position: absolute;
-    top: 25%;
-    right: -110%;
+    top: 25vh;
+    right: -110vw;
     z-index: 4;
     transition: 0.8s;
 }
@@ -251,7 +251,6 @@ h1 {
     top: 0;
     right: -110%; 
     z-index: 3;
-    /* overflow: hidden;  */
 }
 
 .contenedor-titulo-checkout {
@@ -272,23 +271,23 @@ h1 {
     z-index: 4;
     padding: 25px;
     transition: 1.5s;
-    /* overflow: hidden;  */
 }
 
 .modal-formularios {
     display: flex;
     flex-direction: row;
+    flex-basis: 65%;
 }
 
 .contenedor-formulario-confirmar-compra {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* overflow: hidden;  */
 }
 
 .datos-personales {
-    width: 40%;
+    flex-basis: 30%;
+    flex-direction: column;
     margin: 20px;
 }
 
@@ -306,7 +305,7 @@ hr {
 }
 
 .resumen-compra {
-    width: 50%;
+    flex-basis: 45%;
     background-color: rgba(55, 73, 87, 0.1);
     padding: 25px;
 }
@@ -323,10 +322,12 @@ hr {
 }
 
 .etiquetas-datos-personales {
-    margin-top: 10px;
+    margin: 10px 5px 5px 5px;
 }
 
 .espacio-datos-personales {
+    
+    height: 30px;
     border: none;
     border-bottom: 1px solid #424242;
     padding: 5px;
@@ -609,6 +610,11 @@ poner ID a todos los elementos para llamarlos desde JS*/
     right: 0;
 }
 
+.mostrar2 {
+    top: 25vh;
+    right: 30vw;
+}
+
 .hidden {
     display: none;
 }
@@ -632,3 +638,19 @@ poner ID a todos los elementos para llamarlos desde JS*/
     color: #374957; /* AÑIL */
 }
 
+/* @media puntos de quiebre:
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */

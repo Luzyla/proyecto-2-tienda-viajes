@@ -17,6 +17,13 @@ const botonComprar = document.getElementById("boton-comprar")
 const botonVaciar = document.getElementById("boton-vaciar")
 const cuerpo = document.getElementById("cuerpo-html")
 
+// CONFIRMA VACIAR CARRITO
+const overlayVaciar = document.getElementById("fondo-overlay-vaciar")
+const confirmacionPopUp = document.getElementById("contenedor-vaciar-carrito")
+const botonCancelar = document.getElementById("boton-cancelar")
+const botonConfirmaVaciar = document.getElementById("boton-vaciar-carrito")
+
+
 // FILTRO X CATEGORIA
 const filtroCategorias = document.querySelectorAll(".filtro-categoria")
 const articles = document.querySelectorAll(".product")
@@ -61,14 +68,14 @@ const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
 
 
 /*----------------------------------------
-        VER COMO GRILLA O LISTA
+        CARRITO ON CLICK
 ---------------------------------------- */
 // CARRITO MENÚ DESPLEGABLE
 carrito.onclick = () => {
     menuCarrito.classList.add("mostrar")
     overlay.classList.add("mostrar")
     cuerpo.classList.add("agrega-overflow")
-    modificaSignoTabIndex() // hacer función que cambie de negativo a positivo y viceversa
+    //modificaSignoTabIndex() // hacer función que cambie de negativo a positivo y viceversa
 }
 
 cerrarCarrito.onclick = () => {
@@ -78,9 +85,35 @@ cerrarCarrito.onclick = () => {
 }
 
 /*----------------------------------------
-        VER COMO GRILLA O LISTA
+            VACIAR CARRITO
+// ---------------------------------------- */
+// const overlayVaciar = document.getElementById("fondo-overlay-vaciar")
+// const confirmacionPopUp = document.getElementById("contenedor-vaciar-carrito")
+// const botonCancelar = document.getElementById("boton-cancelar")
+// const botonConfirmaVaciar = document.getElementById("boton-vaciar-carrito")
+botonVaciar.onclick = () => {
+    confirmacionPopUp.classList.add("mostrar2")
+    overlayVaciar.classList.add("mostrar")
+    // modificar tabindex a numero negativo
+}
+
+botonConfirmaVaciar.onclick = () => {
+    // eliminar elementos del carrito
+    confirmacionPopUp.classList.remove("mostrar2")
+    overlayVaciar.classList.remove("mostrar")
+    // modificar tabindex a numero negativo
+    
+}
+
+botonCancelar.onclick = () => {
+    confirmacionPopUp.classList.remove("mostrar2")
+    overlayVaciar.classList.remove("mostrar")
+    // modificar tabindex a numero negativo
+}
+
+/*----------------------------------------
+                CHECKOUT
 ---------------------------------------- */
-// CHECKOUT
 botonComprar.onclick = () => {
     confirmarCompra.classList.add("mostrar")
     overlay2.classList.add("mostrar")
