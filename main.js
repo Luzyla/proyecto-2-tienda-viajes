@@ -102,7 +102,7 @@ botonConfirmaVaciar.onclick = () => {
     confirmacionPopUp.classList.remove("mostrar2")
     overlayVaciar.classList.remove("mostrar")
     // modificar tabindex a numero negativo
-    
+   
 }
 
 botonCancelar.onclick = () => {
@@ -155,7 +155,7 @@ const sumarRecargo = (sumaProductos, porcentaje) => {
 
 checkboxEnvio.oninput = () => {
     conEnvio.classList.toggle("hidden")
-    valorEnvio.textContent = "100"
+    // valorEnvio.innerHTML = Number(100)
 }
 
 checkboxDescuento.oninput = () => {
@@ -315,10 +315,6 @@ for (let checkbox of filtroPuntajes) {
             
     };
 }
-
-    
-     
-
 
 
 
