@@ -165,3 +165,49 @@ for (let radio of filtroSexo) {
   }
 }
      
+/*----------------------------------------------
+            CÓDIGO SOY LUCILA
+----------------------------------------------*/
+
+const soyLucila = () => {
+  projectManager()
+  scrumMaster()
+  frontEndDeveloper()
+  softSkills()
+  techSkills()
+}
+
+const projectManager = () => {
+  experienciaLaboral.textContent = "5 años y medio"
+}
+
+const scrumMaster = () => {
+  experienciaLaboral.textContent = "6 meses"
+}
+
+const frontEndDeveloper = () => {
+  experiencia.textContent = "7 meses"
+  return `Más detalles en GitHub https://github.com/luzyla`
+}
+
+
+const softSkills = () => {
+  return ` ${highlyOrganized} and ${efficient}, ${attractedToChallenges}, 
+    ${leadershipAndTeamwork}, ${selfTaught}, ${adaptableToChanges}, 
+    ${creativeProblemSolving}, and ${resiliency} `
+}
+
+const techSkills = () => {
+  return ` ${MS-Office-Excel-Word-PowerPoint-Outlook}, ${MS-Project}, 
+    ${trello}, ${jira}, ${git}, ${msVisio}, ${MS-PowerBI}, ${MS-Teams},
+    ${googleDriveAndDocs}, ${confluence}, ${gantt}, ${scrum}, ${slack},
+    ${HTML5}, ${CSS3}, ${javaScript}, ${SO-Windows}, and ${SO-Linux}`
+}
+
+
+
+
+
+
+
+

@@ -22,15 +22,13 @@
         <div class="contenedor-header">
             <div class="contenedor-logo">
                 <img src="./images/gettingthere.svg" class="img-logo"
-                    alt="El logo de Gettin there! es un globoterráqueo con diferentes puntos marcados, queriendo figurar los destinos a los que queremos llegar y conocer.">
+                    alt="Logo de Gettin there! es un globoterráqueo con diferentes puntos marcados, queriendo figurar los destinos a los que queremos llegar y conocer.">
                 <h1 class="texto-logo">Getting there!</h1>
             </div>
 
             <div class="contenedor-carrito" id="">
                 <input type="image" name="carrito" style="width: 35px;" class="img-carrito"
-                    src="./images/icons8-shopping-cart-80.png"
-                    alt="Botón que permite ingresar al carrito de compras para visualizar su contenido"
-                    tabindex="1">
+                    src="./images/icons8-shopping-cart-80.png" alt="Botón de acceso al carrito de compras" tabindex="1">
                 <p class="texto-carrito" id="items-carrito">Carrito (0 Items)</p>
             </div>
         </div>
@@ -47,9 +45,7 @@
             <div class="carrito-titulo">
                 <h2>Carrito</h2>
                 <input type="image" name="cerrar-carrito" style="width: 35px;" id="cerrar" class="equis"
-                    src="./images/icons8-close-window-100.png" alt="Botón para cerrar el carrito"
-                    tabindex="-1"
-                >
+                    src="./images/icons8-close-window-100.png" alt="Botón que cierra el carrito" tabindex="-1">
             </div>
 
             <p class="cantidad-productos-agregados"><span id="numero-productos-agregados">0</span> producto(s)
@@ -62,8 +58,8 @@
                 <h4>Subtotal $<span id="subtotal-carrito">0</span></h4>
 
                 <div class="contenedor-botones-carrito">
-                    <button id="boton-vaciar" class="button-empty button-basic" tabindex="-1">VACIAR</button>
-                    <button id="boton-comprar" class="button-buy button-basic" tabindex="-1">COMPRAR</button>
+                    <button aria-label="botón vaciar" id="boton-vaciar" class="button-empty button-basic" tabindex="-1">VACIAR</button>
+                    <button aria-label="botón comprar" id="boton-comprar" class="button-buy button-basic" tabindex="-1">COMPRAR</button>
                 </div>
             </div>
         </div>
@@ -72,15 +68,16 @@
 
     <!-- CONFIRMA VACIAR CARRITO -->
     <div class="overlay-confirma-vaciar" id="overlay-vaciar-carrito">
-    
+
         <div class="overlay-fondo-confirma-vaciar" id="fondo-overlay-vaciar" tabindex="-1">
         </div>
-        
+
         <div class="contenedor-confirma-vaciar" id="contenedor-vaciar-carrito" tabindex="-1">
             <p class="texto-vaciar-carrito">Estás por vaciar el carrito, ¿quieres continuar?</p>
             <div class="contenedor-botones-carrito">
-                <button id="boton-cancelar" class="button-cancel button-basic" tabindex="-1">CANCELAR</button>
-                <button id="boton-vaciar-carrito" class="button-empty button-basic button-confirma" tabindex="-1">VACIAR</button>
+                <button aria-label="boton cancelar" id="boton-cancelar" class="button-cancel button-basic" tabindex="-1">CANCELAR</button>
+                <button aria-label="boton vaciar" id="boton-vaciar-carrito" class="button-empty button-basic button-confirma"
+                    tabindex="-1">VACIAR</button>
             </div>
         </div>
 
@@ -97,9 +94,7 @@
             <div class="contenedor-titulo-checkout">
                 <h2>Checkout</h2>
                 <input type="image" name="cerrar-checkout" style="width: 35px;" id="cerrar-checkout" class="equis"
-                    src="./images/icons8-close-window-100.png" alt="Botón para cerrar el checkout" 
-                    tabindex="-1"
-                >
+                    src="./images/icons8-close-window-100.png" alt="Botón Cerrar el checkout" tabindex="-1">
             </div>
 
             <div class="modal-formularios">
@@ -112,15 +107,13 @@
                         <h3>Datos personales</h3>
 
                         <label for="nombre" class="etiquetas-datos-personales">Nombre y apellido*
-                            <input type="text" class="espacio-datos-personales" name="nombre" id="nombre"
-                                placeholder="ej. Ada Lovelace" tabindex="-1" required
-                            >
+                            <input type="text" aria-labelledby="Completar con nombre y apellido" class="espacio-datos-personales" name="nombre" id="nombre"
+                                placeholder="ej. Ada Lovelace" tabindex="-1" required>
                         </label>
 
                         <label for="mail" class="etiquetas-datos-personales">Email*
-                            <input type="email" class="espacio-datos-personales" name="mail" id="mail"
-                                placeholder="ej. adalovelace@gmail.com" tabindex="-1" required
-                            >
+                            <input type="email" aria-labelledby="Completar con email" class="espacio-datos-personales" name="mail" id="mail"
+                                placeholder="ej. adalovelace@gmail.com" tabindex="-1" required>
                         </label>
 
                     </div>
@@ -132,22 +125,23 @@
                         <h3>Opciones de pago</h3>
 
                         <label for="efectivo-debito">
-                            <input type="radio" name="pago" id="efectivo-debito" value="efectivo-debito"  tabindex="-1" checked>
+                            <input type="radio" aria-labelledby="Seleccionar pago en efectivo" name="pago" id="efectivo-debito" value="efectivo-debito" tabindex="-1"
+                                checked>
                             Efectivo / Débito
                         </label>
 
                         <label for="tarjeta">
-                            <input type="radio" name="pago" id="tarjeta" value="tarjeta" tabindex="-1">
+                            <input type="radio" aria-labelledby="Seleccionar pago con tarjeta de crédito" name="pago" id="tarjeta" value="tarjeta" tabindex="-1">
                             Tarjeta de crédito
                         </label>
 
                         <label for="envio">
-                            <input type="checkbox" name="envio" id="envio" tabindex="-1">
+                            <input type="checkbox" aria-labelledby="Agregar envío" name="envio" id="envio" tabindex="-1">
                             Necesito envío
                         </label>
 
                         <label for="dto">
-                            <input type="checkbox" name="descuento" id="dto" tabindex="-1">
+                            <input type="checkbox" aria-labelledby="Seleccionar para aplicar descuento" name="descuento" id="dto" tabindex="-1">
                             Tengo tarjeta de descuento [15%]
                         </label>
 
@@ -176,8 +170,8 @@
             </div>
 
             <div class="contenedor-botones-checkout">
-                <button class="button-basic" id="button-buying" tabindex="-1">SEGUIR COMPRANDO</button>
-                <button class="button-buy button-basic" id="button-ends" tabindex="-1">FINALIZAR</button>
+                <button aria-labelledby="botón seguir comprando" class="button-basic" id="button-buying" tabindex="-1">SEGUIR COMPRANDO</button>
+                <button aria-labelledby="botón finalizar" class="button-buy button-basic" id="button-ends" tabindex="-1">FINALIZAR</button>
             </div>
         </div>
 
@@ -201,13 +195,13 @@
 
     <section class="seccion-principal">
 
-        <div class="aside">
+        <div class="aside" aria-describedby="filtros para buscar viajes">
             <!-- FILTROS -->
             <div class="aside-filtros">
                 <h4>FILTROS</h4>
                 <div class="contenedor-boton-limpiar">
                     <label for="trash" class="texto-limpiar">
-                        <input type="image" name="trash" src="./images/icons8-trash2.svg"
+                        <input aria-labelledby="limpiar filtros" type="image" name="trash" src="./images/icons8-trash2.svg"
                             style="width: 25px; height: 25px;" class="trash">
                         Limpiar
                     </label>
@@ -222,11 +216,10 @@
                     <div class="contenedor-filtro-busqueda">
                         <label for="search">
                             <h4>BÚSQUEDA</h4>
-                            <input type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje"
-                                id="search"
-                            >
+                            <input aria-labelledby="Buscá tu viaje" type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje"
+                                id="search">
                         </label>
-                        <input type="image" name="lupita" style="width: 30px;" src="./images/icons8-search.svg"
+                        <input aria-hidden="true" type="image" name="lupita" style="width: 30px;" src="./images/icons8-search.svg"
                             alt="search-icon" class="lupita" tabindex="-1">
                     </div>
 
@@ -234,23 +227,23 @@
                     <div class="contenedor-filtro-categoria">
                         <h4>CATEGORÍA</h4>
 
-                        <label class="filtro-categoria" for="idaventure" data-categoria="aventura">
+                        <label aria-labelledby="categoría aventura" class="filtro-categoria" for="idaventure" data-categoria="aventura">
                             <input type="checkbox" name="uno" id="idaventure">
                             AVENTURA</label>
 
-                        <label class="filtro-categoria" for="idcitytour" data-categoria="citytour">
+                        <label aria-labelledby="categoría city tour" class="filtro-categoria" for="idcitytour" data-categoria="citytour">
                             <input type="checkbox" name="dos" id="idcitytour">
                             CITY TOUR</label>
 
-                        <label class="filtro-categoria" for="idmountain" data-categoria="montaña">
+                        <label aria-labelledby="categoría montaña" class="filtro-categoria" for="idmountain" data-categoria="montaña">
                             <input type="checkbox" name="tres" id="idmountain">
                             MONTAÑA</label>
 
-                        <label class="filtro-categoria" for="idbeach" data-categoria="playa">
+                        <label aria-labelledby="categoría playa" class="filtro-categoria" for="idbeach" data-categoria="playa">
                             <input type="checkbox" name="cuatro" id="idbeach">
                             PLAYA</label>
 
-                        <label class="filtro-categoria" for="idotros" data-categoria="otros">
+                        <label aria-labelledby="categoría otros" class="filtro-categoria" for="idotros" data-categoria="otros">
                             <input type="checkbox" name="cinco" id="idotros">
                             OTROS</label>
 
@@ -262,7 +255,7 @@
 
                         <!-- CINCO ESTRELLAS -->
                         <label for="idfive-stars">
-                            <input type="checkbox" name="five-stars" id="idfive-stars" class="filtro-puntaje"
+                            <input aria-labelledby="puntaje de cinco estrellas" type="checkbox" name="five-stars" id="idfive-stars" class="filtro-puntaje"
                                 data-stars="5">
                             <img class="star-icon" src="./images/icons8-starfish-100.png" />
                             <img class="star-icon" src="./images/icons8-starfish-100.png" />
@@ -274,49 +267,49 @@
 
                         <!-- CUATRO ESTRELLAS -->
                         <label for="idfour-stars">
-                            <input type="checkbox" value="CONSOLAS" name="four-stars" id="idfour-stars"
+                            <input aria-labelledby="puntaje de cuatro estrellas" type="checkbox" value="CONSOLAS" name="four-stars" id="idfour-stars"
                                 class="filtro-puntaje" data-stars="4">
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             (4)
                         </label>
 
                         <!-- TRES ESTRELLAS -->
                         <label for="idthree-stars">
-                            <input type="checkbox" value="CONSOLAS" name="three-stars" id="idthree-stars"
+                            <input aria-labelledby="puntaje de tres estrellas" type="checkbox" value="CONSOLAS" name="three-stars" id="idthree-stars"
                                 class="filtro-puntaje" data-stars="3">
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             (3)
                         </label>
 
                         <!-- DOS ESTRELLAS -->
                         <label for="idtwo-stars">
-                            <input type="checkbox" value="CONSOLAS" name="two-stars" id="idtwo-stars"
+                            <input aria-labelledby="puntaje de dos estrellas" type="checkbox" value="CONSOLAS" name="two-stars" id="idtwo-stars"
                                 class="filtro-puntaje" data-stars="2">
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             (2)
                         </label>
 
                         <!-- UNA ESTRELLA -->
                         <label for="idone-star">
-                            <input type="checkbox" value="CONSOLAS" name="one-stars" id="idone-star"
+                            <input aria-labelledby="puntaje de una estrella" type="checkbox" value="CONSOLAS" name="one-stars" id="idone-star"
                                 class="filtro-puntaje" data-stars="1">
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             (1)
                         </label>
 
@@ -334,8 +327,7 @@
         <div class="seccion-viajes">
             <nav class="barra-viajes">
                 <div class="mostrando-busqueda">
-                    <p>Mostrando <span id="mostrando-busqueda-viajes">12</span> viaje(s) de <span
-                            id="mostrando-total-viajes">12</span></p>
+                    <p id="mostrando-busqueda-viajes">Mostrando 12 viaje(s) de 12</p>
                 </div>
 
                 <div class="ver-como">
@@ -358,7 +350,7 @@
 
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/lugares/cataratasniagara.jpeg"
-                            alt="Foto de las Cataratas del Niágara">
+                            alt="Cataratas del Niágara">
                     </div>
 
                     <div class="contenedor-contenido-viaje">
@@ -369,13 +361,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -396,13 +388,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -421,13 +413,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -446,13 +438,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -472,13 +464,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -498,13 +490,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -524,13 +516,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -549,13 +541,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -574,13 +566,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -600,13 +592,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -626,13 +618,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 
@@ -652,13 +644,13 @@
                             consequatur, officia corporis provident?</p>
                         <div class="contenedor-stars-tarjeta">
                             <!-- ESTRELLAS -->
-                            <img class="star-icon" src="./images/icons8-starfish-100.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
-                            <img class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
+                            <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                         </div>
-                        <button id="buy-item" class="button-basic">COMPRAR</button>
+                        <button aria-labelledby="botón comprar" id="buy-item" class="button-basic">COMPRAR</button>
                     </div>
                 </article>
 

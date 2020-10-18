@@ -345,3 +345,24 @@ for (let checkbox of filtroPuntajes) {
 //     }
 // }
 //console.log(filtroDestino.value)
+
+
+/*----------------------------------------
+------------------------------------------
+        FILTROS FUNCIONALIZADOS
+------------------------------------------
+----------------------------------------*/
+
+const pasaFiltroInput = (viaje) => {
+    if (hayAlgoEscritoEnElInput()) {
+        if (compararInputConViaje(viaje)) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    else {
+        return true
+    }
+}
