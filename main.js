@@ -27,12 +27,16 @@ const botonConfirmaVaciar = document.getElementById("boton-vaciar-carrito")
 // FILTRO X CATEGORIA
 const filtroCategorias = document.querySelectorAll(".filtro-categoria input")
 const viajes = document.querySelectorAll(".product")
-
 // FILTRO X STARS
 const filtroPuntajes = document.querySelectorAll(".filtro-puntaje")
-
 // FILTRO X INPUT
 const search = document.getElementById("search")
+// LIMPIAR FILTROS
+const trash = document.getElementById("cleaning-filters")
+// TEXTO MOSTRANDO VIAJES BUSCADOS
+const mostrarViajes = document.getElementById("mostrando-busqueda-viajes")
+let viajesFiltrados = 0
+
 
 // CHECKOUT COMPRA
 const confirmarCompra = document.querySelector(".contenedor-confirmar-compra")
@@ -428,13 +432,35 @@ const pasaFiltroStars = (viaje) => {
 // console.log("Filtro Stars")
 // console.log(pasaFiltroStars())
 
+/* ------------------------------- 
+            REVISAR 
+--------------------------------*/
+// MOSTRAR CANTIDAD VIAJES FILTRADOS (problema: suma cada vez que busca, aunque no haya viajes filtrados)
+const mostrarCantidadDeviajes = () => {
+    for (let viaje of todosLosViajes) {
+        mostrarViajes.textContent = `Mostrando ${viajesFiltrados} viaje(s) de ${todosLosViajes.length}`
+    }
+}
+
+
 // FILTROS SIMULTANEOS 
 const pasaTodosLosFiltros = (viaje) => {
     if (pasaFiltroInput(viaje) && pasaFiltroCategoria(viaje) && pasaFiltroStars(viaje)) {
+        viajesFiltrados++
+        mostrarCantidadDeviajes()
         return true
     }
     else {
         return false
     }
 }
+
+// LIMPIAR TODOS LOS FILTROS
+trash.onclick = () => {
+    document.getElementById("filters-form").reset()
+    for (let viaje of todosLosViajes) {
+        viaje.classList.remove("hidden")
+    }
+}
+
 
