@@ -61,6 +61,7 @@ label {
 
 .button-basic:hover {
     background-color: #eaeaea;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button-buy:hover {
@@ -326,7 +327,6 @@ hr {
 }
 
 .espacio-datos-personales {
-    
     height: 30px;
     border: none;
     border-bottom: 1px solid #424242;
@@ -351,7 +351,11 @@ hr {
 }
 
 .img-banner {
-    height: 100%;
+    max-width: 100vw;
+    height: auto;
+    object-fit: cover;
+    -o-object-fit: cover;
+    
 }
 
 .contenedor-texto-banner {
@@ -503,20 +507,30 @@ hr {
     border: 1px solid #37495760;
     align-items: center;
     margin: 10px;
-    flex-basis: 3;
+    /* flex-basis: 3; */
 }
 
 .contenedor-img-tarjeta {
-    /* flex-basis: 1; */
     margin-top: 20px;
     
+}
+
+.contenedor-tarjeta:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .img-tarjeta {
     width: 250px;
     height: 165px;
     overflow: hidden;
+    transition: 0.5s;
+    
 }
+
+.img-tarjeta:hover {
+    transform: scale(117.5%);
+}
+
 
 .texto-tarjeta-titulo {
     font-size: 25px;
