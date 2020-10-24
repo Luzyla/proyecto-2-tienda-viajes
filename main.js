@@ -25,7 +25,7 @@ const botonConfirmaVaciar = document.getElementById("boton-vaciar-carrito")
 
 
 // FILTRO X CATEGORIA
-const filtroCategorias = document.querySelectorAll(".filtro-categoria")
+const filtroCategorias = document.querySelectorAll(".filtro-categoria input")
 const viajes = document.querySelectorAll(".product")
 
 // FILTRO X STARS
@@ -69,7 +69,6 @@ const contenedorDescripciones = document.querySelectorAll(".detalle-viaje")
 // TODAS LAS TARJETAS DE VIAJES
 const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
 
-
 /*----------------------------------------
         CARRITO ON CLICK
 ---------------------------------------- */
@@ -80,7 +79,7 @@ carrito.onclick = () => {
     cuerpo.classList.add("agrega-overflow")
     // overlay.innerHTML = `tabindex="1"`
     //modificaSignoTabIndex() // hacer función que cambie de negativo a positivo y viceversa
-}
+};
 
 cerrarCarrito.onclick = () => {
     menuCarrito.classList.remove("mostrar")
@@ -138,6 +137,7 @@ botonSeguirComprando.onclick = () => {
     cuerpo.classList.remove("agrega-overflow")
 }
 
+console.log(confirmarCompra)
 /*----------------------------------------
         VER COMO GRILLA O LISTA
 ---------------------------------------- */
@@ -255,12 +255,33 @@ const agregaClaseDescripciónDeLasTarjetas = () => {
     }
 }
 
+console.log(cerrarCheckout)
 
 /*----------------------------------------
 ------------------------------------------
     FILTROS DE BÚSQUEDA FUNCIONALIZADOS
 ------------------------------------------
 ----------------------------------------*/
+// PEQUEÑAS f(x)
+const ocultarDestino = (viaje) => {
+    return viaje.classList.add("hidden")
+}
+  
+const mostrarDestino = (viaje) => {
+    return viaje.classList.remove("hidden")
+}
+
+const filtrarDestinos = () => {
+    for (let viaje of todosLosViajes) {
+        if (pasaTodosLosFiltros(viaje)) {
+            mostrarDestino(viaje)
+        }
+        else {
+            ocultarDestino(viaje)
+        }
+    }
+}
+
 // FILTROS
 search.oninput = () => {
     filtrarDestinos()
@@ -334,8 +355,12 @@ const hayAlgunaCategoriaChequeada = () => {
 
 const compararCategoriaConDestino = (viaje) => {
     if (hayAlgunaCategoriaChequeada()) {
-        if (viaje.dataset.categoria === checkboxCategoria.value) {
-            return true
+        for (let checkboxCategoria of filtroCategorias) {
+            if (checkboxCategoria.checked) {
+                if (checkboxCategoria.value === viaje.dataset.categoria) {
+                    return true
+                }
+            }
         }
     }
     return false
@@ -373,8 +398,12 @@ const hayAlgunaStarChequeada = () => {
 
 const compararStarConDestino = (viaje) => {
     if (hayAlgunaStarChequeada()) {
-        if (checkboxStar.dataset.stars === viaje.dataset.stars) {
-            return true
+        for (let checkboxStar of filtroPuntajes) {
+            if (checkboxStar.checked) {
+                if (checkboxStar.value === viaje.dataset.stars) {
+                    return true
+                }
+            }
         }
     }
     return false
@@ -408,35 +437,4 @@ const pasaTodosLosFiltros = (viaje) => {
         return false
     }
 }
-
-// PEQUEÑAS f(x)
-const ocultarDestino = (viaje) => {
-    return viaje.classList.add("hidden")
-}
-  
-const mostrarDestino = (viaje) => {
-    return viaje.classList.remove("hidden")
-}
-
-const filtrarDestinos = () => {
-    for (let viaje of todosLosViajes) {
-        if (pasaTodosLosFiltros(viaje)) {
-            mostrarDestino(viaje)
-        }
-        else {
-            ocultarDestino(viaje)
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 
