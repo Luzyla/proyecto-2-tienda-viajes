@@ -245,12 +245,12 @@ h1 {
             CHECKOUT COMPRA
 ----------------------------------------------*/
 .overlay-fondo-modal {
+    width: 100vw;
+    height: 100vh;
     background-color: #424242;
     opacity: 0.4;
-    flex-basis: 1;
-    height: 100vh;
     position: absolute;
-    top: 0;
+    top: -80px;
     right: -110%; 
     z-index: 3;
 }
@@ -262,17 +262,17 @@ h1 {
 }
 
 .contenedor-confirmar-compra {
-    flex-basis: 1.5;
+    width: 65vw;
     height: 100vh;
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 0;
+    top: -78px;
     right: -2000px;
     z-index: 4;
     padding: 25px;
-    transition: 1.5s;
+    transition: 1s;
 }
 
 .modal-formularios {
@@ -333,8 +333,6 @@ hr {
     padding: 5px;
     margin-bottom: 10px;
 }
-
-
 
 /*----------------------------------------------
                     BANNER
@@ -554,6 +552,7 @@ hr {
 ----------------------------------------------*/
 .seccion-footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color:  rgba(55, 73, 87, 0.1);
 }
@@ -565,13 +564,13 @@ hr {
     margin: 15px 0;  
 }
 
-.firma-footer {
+.firma-footer, .contenedor-mi-firma {
     display: flex;
     justify-content: center;
     padding: 15px;
 }
 
-.texto-footer {
+.texto-footer, .txt-mi-firma {
     font-size: 22px;
     margin-top: 5px;
 }
@@ -624,9 +623,14 @@ poner ID a todos los elementos para llamarlos desde JS*/
     right: 0;
 }
 
-.mostrar2 {
+.mostrar-confirma {
     top: 25vh;
     right: 30vw;
+}
+
+.mostrar-checkout {
+    top: -80px;
+    right: 0;
 }
 
 .hidden {

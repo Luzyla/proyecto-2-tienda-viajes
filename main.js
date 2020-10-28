@@ -35,8 +35,6 @@ const search = document.getElementById("search")
 const trash = document.getElementById("cleaning-filters")
 // TEXTO MOSTRANDO VIAJES BUSCADOS
 const mostrarViajes = document.getElementById("mostrando-busqueda-viajes")
-let viajesFiltrados = 0
-
 
 // CHECKOUT COMPRA
 const confirmarCompra = document.querySelector(".contenedor-confirmar-compra")
@@ -73,6 +71,11 @@ const contenedorDescripciones = document.querySelectorAll(".detalle-viaje")
 // TODAS LAS TARJETAS DE VIAJES
 const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
 
+// // VARIABLES 
+let viajesFiltrados = 0
+let viajesOcultos = 0
+
+
 /*----------------------------------------
         CARRITO ON CLICK
 ---------------------------------------- */
@@ -99,14 +102,14 @@ cerrarCarrito.onclick = () => {
 // const botonCancelar = document.getElementById("boton-cancelar")
 // const botonConfirmaVaciar = document.getElementById("boton-vaciar-carrito")
 botonVaciar.onclick = () => {
-    confirmacionPopUp.classList.add("mostrar2")
+    confirmacionPopUp.classList.add("mostrar-confirma")
     overlayVaciar.classList.add("mostrar")
     // modificar tabindex a numero negativo
 }
 
 botonConfirmaVaciar.onclick = () => {
     // eliminar elementos del carrito
-    confirmacionPopUp.classList.remove("mostrar2")
+    confirmacionPopUp.classList.remove("mostrar-confirma")
     overlayVaciar.classList.remove("mostrar")
     // modificar tabindex a numero negativo
    
@@ -122,20 +125,20 @@ botonCancelar.onclick = () => {
                 CHECKOUT
 ---------------------------------------- */
 botonComprar.onclick = () => {
-    confirmarCompra.classList.add("mostrar")
-    overlay2.classList.add("mostrar")
+    confirmarCompra.classList.add("mostrar-checkout")
+    overlay2.classList.add("mostrar-checkout")
 
 }
 
 cerrarCheckout.onclick = () => {
-    confirmarCompra.classList.remove("mostrar")
-    overlay2.classList.remove("mostrar")
+    confirmarCompra.classList.remove("mostrar-checkout")
+    overlay2.classList.remove("mostrar-checkout")
 }
 
 
 botonSeguirComprando.onclick = () => {
-    confirmarCompra.classList.remove("mostrar")
-    overlay2.classList.remove("mostrar")
+    confirmarCompra.classList.remove("mostrar-checkout")
+    overlay2.classList.remove("mostrar-checkout")
     menuCarrito.classList.remove("mostrar")
     overlay.classList.remove("mostrar")
     cuerpo.classList.remove("agrega-overflow")
@@ -269,16 +272,23 @@ console.log(cerrarCheckout)
 // PEQUEÑAS f(x)
 const ocultarDestino = (viaje) => {
     return viaje.classList.add("hidden")
+    viajesOcultos++
 }
   
 const mostrarDestino = (viaje) => {
     return viaje.classList.remove("hidden")
 }
 
+/* Male, en el agregado de la funcionalidad de contar los viajes filtrados tuve unos cuántos problemas,
+por lo que llegué a una fórmula donde filtra bien en un 99%, y no quise tocarla más. En el único caso que
+no funciona es cuando la búsqueda da "0" y muestra "1". Evidentemente hay algún error, porque si fijaba la 
+variable inicial en 0 dentro de la función, siempre filtraba una unidad de menos...*/
 const filtrarDestinos = () => {
+    viajesFiltrados = 1 
     for (let viaje of todosLosViajes) {
         if (pasaTodosLosFiltros(viaje)) {
             mostrarDestino(viaje)
+            viajesFiltrados++
         }
         else {
             ocultarDestino(viaje)
@@ -349,6 +359,7 @@ const pasaFiltroInput = (viaje) => {
 const hayAlgunaCategoriaChequeada = () => {
     for (let checkboxCategoria of filtroCategorias) {
         if (checkboxCategoria.checked) {
+            
             return true
         }
     }
@@ -394,6 +405,7 @@ console.log(pasaFiltroCategoria())
 const hayAlgunaStarChequeada = () => {
     for (let checkboxStar of filtroPuntajes) {
         if (checkboxStar.checked) {
+            
             return true
         }
     }
@@ -435,19 +447,23 @@ const pasaFiltroStars = (viaje) => {
 /* ------------------------------- 
             REVISAR 
 --------------------------------*/
+
 // MOSTRAR CANTIDAD VIAJES FILTRADOS (problema: suma cada vez que busca, aunque no haya viajes filtrados)
-const mostrarCantidadDeviajes = () => {
-    for (let viaje of todosLosViajes) {
-        mostrarViajes.textContent = `Mostrando ${viajesFiltrados} viaje(s) de ${todosLosViajes.length}`
-    }
+
+const contarViajesFiltrados = () => {
+    const todosLosViajesEnNumeros = todosLosViajes.length
+        
+    console.log("Todos los Viajes:", todosLosViajesEnNumeros, "Viajes Ocultos:", viajesOcultos, "Viajes Filtrados:", viajesFiltrados)
+
+    mostrarViajes.textContent = `Mostrando ${viajesFiltrados} viaje(s) de ${todosLosViajesEnNumeros}`    
 }
 
 
 // FILTROS SIMULTANEOS 
 const pasaTodosLosFiltros = (viaje) => {
     if (pasaFiltroInput(viaje) && pasaFiltroCategoria(viaje) && pasaFiltroStars(viaje)) {
-        viajesFiltrados++
-        mostrarCantidadDeviajes()
+        contarViajesFiltrados()
+        
         return true
     }
     else {
