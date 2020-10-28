@@ -73,19 +73,54 @@ const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
 
 // // VARIABLES 
 let viajesFiltrados = 0
-let viajesOcultos = 0
+let viajesOcultos = 0 //ver si se puede borrar o es útil para algo
 
+// AGREGAR VIAJES AL CARRITO
+const botonComprarViajes = document.querySelectorAll("#buy-item")
+const itemsCarrito = document.getElementById("items-carrito")
+let agregaViaje = 0
+
+/*----------------------------------------
+        AGREGAR VIAJES AL CARRITO
+---------------------------------------- */
+// ver
+for (let viajeElegido of botonComprarViajes) {
+    viajeElegido.onclick = () => {
+        viajeElegido.classList.add("viaje-elegido")
+        agregaViaje++
+        itemsCarrito.textContent = `Carrito (${agregaViaje} Items)`
+        // console.log(comprarViaje.dataset.destino, comprarViaje.classList)   
+    }
+}
 
 /*----------------------------------------
         CARRITO ON CLICK
 ---------------------------------------- */
+const viajesEnCarrito = document.getElementById("productos-carrito")
+const cantidadViajesAgregados = document.getElementById("cuantos-viajes-agregados")
+
 // CARRITO MENÚ DESPLEGABLE
 carrito.onclick = () => {
+    const viajesEnReserva = document.getElementsByClassName("viaje-elegido")
+    
+
     menuCarrito.classList.add("mostrar")
     overlay.classList.add("mostrar")
     cuerpo.classList.add("agrega-overflow")
     // overlay.innerHTML = `tabindex="1"`
     //modificaSignoTabIndex() // hacer función que cambie de negativo a positivo y viceversa
+    if (viajesEnReserva.length === 0) {
+        cantidadViajesAgregados.textContent = `Aún no tenes viajes seleccionados!`
+    }
+    else {
+        cantidadViajesAgregados.textContent = `Tenes ${agregaViaje} viaje(s) agregado(s)`
+
+        for (let viajeReservado of viajesEnCarrito) {
+            console.log(viajeReservado.dataset.destino)
+
+        }
+    }
+
 };
 
 cerrarCarrito.onclick = () => {
@@ -451,10 +486,8 @@ const pasaFiltroStars = (viaje) => {
 // MOSTRAR CANTIDAD VIAJES FILTRADOS (problema: suma cada vez que busca, aunque no haya viajes filtrados)
 
 const contarViajesFiltrados = () => {
-    const todosLosViajesEnNumeros = todosLosViajes.length
-        
-    console.log("Todos los Viajes:", todosLosViajesEnNumeros, "Viajes Ocultos:", viajesOcultos, "Viajes Filtrados:", viajesFiltrados)
-
+    const todosLosViajesEnNumeros = todosLosViajes.length 
+    //console.log("Todos los Viajes:", todosLosViajesEnNumeros, "Viajes Ocultos:", viajesOcultos, "Viajes Filtrados:", viajesFiltrados)
     mostrarViajes.textContent = `Mostrando ${viajesFiltrados} viaje(s) de ${todosLosViajesEnNumeros}`    
 }
 
@@ -463,7 +496,6 @@ const contarViajesFiltrados = () => {
 const pasaTodosLosFiltros = (viaje) => {
     if (pasaFiltroInput(viaje) && pasaFiltroCategoria(viaje) && pasaFiltroStars(viaje)) {
         contarViajesFiltrados()
-        
         return true
     }
     else {

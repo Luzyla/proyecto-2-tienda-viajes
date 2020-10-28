@@ -183,6 +183,9 @@ h1 {
     margin: 10px;
     overflow: scroll;
     scrollbar-width: thin;    
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
 }
 
 .contenedor-resumen-carrito {
