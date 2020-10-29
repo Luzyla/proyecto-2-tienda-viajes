@@ -93,6 +93,40 @@ for (let viajeElegido of botonComprarViajes) {
     }
 }
 
+const crearMiniaturaViaje = (viajeReservado) => {
+    // console.log(viajeReservado.dataset.destino)
+
+    const miniaturaViajeHTML = `
+    <div class="contenedor-viaje-miniatura">
+        <div class="contenedor-img-miniatura">
+            <img class="img-tarjeta-miniatura" src="${viajeReservado.dataset.imagen}">
+        </div>
+        
+        <div class="contenedor-info-miniatura">
+            <div class="sub-contenedor-info-miniatura">
+                <p class="destino-txt-miniatura">${viajeReservado.dataset.destino.toUpperCase()}</p>
+                <input type="image" src="./images/icons8-trash2.svg" alt="Eliminar viaje del carrito" 
+                aria-labelledby="Eliminar viaje del carrito" class="trash-miniatura" >
+            </div>
+
+            <div class="sub-contenedor-info-miniatura">
+                <label for="cantidad-de-viajes">
+                    <input type="number" name="cantidad" id="cantidad-de-viajes" value="1" 
+                    aria-labelledby="Cantidad de unidades del viaje elegido" class="cantidad-viajes">
+                </label>
+                <p class="precio-viaje-miniatura">x $<span> ${viajeReservado.dataset.precio}<span></p>
+            </div>
+        </div>
+    </div>
+    `
+    console.log(viajeReservado.dataset.imagen)
+    console.log(viajeReservado.dataset.precio)
+    console.log(viajeReservado.dataset.destino)
+
+    return miniaturaViajeHTML
+}
+
+
 /*----------------------------------------
         CARRITO ON CLICK
 ---------------------------------------- */
@@ -109,17 +143,27 @@ carrito.onclick = () => {
     cuerpo.classList.add("agrega-overflow")
     // overlay.innerHTML = `tabindex="1"`
     //modificaSignoTabIndex() // hacer función que cambie de negativo a positivo y viceversa
+    
     if (viajesEnReserva.length === 0) {
         cantidadViajesAgregados.textContent = `Aún no tenes viajes seleccionados!`
+        botonComprar.classList.add("hidden")
+        botonVaciar.classList.add("hidden")
     }
+
     else {
         cantidadViajesAgregados.textContent = `Tenes ${agregaViaje} viaje(s) agregado(s)`
+        botonComprar.classList.remove("hidden")
+        botonVaciar.classList.remove("hidden")
 
-        for (let viajeReservado of viajesEnCarrito) {
-            console.log(viajeReservado.dataset.destino)
-
+        todosLosViajesHTML = ""
+        for (let viajeReservado of viajesEnReserva) {
+            todosLosViajesHTML = todosLosViajesHTML + crearMiniaturaViaje(viajeReservado)
+            // console.log(viajeReservado.dataset.destino)
         }
+        
+        viajesEnCarrito.innerHTML = todosLosViajesHTML
     }
+
 
 };
 

@@ -206,6 +206,61 @@ h1 {
 }
 
 /*----------------------------------------------
+        MINIATURA DE VIAJE EN CARRITO
+----------------------------------------------*/
+.contenedor-viaje-miniatura {
+    width: 380px;
+    display: flex;
+}
+
+.contenedor-img-miniatura {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+.img-tarjeta-miniatura {
+    max-width: 80px;
+    overflow: hidden;
+}
+
+.contenedor-info-miniatura {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.sub-contenedor-info-miniatura {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.destino-txt-miniatura {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.precio-viaje-miniatura {
+    font-size: 18px;
+}
+
+.trash-miniatura {
+    width: 25px; 
+    height: 25px;
+}
+
+.cantidad-viajes {
+    width: 40px; 
+    height: 25px;
+}
+
+/*----------------------------------------------
             CONFIRMA VACIAR
 ----------------------------------------------*/
 .overlay-confirma-vaciar {
@@ -352,11 +407,8 @@ hr {
 }
 
 .img-banner {
-    max-width: 100vw;
+    width: 100vw;
     height: auto;
-    object-fit: cover;
-    -o-object-fit: cover;
-    
 }
 
 .contenedor-texto-banner {
