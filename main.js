@@ -7,6 +7,11 @@
 
 // document.getElementById("myAnchor3").tabIndex = "1";
 
+// BODY
+const cuerpo = document.getElementById("cuerpo-html")
+const aside = document.querySelector(".aside")
+const firma = document.querySelector(".link-firma")
+
 // CARRITO
 const carrito = document.querySelector(".contenedor-carrito")
 const menuCarrito = document.getElementById("carrito-menu")
@@ -15,14 +20,17 @@ const cerrarCarrito = document.getElementById("cerrar")
 const cerrarCheckout = document.getElementById("cerrar-checkout")
 const botonComprar = document.getElementById("boton-comprar")
 const botonVaciar = document.getElementById("boton-vaciar")
-const cuerpo = document.getElementById("cuerpo-html")
+const contenedorCarrito = document.querySelector(".contenedor-resumen-carrito")
+
+// CARRITO ON CLICK
+const viajesEnCarrito = document.getElementById("productos-carrito")
+const cantidadViajesAgregados = document.getElementById("cuantos-viajes-agregados") // revisar
 
 // CONFIRMA VACIAR CARRITO
 const overlayVaciar = document.getElementById("fondo-overlay-vaciar")
 const confirmacionPopUp = document.getElementById("contenedor-vaciar-carrito")
 const botonCancelar = document.getElementById("boton-cancelar")
 const botonConfirmaVaciar = document.getElementById("boton-vaciar-carrito")
-
 
 // FILTRO X CATEGORIA
 const filtroCategorias = document.querySelectorAll(".filtro-categoria input")
@@ -45,14 +53,19 @@ const botonFinalizarCompra = document.getElementById("button-ends")
 // RESUMEN CHECKOUT
 const sumaProductos = document.getElementById("suma-productos")
 const valorSubtotal = document.getElementById("valor-subtotal")
+
 const conEnvio = document.getElementById("con-envio")
 const valorEnvio = document.getElementById("valor-envio")
+
 const conDescuento = document.getElementById("con-descuento")
 const valorDescuento = document.getElementById("valor-descuento")
+
 const conRecargo = document.getElementById("con-recargo")
 const valorRecargo = document.getElementById("valor-recargo")
+
 const sumaTotal = document.getElementById("suma-total")
 const valorTotal = document.getElementById("valor-total")
+const formularioCheckout = document.querySelector("contenedor-formulario-confirmar-compra")
 
 // OPCIONES DE PAGO
 const radioEfectivo = document.getElementById("efectivo-debito")
@@ -71,32 +84,33 @@ const contenedorDescripciones = document.querySelectorAll(".detalle-viaje")
 // TODAS LAS TARJETAS DE VIAJES
 const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
 
-// // VARIABLES 
+// VARIABLES 
 let viajesFiltrados = 0
 let viajesOcultos = 0 //ver si se puede borrar o es útil para algo
 
 // AGREGAR VIAJES AL CARRITO
 const botonComprarViajes = document.querySelectorAll("#buy-item")
 const itemsCarrito = document.getElementById("items-carrito")
+const viajesEnReserva = document.getElementsByClassName("viaje-elegido")
 let agregaViaje = 0
+
+// ELIMINAR VIAJES DEL CARRITO
+const trashMiniatura = document.querySelectorAll("#id-trash-miniatura")
+
 
 /*----------------------------------------
         AGREGAR VIAJES AL CARRITO
 ---------------------------------------- */
-// ver
 for (let viajeElegido of botonComprarViajes) {
     viajeElegido.onclick = () => {
         viajeElegido.classList.add("viaje-elegido")
         agregaViaje++
         itemsCarrito.textContent = `Carrito (${agregaViaje} Items)`
-        // console.log(comprarViaje.dataset.destino, comprarViaje.classList)   
     }
 }
 
 const crearMiniaturaViaje = (viajeReservado) => {
-    // console.log(viajeReservado.dataset.destino)
-
-    const miniaturaViajeHTML = `
+    let miniaturaViajeHTML = `
     <div class="contenedor-viaje-miniatura">
         <div class="contenedor-img-miniatura">
             <img class="img-tarjeta-miniatura" src="${viajeReservado.dataset.imagen}">
@@ -106,66 +120,94 @@ const crearMiniaturaViaje = (viajeReservado) => {
             <div class="sub-contenedor-info-miniatura">
                 <p class="destino-txt-miniatura">${viajeReservado.dataset.destino.toUpperCase()}</p>
                 <input type="image" src="./images/icons8-trash2.svg" alt="Eliminar viaje del carrito" 
-                aria-labelledby="Eliminar viaje del carrito" class="trash-miniatura" >
+                aria-labelledby="Eliminar viaje del carrito" class="trash-miniatura" id="id-trash-miniatura"
+                value="${viajeReservado.dataset.destino}" tabIndex="2">
             </div>
 
             <div class="sub-contenedor-info-miniatura">
                 <label for="cantidad-de-viajes">
                     <input type="number" name="cantidad" id="cantidad-de-viajes" value="1" 
-                    aria-labelledby="Cantidad de unidades del viaje elegido" class="cantidad-viajes">
+                    aria-labelledby="Cantidad de unidades del viaje elegido" class="cantidad-viajes"
+                    tabIndex="1" min="1">
                 </label>
-                <p class="precio-viaje-miniatura">x $<span> ${viajeReservado.dataset.precio}<span></p>
+                <p class="precio-viaje-miniatura">x $<span>${viajeReservado.dataset.precio}<span></p>
             </div>
         </div>
     </div>
+    <hr>
     `
-    console.log(viajeReservado.dataset.imagen)
-    console.log(viajeReservado.dataset.precio)
-    console.log(viajeReservado.dataset.destino)
-
     return miniaturaViajeHTML
 }
 
+/*----------------------------------------
+        ELIMINAR VIAJES DEL CARRITO
+---------------------------------------- */
+// const eliminarMiniaturaDeviaje = (viajeElegido) => {
+//     if (viajeReservado.dataset.destino === true) {
+//         viajeElegido.classList.remove("viaje-elegido")
+//     }
+// }
 
 /*----------------------------------------
         CARRITO ON CLICK
 ---------------------------------------- */
-const viajesEnCarrito = document.getElementById("productos-carrito")
-const cantidadViajesAgregados = document.getElementById("cuantos-viajes-agregados")
-
-// CARRITO MENÚ DESPLEGABLE
-carrito.onclick = () => {
-    const viajesEnReserva = document.getElementsByClassName("viaje-elegido")
+const seteoTabindexCarrito = () => {
+    cerrarCarrito.setAttribute("tabIndex", 1);
+    botonVaciar.setAttribute("tabIndex", 3);
+    botonComprar.setAttribute("tabIndex", 4);
     
+    cuerpo.setAttribute("tabIndex", -1);
+    aside.setAttribute("tabIndex", -1);
+    botonComprar.setAttribute("tabIndex", -1);
+    firma.setAttribute("tabIndex", -1);
+}
 
-    menuCarrito.classList.add("mostrar")
-    overlay.classList.add("mostrar")
-    cuerpo.classList.add("agrega-overflow")
-    // overlay.innerHTML = `tabindex="1"`
-    //modificaSignoTabIndex() // hacer función que cambie de negativo a positivo y viceversa
-    
+const subtotalMiniatura = (viajeReservado) => {
+    return viajeReservado.dataset.precio
+}
+
+const agregaMiniaturasDeViajesElegidos = () => {
     if (viajesEnReserva.length === 0) {
         cantidadViajesAgregados.textContent = `Aún no tenes viajes seleccionados!`
         botonComprar.classList.add("hidden")
         botonVaciar.classList.add("hidden")
+        contenedorCarrito.classList.add("hidden")
     }
 
     else {
         cantidadViajesAgregados.textContent = `Tenes ${agregaViaje} viaje(s) agregado(s)`
         botonComprar.classList.remove("hidden")
         botonVaciar.classList.remove("hidden")
+        contenedorCarrito.classList.remove("hidden")
 
         todosLosViajesHTML = ""
         for (let viajeReservado of viajesEnReserva) {
             todosLosViajesHTML = todosLosViajesHTML + crearMiniaturaViaje(viajeReservado)
-            // console.log(viajeReservado.dataset.destino)
         }
         
         viajesEnCarrito.innerHTML = todosLosViajesHTML
     }
+}
 
+// CARRITO MENÚ DESPLEGABLE
+// const viajesEnReserva = document.getElementsByClassName("viaje-elegido")
+carrito.onclick = () => {
+    
+    menuCarrito.classList.add("mostrar")
+    overlay.classList.add("mostrar")
+    cuerpo.classList.add("agrega-overflow")
+
+    seteoTabindexCarrito()
+    agregaMiniaturasDeViajesElegidos()
+
+    // trashMiniatura.onclick = () => {
+    //     eliminarMiniaturaDeviaje()       
+    // }
+    // console.log(trashMiniatura)
 
 };
+
+
 
 cerrarCarrito.onclick = () => {
     menuCarrito.classList.remove("mostrar")
@@ -176,36 +218,58 @@ cerrarCarrito.onclick = () => {
 /*----------------------------------------
             VACIAR CARRITO
 // ---------------------------------------- */
-// const overlayVaciar = document.getElementById("fondo-overlay-vaciar")
-// const confirmacionPopUp = document.getElementById("contenedor-vaciar-carrito")
-// const botonCancelar = document.getElementById("boton-cancelar")
-// const botonConfirmaVaciar = document.getElementById("boton-vaciar-carrito")
+
 botonVaciar.onclick = () => {
     confirmacionPopUp.classList.add("mostrar-confirma")
-    overlayVaciar.classList.add("mostrar")
-    // modificar tabindex a numero negativo
+    overlayVaciar.classList.add("mostrar-checkout")
+    
+    botonCancelar.setAttribute("tabIndex", 1)
+    botonConfirmaVaciar.setAttribute("tabIndex", 2)
+    
+    cerrarCarrito.setAttribute("tabIndex", -1);
+    botonVaciar.setAttribute("tabIndex", -1);
+    botonComprar.setAttribute("tabIndex", -1);
+    aside.setAttribute("tabIndex", -1)
+
 }
 
+
 botonConfirmaVaciar.onclick = () => {
-    // eliminar elementos del carrito
     confirmacionPopUp.classList.remove("mostrar-confirma")
-    overlayVaciar.classList.remove("mostrar")
+    overlayVaciar.classList.remove("mostrar-checkout")
+    todosLosViajesHTML = ""
+    // eliminar elementos del carrito
+    //viajesEnReserva = document.getElementsByClassName("viaje-elegido")
+    // viajeElegido.classList.remove("viaje-elegido")
     // modificar tabindex a numero negativo
-   
 }
 
 botonCancelar.onclick = () => {
-    confirmacionPopUp.classList.remove("mostrar2")
-    overlayVaciar.classList.remove("mostrar")
-    // modificar tabindex a numero negativo
+    confirmacionPopUp.classList.remove("mostrar-confirma")
+    overlayVaciar.classList.remove("mostrar-checkout")
 }
+
 
 /*----------------------------------------
                 CHECKOUT
 ---------------------------------------- */
+const seteoTabindexCheckout = () => {
+    // COMPLETAR
+    
+    cerrarCarrito.setAttribute("tabIndex", 1);
+    botonVaciar.setAttribute("tabIndex", 3);
+    botonComprar.setAttribute("tabIndex", 4);
+    
+    cuerpo.setAttribute("tabIndex", -1);
+    aside.setAttribute("tabIndex", -1);
+    botonComprar.setAttribute("tabIndex", -1);
+    firma.setAttribute("tabIndex", -1);
+}
+
 botonComprar.onclick = () => {
     confirmarCompra.classList.add("mostrar-checkout")
     overlay2.classList.add("mostrar-checkout")
+    seteoTabindexCheckout()
 
 }
 
@@ -223,13 +287,24 @@ botonSeguirComprando.onclick = () => {
     cuerpo.classList.remove("agrega-overflow")
 }
 
-console.log(confirmarCompra)
+botonFinalizarCompra.onclick = () => {
+    
+    alert("Compra finalizada con éxito!")
+}
+
+//console.log(confirmarCompra)
 /*----------------------------------------
         VER COMO GRILLA O LISTA
 ---------------------------------------- */
 // OPERACIONES DEL CHECKOUT
+
 radioEfectivo.oninput = () => {
     conRecargo.classList.add("hidden")
+}
+
+const sumarRecargo = () => {
+    let recargo = valorSubtotal * 0.1
+    recargo.textContent = recargo
 }
 
 radioTarjeta.oninput = () => {
@@ -237,15 +312,13 @@ radioTarjeta.oninput = () => {
     sumarRecargo()
 }
 
-const sumarRecargo = (sumaProductos, porcentaje) => {
-    porcentaje = 0.10
-    let recargo = sumaProductos * porcentaje
-    recargo.textContent = recargo
-}
-
 checkboxEnvio.oninput = () => {
     conEnvio.classList.toggle("hidden")
-    // valorEnvio.innerHTML = Number(100)
+}
+
+const sumarDescuento = () => {
+    let descuento = valorSubtotal * 0.05
+    valorDescuento.textContent = `-${Number(descuento)}`
 }
 
 checkboxDescuento.oninput = () => {
@@ -253,11 +326,11 @@ checkboxDescuento.oninput = () => {
     sumarDescuento()
 }
 
-const sumarDescuento = (sumaProductos, porcentaje) => {
-    porcentaje = 0.15
-    let descuento = sumaProductos * porcentaje
-    valorEnvio.textContent = descuento
+const sumaDestinosMiniatura = () => {
+
 }
+
+valorSubtotal.textContent = sumaDestinosMiniatura()
 
 /*----------------------------------------
             VER COMO LISTA
@@ -351,7 +424,7 @@ console.log(cerrarCheckout)
 // PEQUEÑAS f(x)
 const ocultarDestino = (viaje) => {
     return viaje.classList.add("hidden")
-    viajesOcultos++
+    // viajesOcultos++
 }
   
 const mostrarDestino = (viaje) => {
@@ -378,7 +451,7 @@ const filtrarDestinos = () => {
 // FILTROS
 search.oninput = () => {
     filtrarDestinos()
-    console.log(search.value)
+    //console.log(search.value)
 }
 
 for (let checkboxCategoria of filtroCategorias) {

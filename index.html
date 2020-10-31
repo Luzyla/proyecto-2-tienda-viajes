@@ -47,7 +47,7 @@
 
             <div class="carrito-titulo">
                 <h2>Carrito</h2>
-                <input type="image" name="cerrar-carrito" style="width: 35px;" id="cerrar" class="equis"
+                <input type="image" name="cerrar-carrito" id="cerrar" class="equis"
                     src="./images/icons8-close-window-100.png" alt="Botón que cierra el carrito" tabindex="-1">
             </div>
 
@@ -96,14 +96,14 @@
 
             <div class="contenedor-titulo-checkout">
                 <h2>Checkout</h2>
-                <input type="image" name="cerrar-checkout" style="width: 35px;" id="cerrar-checkout" class="equis"
+                <input type="image" name="cerrar-checkout" id="cerrar-checkout" class="equis"
                     src="./images/icons8-close-window-100.png" alt="Botón Cerrar el checkout" tabindex="-1">
             </div>
 
             <div class="modal-formularios">
 
                 <!-- FORM inicio -->
-                <form class="contenedor-formulario-confirmar-compra">
+                <form class="contenedor-formulario-confirmar-compra" >
 
                     <div class="datos-personales" id="personal-info">
 
@@ -156,14 +156,13 @@
                 <div class="resumen-compra" id="buying">
                     <h3>Resumen</h3>
 
-                    <div id="resumen-productos-elegidos" class="contenedor-productos-agregados">
-                    </div>
+                    <!-- <div id="resumen-productos-elegidos" class="contenedor-productos-agregados">
+                    </div> -->
 
                     <div class="formato-resumen">
                         <h4 id="suma-productos">Subtotal $<span id="valor-subtotal">0</span></h4>
                         <p id="con-envio" class="hidden">Envío $<span id="valor-envio">300</span></p>
-                        <p id="con-descuento" class="descuento-compra hidden">Descuento $<span
-                                id="valor-descuento">0</span></p>
+                        <p id="con-descuento" class="descuento-compra hidden">Descuento $<span id="valor-descuento">0</span></p>
                         <p id="con-recargo" class="recargo-compra hidden">Recargo $<span id="valor-recargo">0</span></p>
                         <h2 id="suma-total" class="total-compra">Total $<span id="valor total">0</span></h2>
                     </div>

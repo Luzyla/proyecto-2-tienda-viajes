@@ -577,13 +577,11 @@ hr {
     height: 165px;
     overflow: hidden;
     transition: 0.5s;
-    
 }
 
 .img-tarjeta:hover {
     transform: scale(117.5%);
 }
-
 
 .texto-tarjeta-titulo {
     font-size: 25px;
@@ -598,7 +596,6 @@ hr {
 .texto-tarjeta-valor {
     margin-top: 10px;
     font-size: 18px;
-    
 }
 
 
