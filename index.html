@@ -182,29 +182,6 @@
 
     </section>
     
-    <!-- MINIATURA PARA CARRITO  
-    <div class="contenedor-viaje-miniatura">
-        <div class="contenedor-img-miniatura">
-            <img class="img-tarjeta-miniatura" src="./images/lugares/cataratasniagara.jpeg">
-        </div>
-        
-        <div class="contenedor-info-miniatura">
-            <div class="sub-contenedor-info-miniatura">
-                <p class="destino-txt-miniatura">Destino miniatura</p>
-                <input type="image" src="./images/icons8-trash2.svg" alt="Eliminar viaje del carrito" 
-                aria-labelledby="Eliminar viaje del carrito" class="trash-miniatura" >
-            </div>
-            <div class="sub-contenedor-info-miniatura">
-                <label for="cantidad-de-viajes">
-                    <input type="number" name="cantidad" id="cantidad-de-viajes" value="1" 
-                    aria-labelledby="Cantidad de unidades del viaje elegido" class="cantidad-viajes">
-                </label>
-                <p class="precio-viaje-miniatura">x $10000</p>
-            </div>
-        </div>
-    </div>
-    -->
-
     <!-- BANNER -->
     <div class="contenedor-banner">
         <div class="contenedor-img-banner">
@@ -224,10 +201,15 @@
             <!-- FILTROS -->
             <div class="aside-filtros">
                 <h4>FILTROS</h4>
+                <div  class="desplegar-busqueda-responsive">
+                    <label for="despliega-filtros">
+                        <input id="despliega-filtros" name="despliega-filtros" class="despliega-filtros-lupa" type="image" src="./images/icons8-search.svg" alt="Desplegar opciones de filtros para buscar tu viaje" aria-describedby="Desplegar opciones de filtros para buscar tu viaje">
+                    </label>
+                </div>
                 <div class="contenedor-boton-limpiar">
                     <label for="cleaning-filters" class="texto-limpiar">
                         <input aria-labelledby="limpiar filtros" type="image" name="trash" src="./images/icons8-trash2.svg"
-                            style="width: 25px; height: 25px;" class="trash" id="cleaning-filters">
+                            class="trash trash-miniatura" id="cleaning-filters">
                         Limpiar
                     </label>
                 </div>
@@ -235,6 +217,7 @@
 
             <!-- FORM inicio -->
             <div class="formulario-aside">
+                
                 <form action="" method="" id="filters-form">
 
                     <!-- BUSQUEDA -->

@@ -17,7 +17,6 @@ const carrito = document.querySelector(".contenedor-carrito")
 const menuCarrito = document.getElementById("carrito-menu")
 const overlay = document.getElementById("fondo-overlay")
 const cerrarCarrito = document.getElementById("cerrar")
-const cerrarCheckout = document.getElementById("cerrar-checkout")
 const botonComprar = document.getElementById("boton-comprar")
 const botonVaciar = document.getElementById("boton-vaciar")
 const contenedorCarrito = document.querySelector(".contenedor-resumen-carrito")
@@ -45,6 +44,7 @@ const trash = document.getElementById("cleaning-filters")
 const mostrarViajes = document.getElementById("mostrando-busqueda-viajes")
 
 // CHECKOUT COMPRA
+const cerrarCheckout = document.getElementById("cerrar-checkout")
 const confirmarCompra = document.querySelector(".contenedor-confirmar-compra")
 const overlay2 = document.getElementById("fondo-overlay-modal")
 const botonSeguirComprando = document.getElementById("button-buying")
@@ -97,6 +97,9 @@ let agregaViaje = 0
 // ELIMINAR VIAJES DEL CARRITO
 const trashMiniatura = document.querySelectorAll("#id-trash-miniatura")
 
+// DESPLIEGA FILTROS EN RESPONSIVE
+const lupaDropdown = document.getElementById("despliega-filtros")
+const contenedorFiltrosDeBusqueda = document.querySelector(".formulario-aside")
 
 /*----------------------------------------
         AGREGAR VIAJES AL CARRITO
@@ -629,3 +632,10 @@ trash.onclick = () => {
 }
 
 
+/*----------------------------------------
+DESPLIEGA FILTROS DE BÚSQUEDA EN RESPONSIVE
+---------------------------------------- */
+
+lupaDropdown.onclick = () => {
+    contenedorFiltrosDeBusqueda.classList.toggle("blocking-hidden")
+}
