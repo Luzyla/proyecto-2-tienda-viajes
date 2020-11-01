@@ -44,6 +44,7 @@ label {
     font-weight: bold;
     font-size: 14px;
     margin: 5px;
+    cursor: pointer;
 }
 
 .button-buy {
@@ -104,7 +105,6 @@ h1 {
     width: 35px;
 }
 
-
 /*-------------- CARRITO ----------------*/
 .contenedor-carrito {
     display: flex;
@@ -118,8 +118,8 @@ h1 {
 
 .texto-carrito {
     margin-right: 15px;
+    cursor: pointer;
 }
-
 
 /*-------------- CHECKOUT ----------------*/
 .total-compra {
@@ -288,7 +288,7 @@ h1 {
     align-items: center;
     background-color: #fafafa;
     position: absolute;
-    top: 25vh;
+    top: 20vh;
     right: -110vw;
     z-index: 4;
     transition: 0.8s;
@@ -298,7 +298,6 @@ h1 {
     font-size: 30px;
     font-weight: bold;
 }
-
 
 /*----------------------------------------------
             CHECKOUT COMPRA
@@ -364,7 +363,6 @@ hr {
     display: flex;
     flex-direction: column;
     margin: 20px;
-
 }
 
 .resumen-compra {
@@ -523,15 +521,10 @@ hr {
     padding: 20px;
 }
 
-
 .barra-viajes {
     display: flex;
     justify-content: space-between;
 }
-/*-------------- MOSTRANDO ----------------*/
-
-
-
 
 /*-------------- VER COMO ----------------*/
 .ver-como {
@@ -563,12 +556,10 @@ hr {
     border: 1px solid #37495760;
     align-items: center;
     margin: 10px;
-    /* flex-basis: 3; */
 }
 
 .contenedor-img-tarjeta {
     margin-top: 20px;
-    
 }
 
 .contenedor-tarjeta:hover {
@@ -600,7 +591,6 @@ hr {
     margin-top: 10px;
     font-size: 18px;
 }
-
 
 /*----------------------------------------------
                     FOOTER
@@ -669,148 +659,24 @@ hr {
     padding: 20px;
 }
 
-/* RECORDAR REMOVER HIDDEN DEL P detalle-viaje
-poner ID a todos los elementos para llamarlos desde JS*/
-
 /*----------------------------------------------
                 RESPONSIVE
 ----------------------------------------------*/
 @media (min-width: 768px) and (max-width: 992px) {
 
-    /*-------------- BOTONES ----------------*/
-    /* .button-basic {
-        height: 45px;
-        width: 200px;
-        background-color: #fafafa;
-        border-radius: 5px;
-        border: 1px solid #37495780;
-        color: #374957;
-        font-weight: bold;
-        font-size: 14px;
-        margin: 5px;
-    } */
-
-    /* .button-buy {
-        width: 300px;
-    }
-
-    .button-empty {
-        width: 300px;
-    } */
-
-    /* .button-basic:hover {
-        background-color: #eaeaea;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .button-buy:hover {
-        background-color: #58aa1280;
-    }
-
-    .button-empty:hover {
-        background-color: #ffdfdb;
-    }
-
-    input:focus {
-        outline-style: solid;
-        outline-width: thin;
-    } */
-
-    /*-------------- CARRITO ----------------*/
-    /* .contenedor-carrito {
-        display: flex;
-        align-items: center;    
-    }
-
-    .img-carrito {
-        width: 40px;
-        font-weight: bold;
-    }
-
-    .texto-carrito {
-        margin-right: 15px;
-    } */
-
-
-    /*-------------- CHECKOUT ----------------*/
-    /* .total-compra {
-        font-weight: bold;
-    }
-
-    .descuento-compra {
-        color: #58aa12;
-    }
-
-    .recargo-compra {
-        color: #e71837;
-    } */
-
     /*----------------------------------------------
-                CARRITO MENÚ DESPLEGABLE
+                    BASIC
     ----------------------------------------------*/
-    /* .overlay {
-        display: flex;
-    } */
-
-    /* .overlay-fondo {
-        width: 100vw;
-        height: 100vh;
-        background-color: #424242;
-        opacity: 0.4;
-        position: absolute;
-        top: 0;
-        right: -110%;
-        z-index: 1;
-    } */
-
+    /*-------------- TEXTO ----------------*/
+    /*-------------- BOTONES ----------------*/
+    /*-------------- CARRITO ----------------*/
+    /*-------------- CHECKOUT ----------------*/
+    /*----------------------------------------------
+                CARRITO MENÚ DESPLEGABLE 🤓
+    ----------------------------------------------*/
     .contenedor-carrito-menu {
         width: 50vw;
-        /* height: 100vh;
-        background-color: #fafafa;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 0;
-        right: -1000px;
-        z-index: 2;
-        padding: 25px;
-        transition: 0.8s;
-        overflow-y: scroll;
-        scrollbar-width: thin;     */
     }
-
-    /* .equis {
-        width: 35px;
-        height: 35px;
-    }
-
-    .carrito-titulo {
-        display: flex;
-        justify-content: space-between;
-    } */
-
-    /* .contenedor-productos-agregados {
-        width: 100%;
-        height: 50%;
-        margin: 10px;
-        overflow: scroll;
-        scrollbar-width: thin;    
-        font-weight: bold;
-        text-align: center;
-        font-size: 22px;
-    }
-
-    .contenedor-resumen-carrito {
-        height: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cantidad-productos-agregados {
-        text-align: right;
-        margin-bottom: 10px;
-    }*/
 
     .contenedor-botones-carrito {
         flex-direction: column;
@@ -818,112 +684,28 @@ poner ID a todos los elementos para llamarlos desde JS*/
     } 
 
     /*----------------------------------------------
-            MINIATURA DE VIAJE EN CARRITO
+            MINIATURA DE VIAJE EN CARRITO 🤓
     ----------------------------------------------*/
     .contenedor-viaje-miniatura {
         width: 100%;
-    
     }
-
-    /* .contenedor-img-miniatura {
-        width: 30%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 10px;
-    }
-
-    .img-tarjeta-miniatura {
-        max-width: 80px;
-        overflow: hidden;
-    }
-
-    .contenedor-info-miniatura {
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
- */
-    /* .sub-contenedor-info-miniatura {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .destino-txt-miniatura {
-        font-weight: bold;
-        font-size: 20px;
-    }
-
-    .precio-viaje-miniatura {
-        font-size: 18px;
-    }
-
-    .trash-miniatura {
-        width: 25px; 
-        height: 25px;
-    }
-
-    .cantidad-viajes {
-        width: 40px; 
-        height: 25px;
-    } */
 
     /*----------------------------------------------
-                CONFIRMA VACIAR
+                CONFIRMA VACIAR 🤓
     ----------------------------------------------*/
-    .overlay-confirma-vaciar {
-        position: relative;
-    }
-
-    .overlay-fondo-confirma-vaciar {
-        width: 100vw;
-        height: 100vh;
-        background-color: #424242;
-        opacity: 0.4;
-        position: absolute;
-        top: 0;
-        right: -110vw;
-        z-index: 3;
-    }
-
     .contenedor-confirma-vaciar {
-        width: 45vw;
-        height: 35vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #fafafa;
-        position: absolute;
-        top: 25vh;
-        right: -110vw;
-        z-index: 4;
-        transition: 0.8s;
+        width: 55vw;
+        height: 45vh;
     }
 
     .texto-vaciar-carrito {
-        font-size: 30px;
-        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
     }
 
     /*----------------------------------------------
-                CHECKOUT COMPRA
+                CHECKOUT COMPRA 🤓
     ----------------------------------------------*/
-    .overlay-fondo-modal {
-        width: 100vw;
-        height: 100vh;
-        background-color: #424242;
-        opacity: 0.4;
-        position: absolute;
-        top: -80px;
-        right: -110%; 
-        z-index: 3;
-    }
-
     .contenedor-titulo-checkout {
         display: flex;
         justify-content: space-between;
@@ -931,78 +713,30 @@ poner ID a todos los elementos para llamarlos desde JS*/
     }
 
     .contenedor-confirmar-compra {
-        width: 65vw;
-        height: 100vh;
-        background-color: #fafafa;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: -78px;
-        right: -2000px;
-        z-index: 4;
-        padding: 25px;
-        transition: 1s;
-        overflow: scroll;
-        scrollbar-width: thin;    
+        width: 100vw;
     }
 
     .modal-formularios {
-        display: flex;
-        flex-direction: row;
-        flex-basis: 65%;
+        flex-basis: 50vw;
     }
 
-    .contenedor-formulario-confirmar-compra {
+    .datos-personales {
+        width: 40vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .datos-personales {
-        width: 40%;
-        flex-direction: column;
-        margin: 20px;
+    .datos-personales label {
+        width: 25vw;
     }
 
     hr {
-        width: 80%;
-        border: 1px solid rgba(55, 73, 87, 0.2);
-        margin: 20px 0;
-    }
-
-    .opciones-pago {
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-
+        width: 90%;
     }
 
     .resumen-compra {
-        flex-basis: 45%;
-        background-color: rgba(55, 73, 87, 0.1);
-        padding: 25px;
-    }
-
-    .resumen-compra h3 {
-        margin-left: 5px;
-    }
-
-    .contenedor-botones-checkout {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    .etiquetas-datos-personales {
-        margin: 10px 5px 5px 5px;
-    }
-
-    .espacio-datos-personales {
-        height: 30px;
-        border: none;
-        border-bottom: 1px solid #424242;
-        padding: 5px;
-        margin-bottom: 10px;
+        flex-basis: 50vw;
     }
 
     /*----------------------------------------------
@@ -1029,9 +763,7 @@ poner ID a todos los elementos para llamarlos desde JS*/
     }
 
     .formulario-aside {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        display: none;
         margin-top: 5px;
     }
 
@@ -1042,7 +774,7 @@ poner ID a todos los elementos para llamarlos desde JS*/
     }
 
     .contenedor-filtro-busqueda, .contenedor-filtro-puntaje, .contenedor-filtro-categoria {
-        flex-basis: 30vw;
+        width: auto;
         margin: 0px 10px 5px 10px;
         padding: 10px;
         text-align: center;
@@ -1054,185 +786,414 @@ poner ID a todos los elementos para llamarlos desde JS*/
         height: 30px;
     }
 
-    .formulario-aside {
-        display: none;
-    }
-
     /*-------------- FILTROS ----------------*/
   
     /*-------------- BÚSQUEDA ----------------*/
+    .lupita {
+        position: absolute;
+        left: 180px;
+        top: 42px;
+    }
 
     /*-------------- CATEGORÍA ----------------*/
+    .contenedor-filtro-categoria {
+        align-items: flex-start;
+    }
 
     /*-------------- PUNTAJE ----------------*/
 
     /*----------------------------------------------
-                        VIAJES
+                        VIAJES 
     ----------------------------------------------*/
-    /* .seccion-viajes {
-        flex-basis: 80vw;
-        background-color: #fafafa;
-        margin: 5px 15px 25px 10px;
-        padding: 20px;
-    }
-
-
-    .barra-viajes {
-        display: flex;
-        justify-content: space-between;
-    } */
     /*-------------- MOSTRANDO ----------------*/
-
-
-
-
     /*-------------- VER COMO ----------------*/
-    /* .ver-como {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .ver-como input {
-        width: 40px;
-    } */
-
-
     /*-------------- TARJETAS ----------------*/
-    /* .seccion-tarjetas {
-        max-width: 100%;
-        padding: 5px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-
-    .contenedor-tarjeta { ARTICLE */
-        /* width: 295px;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
-        border: 1px solid #37495760;
-        align-items: center;
-        margin: 10px; */
-        /* flex-basis: 3; */
-    /* } */
-
-    /* .contenedor-img-tarjeta {
-        margin-top: 20px;
-        
-    }
-
-    .contenedor-tarjeta:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .img-tarjeta {
-        width: 250px;
-        height: 165px;
-        overflow: hidden;
-        transition: 0.5s;
-    }
-
-    .img-tarjeta:hover {
-        transform: scale(117.5%);
-    }
-
-    .texto-tarjeta-titulo {
-        font-size: 25px;
-    }
-
-    .contenedor-contenido-viaje {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .texto-tarjeta-valor {
-        margin-top: 10px;
-        font-size: 18px;
-    } */
-
-
     /*----------------------------------------------
-                        FOOTER
+                        FOOTER 
     ----------------------------------------------*/
-    /* .seccion-footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color:  rgba(55, 73, 87, 0.1);
-    }
-
-    .contenedor-footer {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;    
-        margin: 15px 0;  
-    }
-
-    .firma-footer, .contenedor-mi-firma {
-        display: flex;
-        justify-content: center;
-        padding: 15px;
-    }
-
-    .texto-footer, .txt-mi-firma {
-        font-size: 22px;
-        margin-top: 5px;
-    }
-
-    .span-footer {
-        font-family: Satisfy;
-        font-weight: bold;
-
-    }
-
-    .img-logo-footer {
-        width: 22px;
-        margin: 5px;
-    } */
-
     /*----------------------------------------------
                         FILTROS 🤓
     ----------------------------------------------*/
     /*-------------- VER COMO LISTA ----------------*/
-    /* .ver-como-lista { APLICA AL CONTENEDOR ARTICLE */
-        /* flex-basis: 100%;
-        height: auto;
-        flex-direction: row;
-        align-items: none;
-    } */
-
-    /* .margen-como-lista { APLICA AL CONTENEDOR contenedor-img-tarjeta */
-        /* margin: 20px;
-        align-items: center;
-    } */
-
     .img-como-lista { /* APLICA A LA IMAGEN img-tarjeta */
         width: 290px;
         height: 215px;
     }
 
-    /* .contenedor-contenido-viaje-lista { /* AGREGAR ESTA CLASE AL CONTENEDOR */
-        /* display: flex;
+} /* FIN @MEDIA 768-992 */
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    /*-------------- BOTONES ----------------*/
+    /*-------------- CARRITO ----------------*/
+    /*-------------- CHECKOUT ----------------*/
+    /*----------------------------------------------
+                CARRITO MENÚ DESPLEGABLE 🤓
+    ----------------------------------------------*/
+    .contenedor-carrito-menu {
+        width: 70vw;
+    }
+
+    .contenedor-botones-carrito {
+        flex-direction: column;
+        align-items: flex-end;
+    } 
+
+    /*----------------------------------------------
+            MINIATURA DE VIAJE EN CARRITO 🤓
+    ----------------------------------------------*/
+    .contenedor-viaje-miniatura {
+        width: 100%;
+    }
+
+    /*----------------------------------------------
+                CONFIRMA VACIAR 🤓
+    ----------------------------------------------*/
+    .contenedor-confirma-vaciar {
+        width: 60vw;
+        height: 45vh;
+    }
+
+    .texto-vaciar-carrito {
+        font-size: 22px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /*----------------------------------------------
+                CHECKOUT COMPRA 🤓
+    ----------------------------------------------*/
+    .contenedor-confirmar-compra {
+        width: 100vw;
+    }
+
+    .modal-formularios {
+        flex-basis: 40vw;
+    }
+
+    .datos-personales {
+        width: 40vw;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px;
-    } */
-} /* FIN @QUERY 768-992 */
+    }
 
+    .datos-personales label {
+        width: 25vw;
+    }
 
-/*-------------- FILTROS GENERALES ----------------*/
+    .espacio-datos-personales {
+        height: 25px;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    .resumen-compra {
+        flex-basis: 50vw;
+    }
+
+    /*----------------------------------------------
+                        BANNER 🤓
+    ----------------------------------------------*/
+    .contenedor-texto-banner {
+        width: 65vw;
+    }
+    
+    .texto-banner {
+        font-size: 25px;
+        text-align: center;
+        padding: 0 20px 0 20px;
+    }
+
+    /*----------------------------------------------
+                    SECCIÓN PRINCIPAL 🤓
+    ----------------------------------------------*/
+    .seccion-principal {
+        flex-direction: column;
+    }
+
+    /*----------------------------------------------
+                        ASIDE 🤓
+    ----------------------------------------------*/
+    .aside {
+        flex-basis: 0;
+        margin: 5px;
+    }
+    
+    /*-------------- FILTROS ----------------*/
+    #filters-form {
+        display: flex;
+        flex-basis: 100vw;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .contenedor-filtro-busqueda, .contenedor-filtro-puntaje, .contenedor-filtro-categoria {
+        width: auto;
+        margin: 0px 10px 5px 10px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .despliega-filtros-lupa {
+        display: flex;
+        width: 30px;
+        height: 30px;
+    }
+
+    .formulario-aside {
+        display: none;
+        margin-top: 5px;
+    }
+
+    /*-------------- BÚSQUEDA ----------------*/
+    .contenedor-filtro-busqueda {
+        margin-top: 0;
+        position: relative;
+        flex-basis: 1;
+    }
+
+    .filtro-busqueda {
+        max-width: 180px;
+        padding-left: 5px;
+        padding-right: 30px;
+    }
+
+    .lupita {
+        position: absolute;
+        left: 156px;
+        top: 36px;
+    }
+
+    /*-------------- CATEGORÍA ----------------*/
+    .contenedor-filtro-categoria {
+        align-items: flex-start;
+    }
+
+    .filtro-categoria {
+        max-width: 180px;
+    }
+
+    /*-------------- PUNTAJE ----------------*/
+    .star-icon {
+        width: 20px;
+    }
+
+    /*----------------------------------------------
+                        VIAJES 🤓
+    ----------------------------------------------*/
+    /*-------------- MOSTRANDO ----------------*/
+    /*-------------- VER COMO ----------------*/
+    .ver-como {
+        display: none;
+    }
+    
+    /*-------------- TARJETAS ----------------*/
+
+    /*----------------------------------------------
+                        FOOTER 
+    ----------------------------------------------*/
+    /*----------------------------------------------
+                        FILTROS 
+    ----------------------------------------------*/
+    /*-------------- VER COMO LISTA ----------------*/
+
+}  /* FIN @MEDIA 576-767.9 */
+
+@media (max-width: 575.9px) {
+    /*-------------- BOTONES ----------------*/
+
+    /*----------------------------------------------
+                    HEADER 🤓
+    ----------------------------------------------*/
+    /*-------------- LOGO ----------------*/
+    .contenedor-logo {
+        display: flex;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+    
+    .img-logo {
+        width: 25px;
+    }
+
+    /*-------------- CARRITO ----------------*/
+    /*-------------- CHECKOUT ----------------*/
+    /*----------------------------------------------
+                CARRITO MENÚ DESPLEGABLE 🤓
+    ----------------------------------------------*/
+    .contenedor-carrito-menu {
+        width: 100vw;
+    }
+
+    .contenedor-botones-carrito {
+        flex-direction: column;
+        align-items: flex-end;
+    } 
+
+    /*----------------------------------------------
+            MINIATURA DE VIAJE EN CARRITO 🤓
+    ----------------------------------------------*/
+    .contenedor-viaje-miniatura {
+        width: 100%;
+    }
+
+    /*----------------------------------------------
+                CONFIRMA VACIAR 🤓
+    ----------------------------------------------*/
+    .contenedor-confirma-vaciar {
+        width: 65vw;
+        height: 45vh;
+    }
+
+    .texto-vaciar-carrito {
+        font-size: 20px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /*----------------------------------------------
+                CHECKOUT COMPRA 🤓
+    ----------------------------------------------*/
+    .contenedor-confirmar-compra {
+        width: 100vw;
+    }
+
+    .modal-formularios {
+        flex-basis: 40vw;
+        flex-direction: column;
+    }
+
+    .datos-personales {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .datos-personales label {
+        width: 25vw;
+    }
+
+    .espacio-datos-personales {
+        height: 25px;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    .opciones-pago {
+        align-items: center;
+    }
+
+    .resumen-compra {
+        flex-basis: 50vw;
+    }
+
+    /*----------------------------------------------
+                        BANNER 🤓
+    ----------------------------------------------*/
+    .contenedor-texto-banner {
+        width: 80vw;
+    }
+    
+    .texto-banner {
+        font-size: 20px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .texto-logo-gt {
+        font-size: 20px;
+    }
+
+    /*----------------------------------------------
+                    SECCIÓN PRINCIPAL 🤓
+    ----------------------------------------------*/
+    .seccion-principal {
+        flex-direction: column;
+    }
+
+    /*----------------------------------------------
+                        ASIDE 🤓
+    ----------------------------------------------*/
+    .aside {
+        flex-basis: 0;
+        margin: 10px;
+    }
+
+    #filters-form {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100vw;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+    }
+
+    .contenedor-filtro-busqueda, .contenedor-filtro-puntaje, .contenedor-filtro-categoria {
+        padding: 10px;
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+
+    .despliega-filtros-lupa {
+        display: flex;
+        width: 30px;
+        height: 30px;
+    }
+
+    .formulario-aside {
+        display: none;
+        margin-top: 5px;
+    }
+
+    .lupita {
+        left: 235px;
+        top: 42px;
+    }
+
+    /*-------------- FILTROS ----------------*/
+    /*-------------- BÚSQUEDA ----------------*/
+    /*-------------- CATEGORÍA ----------------*/
+    /*-------------- PUNTAJE ----------------*/
+
+    /*----------------------------------------------
+                        VIAJES 🤓
+    ----------------------------------------------*/
+    /*-------------- MOSTRANDO ----------------*/
+    /*-------------- VER COMO ----------------*/
+    .ver-como {
+        display: none;
+    }
+    
+    /*-------------- TARJETAS ----------------*/
+
+    /*----------------------------------------------
+                        FOOTER 
+    ----------------------------------------------*/
+    /*----------------------------------------------
+                        FILTROS 
+    ----------------------------------------------*/
+    /*-------------- VER COMO LISTA ----------------*/
+
+}  /*FIN @MEDIA 575.9 */
+
+/*--------------------------------
+        FILTROS GENERALES 
+----------------------------------*/
 .mostrar {
     top: 0;
     right: 0;
 }
 
 .mostrar-confirma {
-    top: 25vh;
-    right: 30vw;
+    top: 20vh;
+    right: 20vw;
 }
 
 .mostrar-checkout {
@@ -1283,3 +1244,7 @@ Medium devices (tablets, 768px and up)
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... } */
+
+/*----------------------------------------------
+                    by @Luzyla
+----------------------------------------------*/

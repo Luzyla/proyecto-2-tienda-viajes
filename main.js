@@ -639,3 +639,8 @@ DESPLIEGA FILTROS DE BÚSQUEDA EN RESPONSIVE
 lupaDropdown.onclick = () => {
     contenedorFiltrosDeBusqueda.classList.toggle("blocking-hidden")
 }
+
+
+/*----------------------------------------------
+                    by @Luzyla
+----------------------------------------------*/
