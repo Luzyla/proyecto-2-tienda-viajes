@@ -103,19 +103,21 @@
             <div class="modal-formularios">
 
                 <!-- FORM inicio -->
-                <form class="contenedor-formulario-confirmar-compra" >
+                <form action="" method="post" class="contenedor-formulario-confirmar-compra" >
 
                     <div class="datos-personales" id="personal-info">
 
                         <h3>Datos personales</h3>
 
                         <label for="nombre" class="etiquetas-datos-personales">Nombre y apellido*
-                            <input type="text" aria-labelledby="Completar con nombre y apellido" class="espacio-datos-personales" name="nombre" id="nombre"
+                            <input type="text" aria-labelledby="Completar con nombre y apellido" 
+                                class="espacio-datos-personales" name="nombre" id="nombre"
                                 placeholder="ej. Ada Lovelace" tabindex="-1" required>
                         </label>
 
                         <label for="mail" class="etiquetas-datos-personales">Email*
-                            <input type="email" aria-labelledby="Completar con email" class="espacio-datos-personales" name="mail" id="mail"
+                            <input type="email" aria-labelledby="Completar con email" 
+                                class="espacio-datos-personales" name="mail" id="mail"
                                 placeholder="ej. adalovelace@gmail.com" tabindex="-1" required>
                         </label>
 
@@ -128,23 +130,27 @@
                         <h3>Opciones de pago</h3>
 
                         <label for="efectivo-debito">
-                            <input type="radio" aria-labelledby="Seleccionar pago en efectivo" name="pago" id="efectivo-debito" value="efectivo-debito" tabindex="-1"
+                            <input type="radio" aria-labelledby="Seleccionar pago en efectivo" 
+                                name="pago" id="efectivo-debito" value="efectivo-debito" tabindex="-1"
                                 checked>
                             Efectivo / Débito
                         </label>
 
                         <label for="tarjeta">
-                            <input type="radio" aria-labelledby="Seleccionar pago con tarjeta de crédito" name="pago" id="tarjeta" value="tarjeta" tabindex="-1">
+                            <input type="radio" aria-labelledby="Seleccionar pago con tarjeta de crédito" 
+                                name="pago" id="tarjeta" value="tarjeta" tabindex="-1">
                             Tarjeta de crédito
                         </label>
 
                         <label for="envio">
-                            <input type="checkbox" aria-labelledby="Agregar envío" name="envio" id="envio" tabindex="-1">
+                            <input type="checkbox" aria-labelledby="Agregar envío" name="envio" 
+                                id="envio" tabindex="-1">
                             Necesito envío
                         </label>
 
                         <label for="dto">
-                            <input type="checkbox" aria-labelledby="Seleccionar para aplicar descuento" name="descuento" id="dto" tabindex="-1">
+                            <input type="checkbox" aria-labelledby="Seleccionar para aplicar descuento" 
+                                name="descuento" id="dto" tabindex="-1">
                             Tengo tarjeta de descuento [15%]
                         </label>
 
@@ -172,8 +178,12 @@
             </div>
 
             <div class="contenedor-botones-checkout">
-                <button aria-labelledby="botón seguir comprando" class="button-basic" id="button-buying" tabindex="-1">SEGUIR COMPRANDO</button>
-                <button aria-labelledby="botón finalizar" class="button-buy button-basic" id="button-ends" tabindex="-1">FINALIZAR</button>
+                <button aria-labelledby="botón seguir comprando" class="button-basic" 
+                    id="button-buying" tabindex="-1">SEGUIR COMPRANDO
+                </button>
+                <button aria-labelledby="botón finalizar" class="button-buy button-basic" 
+                    id="button-ends" tabindex="-1">FINALIZAR
+                </button>
             </div>
         </div>
 
@@ -181,29 +191,6 @@
         </div>
 
     </section>
-    
-    <!-- MINIATURA PARA CARRITO  
-    <div class="contenedor-viaje-miniatura">
-        <div class="contenedor-img-miniatura">
-            <img class="img-tarjeta-miniatura" src="./images/lugares/cataratasniagara.jpeg">
-        </div>
-        
-        <div class="contenedor-info-miniatura">
-            <div class="sub-contenedor-info-miniatura">
-                <p class="destino-txt-miniatura">Destino miniatura</p>
-                <input type="image" src="./images/icons8-trash2.svg" alt="Eliminar viaje del carrito" 
-                aria-labelledby="Eliminar viaje del carrito" class="trash-miniatura" >
-            </div>
-            <div class="sub-contenedor-info-miniatura">
-                <label for="cantidad-de-viajes">
-                    <input type="number" name="cantidad" id="cantidad-de-viajes" value="1" 
-                    aria-labelledby="Cantidad de unidades del viaje elegido" class="cantidad-viajes">
-                </label>
-                <p class="precio-viaje-miniatura">x $10000</p>
-            </div>
-        </div>
-    </div>
-    -->
 
     <!-- BANNER -->
     <div class="contenedor-banner">
@@ -212,11 +199,10 @@
         </div>
 
         <div class="contenedor-texto-banner">
-            <p class="texto-banner">It's not about the destination... it's about <span class="texto-logo-gt">Getting
-                    there!</span></p>
+            <p class="texto-banner">It's not about the destination... it's about 
+                <span class="texto-logo-gt">Getting there!</span></p>
         </div>
     </div>
-
 
     <section class="seccion-principal">
 
@@ -227,7 +213,7 @@
                 <div class="contenedor-boton-limpiar">
                     <label for="cleaning-filters" class="texto-limpiar">
                         <input aria-labelledby="limpiar filtros" type="image" name="trash" src="./images/icons8-trash2.svg"
-                            style="width: 25px; height: 25px;" class="trash" id="cleaning-filters">
+                            class="trash" id="cleaning-filters">
                         Limpiar
                     </label>
                 </div>
@@ -244,7 +230,7 @@
                             <input aria-labelledby="Buscá tu viaje" type="text" name="search" class="filtro-busqueda" placeholder="Buscá tu viaje"
                                 id="search">
                         </label>
-                        <input aria-hidden="true" type="image" name="lupita" style="width: 30px;" src="./images/icons8-search.svg"
+                        <input aria-hidden="true" type="image" name="lupita" src="./images/icons8-search.svg"
                             alt="search-icon" class="lupita" tabindex="-1">
                     </div>
 
@@ -254,23 +240,28 @@
 
                         <label aria-labelledby="categoría aventura" class="filtro-categoria" for="idaventure" data-categoria="aventura">
                             <input type="checkbox" name="aventura" id="idaventure" value="aventura">
-                            AVENTURA</label>
+                            AVENTURA
+                        </label>
 
                         <label aria-labelledby="categoría city tour" class="filtro-categoria" for="idcitytour" data-categoria="citytour">
                             <input type="checkbox" name="citytour" id="idcitytour" value="citytour">
-                            CITY TOUR</label>
+                            CITY TOUR
+                        </label>
 
                         <label aria-labelledby="categoría montaña" class="filtro-categoria" for="idmountain" data-categoria="montaña">
                             <input type="checkbox" name="tres" id="idmountain" value="montania">
-                            MONTAÑA</label>
+                            MONTAÑA
+                        </label>
 
                         <label aria-labelledby="categoría playa" class="filtro-categoria" for="idbeach" data-categoria="playa">
                             <input type="checkbox" name="cuatro" id="idbeach" value="playa">
-                            PLAYA</label>
+                            PLAYA
+                        </label>
 
                         <label aria-labelledby="categoría otros" class="filtro-categoria" for="idotros" data-categoria="otros">
                             <input type="checkbox" name="cinco" id="idotros" value="otros">
-                            OTROS</label>
+                            OTROS
+                        </label>
 
                     </div>
 
@@ -280,7 +271,8 @@
 
                         <!-- CINCO ESTRELLAS -->
                         <label for="idfive-stars">
-                            <input aria-labelledby="puntaje de cinco estrellas" type="checkbox" name="five-stars" id="idfive-stars" class="filtro-puntaje"
+                            <input aria-labelledby="puntaje de cinco estrellas" type="checkbox" 
+                            name="five-stars" id="idfive-stars" class="filtro-puntaje"
                                 data-stars="5" value="5">
                             <img class="star-icon" src="./images/icons8-starfish-100.png" />
                             <img class="star-icon" src="./images/icons8-starfish-100.png" />
@@ -292,7 +284,8 @@
 
                         <!-- CUATRO ESTRELLAS -->
                         <label for="idfour-stars">
-                            <input aria-labelledby="puntaje de cuatro estrellas" type="checkbox" name="four-stars" id="idfour-stars"
+                            <input aria-labelledby="puntaje de cuatro estrellas" type="checkbox" 
+                            name="four-stars" id="idfour-stars"
                                 class="filtro-puntaje" data-stars="4" value="4">
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
@@ -304,8 +297,8 @@
 
                         <!-- TRES ESTRELLAS -->
                         <label for="idthree-stars">
-                            <input aria-labelledby="puntaje de tres estrellas" type="checkbox" name="three-stars" id="idthree-stars"
-                                class="filtro-puntaje" data-stars="3" value="3">
+                            <input aria-labelledby="puntaje de tres estrellas" type="checkbox" 
+                            name="three-stars" id="idthree-stars" class="filtro-puntaje" data-stars="3" value="3">
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
@@ -316,8 +309,8 @@
 
                         <!-- DOS ESTRELLAS -->
                         <label for="idtwo-stars">
-                            <input aria-labelledby="puntaje de dos estrellas" type="checkbox" name="two-stars" id="idtwo-stars"
-                                class="filtro-puntaje" data-stars="2" value="2">
+                            <input aria-labelledby="puntaje de dos estrellas" type="checkbox" 
+                            name="two-stars" id="idtwo-stars" class="filtro-puntaje" data-stars="2" value="2">
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
@@ -328,8 +321,8 @@
 
                         <!-- UNA ESTRELLA -->
                         <label for="idone-star">
-                            <input aria-labelledby="puntaje de una estrella" type="checkbox" name="one-stars" id="idone-star"
-                                class="filtro-puntaje" data-stars="1" value="1">
+                            <input aria-labelledby="puntaje de una estrella" type="checkbox" 
+                            name="one-stars" id="idone-star" class="filtro-puntaje" data-stars="1" value="1">
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100.png" />
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
                             <img aria-hidden="true" class="star-icon" src="./images/icons8-starfish-100-empty.png" />
@@ -432,7 +425,7 @@
                 </article>
 
                 <!-- TARJETA -->
-                <article class="product contenedor-tarjeta" data-destino="disney" data-categoria="aventura"
+                <article class="product contenedor-tarjeta" data-destino="disneyworld" data-categoria="aventura"
                     data-stars="5" data-precio="15000" data-imagen="./images/lugares/disney.jpg">
                     <div class="contenedor-img-tarjeta">
                         <img class="img-tarjeta" src="./images/lugares/disney.jpg" alt="Foto de Disneyworld">

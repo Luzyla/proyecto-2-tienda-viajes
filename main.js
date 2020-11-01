@@ -142,11 +142,11 @@ const crearMiniaturaViaje = (viajeReservado) => {
 /*----------------------------------------
         ELIMINAR VIAJES DEL CARRITO
 ---------------------------------------- */
-// const eliminarMiniaturaDeviaje = (viajeElegido) => {
-//     if (viajeReservado.dataset.destino === true) {
-//         viajeElegido.classList.remove("viaje-elegido")
-//     }
-// }
+const eliminarMiniaturaDeviaje = (viajeElegido) => {
+    if (viajeReservado.dataset.destino === true) {
+        viajeElegido.classList.remove("viaje-elegido")
+    }
+}
 
 /*----------------------------------------
         CARRITO ON CLICK
@@ -196,6 +196,7 @@ carrito.onclick = () => {
     menuCarrito.classList.add("mostrar")
     overlay.classList.add("mostrar")
     cuerpo.classList.add("agrega-overflow")
+    
 
     seteoTabindexCarrito()
     agregaMiniaturasDeViajesElegidos()
@@ -233,15 +234,29 @@ botonVaciar.onclick = () => {
 
 }
 
+const ocultarContenedorBotonesCarrito = () => {
+    contenedorCarrito.classList.add("hidden")
+
+    // botonVaciar.classList.add("hidden")
+    // botonComprar.classList.add("hidden")
+    // valorSubtotal.classList.add("hidden")
+    
+    // viajesEnCarrito.classList.add("hidden")
+    // viajesEnReserva
+}
+
+const modificaTextContentCarrito = () => {
+    viajesEnCarrito.textContent = ""
+    cantidadViajesAgregados.textContent = `Aún no tenes viajes seleccionados!`
+    itemsCarrito.textContent = `Carrito (${cantidadViajesAgregados} Items)`
+}
 
 botonConfirmaVaciar.onclick = () => {
     confirmacionPopUp.classList.remove("mostrar-confirma")
     overlayVaciar.classList.remove("mostrar-checkout")
-    todosLosViajesHTML = ""
-    // eliminar elementos del carrito
-    //viajesEnReserva = document.getElementsByClassName("viaje-elegido")
-    // viajeElegido.classList.remove("viaje-elegido")
-    // modificar tabindex a numero negativo
+    modificaTextContentCarrito()    
+    ocultarContenedorBotonesCarrito()
+
 }
 
 botonCancelar.onclick = () => {
@@ -625,6 +640,7 @@ trash.onclick = () => {
     document.getElementById("filters-form").reset()
     for (let viaje of todosLosViajes) {
         viaje.classList.remove("hidden")
+        mostrarViajes.textContent = `Mostrando 12 viaje(s) de 12`
     }
 }
 
