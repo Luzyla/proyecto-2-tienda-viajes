@@ -293,16 +293,6 @@ const eliminaMiniaturasDeViajesElegidos = () => {
             ocultarContenedorBotonesCarrito()
         }
     }
-    // else {
-    //     cantidadViajesAgregados.textContent = `Tenes ${agregaViaje} viaje(s) agregado(s)`
-    //     mostrarContenedorBotonesCarrito()
-    //     todosLosViajesHTML = ""
-    //     for (let viajeReservado of viajesEnReserva) {
-    //         todosLosViajesHTML = todosLosViajesHTML + crearMiniaturaViaje(viajeReservado)
-    //     }
-        
-    //     viajesEnCarrito.innerHTML = todosLosViajesHTML
-    // }
 }
 
 const seteoTabindexConfirmaVaciar = () => {
