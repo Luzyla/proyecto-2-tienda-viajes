@@ -10,6 +10,7 @@ body {
     color: #424242;
     font-size: 18px;
     overflow-x: hidden;
+
 }
 
 * {
@@ -475,6 +476,7 @@ hr {
 .trash {
     position: absolute;
     left: -28px;
+    width: 25px;
 }
 
 /*-------------- BÚSQUEDA ----------------*/
@@ -692,6 +694,7 @@ poner ID a todos los elementos para llamarlos desde JS*/
 
 .agrega-overflow {
     overflow-y: hidden;
+    position: fixed; /* agregando esta propiedaed el overflow funciona en Chrome */
 }
 
 /*----------------------------------------------
