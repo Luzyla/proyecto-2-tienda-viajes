@@ -10,6 +10,7 @@ body {
     color: #424242;
     font-size: 18px;
     overflow-x: hidden;
+
 }
 
 * {
@@ -476,6 +477,7 @@ hr {
 .trash {
     position: absolute;
     left: -28px;
+    width: 25px;
 }
 
 /*-------------- BÚSQUEDA ----------------*/
@@ -496,6 +498,7 @@ hr {
 }
 
 .lupita {
+    width: 30px;
     position: absolute;
     left: 172px;
     top: 33px;
@@ -1207,6 +1210,7 @@ hr {
 
 .agrega-overflow {
     overflow-y: hidden;
+    position: fixed; /* agregando esta propiedaed el overflow funciona en Chrome */
 }
 
 .blocking-hidden {
