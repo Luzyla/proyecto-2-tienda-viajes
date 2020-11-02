@@ -14,6 +14,7 @@ const cerrarCarrito = document.getElementById("cerrar")
 const botonComprar = document.getElementById("boton-comprar")
 const botonVaciar = document.getElementById("boton-vaciar")
 const contenedorCarrito = document.querySelector(".contenedor-resumen-carrito")
+const subtotalCarrito = document.getElementById("subtotal-carrito")
 
 // CARRITO ON CLICK
 const viajesEnCarrito = document.getElementById("productos-carrito")
@@ -93,21 +94,24 @@ let agregaViaje = 0
 
 // ELIMINAR VIAJES DEL CARRITO
 const trashMiniaturas = document.querySelectorAll("#id-trash-miniatura")
+let subtotalMiniatura = 0
 
-// DESPLIEGA FILTROS EN RESPONSIVE
-const lupaDropdown = document.getElementById("despliega-filtros")
-const contenedorFiltrosDeBusqueda = document.querySelector(".formulario-aside")
+let totalProductosMiniatura = 0
 
 /*----------------------------------------
         AGREGAR VIAJES AL CARRITO ✅
 ---------------------------------------- */
+
 for (let viajeElegido of botonComprarViajes) {
     viajeElegido.onclick = () => {
         viajeElegido.classList.add("viaje-elegido")
         agregaViaje++
         itemsCarrito.textContent = `Carrito (${agregaViaje} Items)`
+        subtotalMiniatura = subtotalMiniatura + Number(viajeElegido.dataset.precio)
+        console.log(subtotalMiniatura)
     }
 }
+
 
 const crearMiniaturaViaje = (viajeReservado) => {
     let miniaturaViajeHTML = `
@@ -164,24 +168,23 @@ const crearMiniaturaViaje = (viajeReservado) => {
 // }
 //console.log(trashMiniaturas, "trash Miniaturas")
 
-/*----------------------------------------
-        OPERACIONES DEL CARRITO 
----------------------------------------- */
-
 
 /*----------------------------------------
         OPERACIONES DEL CHECKOUT 
 ---------------------------------------- */
-const valorSubtotalNumero = Number(valorSubtotal)
-// let valorDeTodosLosViajesElegidos = Number(viajeElegido)
+let descuento = 0
+let recargo = 0
+let envio = 300
 
 radioEfectivo.oninput = () => {
     conRecargo.classList.add("hidden")
 }
 
 const sumarRecargo = () => {
-    let recargo = valorSubtotal * 0.1
-    recargo.textContent = recargo
+    recargo = subtotalMiniatura * 0.1
+    valorRecargo.textContent = `${Number(recargo)}`
+    totalProductosMiniatura = totalProductosMiniatura + recargo
+    valorTotal.textContent = `${totalProductosMiniatura}`
 }
 
 radioTarjeta.oninput = () => {
@@ -191,11 +194,16 @@ radioTarjeta.oninput = () => {
 
 checkboxEnvio.oninput = () => {
     conEnvio.classList.toggle("hidden")
+    valorEnvio.textContent = `${Number(envio)}`
+    totalProductosMiniatura = totalProductosMiniatura + envio
+    valorTotal.textContent = `${totalProductosMiniatura}`
 }
 
 const sumarDescuento = () => {
-    let descuento = valorSubtotal * 0.05
+    descuento = subtotalMiniatura * 0.05
     valorDescuento.textContent = `-${Number(descuento)}`
+    totalProductosMiniatura = totalProductosMiniatura - descuento
+    valorTotal.textContent = `${totalProductosMiniatura}`
 }
 
 checkboxDescuento.oninput = () => {
@@ -203,12 +211,26 @@ checkboxDescuento.oninput = () => {
     sumarDescuento()
 }
 
-// const sumaDestinosMiniatura = () => {
-
+// const calcularTotalProductosMiniatura = () => {
+//     totalProductosMiniatura = subtotalMiniatura
+//     if (radioTarjeta.checked) {
+//         totalProductosMiniatura = totalProductosMiniatura + recargo
+//         return valorTotal.textContent = `${totalProductosMiniatura}`
+//     }
+//     else if (checkboxDescuento.checked) {
+//         totalProductosMiniatura = totalProductosMiniatura - descuento
+//         return valorTotal.textContent = `${totalProductosMiniatura}`
+//     }
+//     else if (checkboxEnvio.checked) {
+//         totalProductosMiniatura = totalProductosMiniatura + envio
+//         return valorTotal.textContent = `${totalProductosMiniatura}`
+//     }
+//     else {
+//         return valorTotal.textContent = `${totalProductosMiniatura}`
+//     }
 // }
 
-// valorSubtotal.textContent = sumaDestinosMiniatura()
-
+// console.log(totalProductosMiniatura)
 
 /*----------------------------------------
         CARRITO ON CLICK ✅
@@ -222,12 +244,6 @@ const seteoTabindexCarrito = () => {
     aside.setAttribute("tabIndex", -1);
     firma.setAttribute("tabIndex", -1);
 }
-
-// const subtotalMiniatura = (viajeReservado) => { //REVISAR
-//     const viajeReservadoNumero = Number(viajeReservado.dataset.precio)
-
-//     return viajeReservadoNumero
-// }
 
 const ocultarContenedorBotonesCarrito = () => {
     contenedorCarrito.classList.add("hidden")
@@ -267,7 +283,8 @@ carrito.onclick = () => {
     mostrarElementosCarrito()
     seteoTabindexCarrito()
     agregaMiniaturasDeViajesElegidos()
-    //console.log(trashMiniaturas, "trash Miniaturas")
+    subtotalCarrito.textContent = `${subtotalMiniatura}`
+    
 };
 
 const ocultarElementosCarrito = () => {
@@ -279,6 +296,14 @@ const ocultarElementosCarrito = () => {
 
 cerrarCarrito.onclick = () => {
     ocultarElementosCarrito()
+}
+
+botonComprar.onclick = () => { // LLEVA A CHECKOUT
+    confirmarCompra.classList.add("mostrar-checkout")
+    overlay2.classList.add("mostrar-checkout")
+    seteoTabindexCheckout()
+    valorSubtotal.textContent = `${subtotalMiniatura}`
+    valorTotal.textContent = `${subtotalMiniatura}`
 }
 
 /*----------------------------------------
@@ -375,13 +400,6 @@ const seteoTabindexCheckout = () => {
     firma.setAttribute("tabIndex", -1);
 }
 
-botonComprar.onclick = () => {
-    confirmarCompra.classList.add("mostrar-checkout")
-    overlay2.classList.add("mostrar-checkout")
-    seteoTabindexCheckout()
-
-}
-
 cerrarCheckout.onclick = () => {
     confirmarCompra.classList.remove("mostrar-checkout")
     overlay2.classList.remove("mostrar-checkout")
@@ -402,6 +420,8 @@ botonFinalizarCompra.onclick = () => {
     seteoTabindexBody()
     alert("Compra finalizada con éxito!")
 }
+
+
 
 /*----------------------------------------
 ------------------------------------------
