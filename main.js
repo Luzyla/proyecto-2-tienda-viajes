@@ -37,6 +37,8 @@ const search = document.getElementById("search")
 const trash = document.getElementById("cleaning-filters")
 // TEXTO MOSTRANDO VIAJES BUSCADOS
 const mostrarViajes = document.getElementById("mostrando-busqueda-viajes")
+// LUPA 
+const lupaDropdown = document.getElementById("despliega-filtros")
 
 // CHECKOUT COMPRA
 const cerrarCheckout = document.getElementById("cerrar-checkout")
@@ -140,32 +142,6 @@ const crearMiniaturaViaje = (viajeReservado) => {
     `
     return miniaturaViajeHTML
 }
-
-/*----------------------------------------
-        ELIMINAR VIAJES DEL CARRITO
----------------------------------------- REVISAR */
-// for (trashMiniatura of trashMiniaturas) {
-//     console.log(trashMiniaturas, "trashMiniaturas")
-//     trashMiniatura.onclick = () => {
-//         if (trashMiniatura.value === viajeReservado.dataset.destino)
-
-//         for (let viajeReservado of viajesEnReserva) {
-//             todosLosViajesHTML = todosLosViajesHTML + crearMiniaturaViaje(viajeReservado)
-//         }
-//         for (let viajeElegido of botonComprarViajes) {
-//             console.log(viajeElegido, "trashMiniaturas")
-//             viajeElegido.classList.remove("viaje-elegido")
-//             agregaViaje--
-//             cantidadViajesAgregados.textContent = `Tenes ${agregaViaje} viaje(s) agregado(s)`
-//             itemsCarrito.textContent = `Carrito (${agregaViaje} Items)`
-//         }
-//     }
-// // }
-// trashMiniaturas.onclick = () => {
-    
-// }
-//console.log(trashMiniaturas, "trash Miniaturas")
-
 
 /*----------------------------------------
         OPERACIONES DEL CHECKOUT 
