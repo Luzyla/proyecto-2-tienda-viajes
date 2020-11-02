@@ -101,7 +101,6 @@ let totalProductosMiniatura = 0
 /*----------------------------------------
         AGREGAR VIAJES AL CARRITO ✅
 ---------------------------------------- */
-
 for (let viajeElegido of botonComprarViajes) {
     viajeElegido.onclick = () => {
         viajeElegido.classList.add("viaje-elegido")
@@ -111,7 +110,6 @@ for (let viajeElegido of botonComprarViajes) {
         console.log(subtotalMiniatura)
     }
 }
-
 
 const crearMiniaturaViaje = (viajeReservado) => {
     let miniaturaViajeHTML = `
