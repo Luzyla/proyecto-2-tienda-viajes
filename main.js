@@ -86,7 +86,10 @@ const todosLosViajes = document.querySelectorAll(".contenedor-tarjeta")
 
 // VARIABLES 
 let viajesFiltrados = 0
-let viajesOcultos = 0 //ver si se puede borrar o es útil para algo
+
+// DESPLIEGA FILTROS EN RESPONSIVE
+const lupaDropdown = document.getElementById("despliega-filtros")
+const contenedorFiltrosDeBusqueda = document.querySelector(".formulario-aside")
 
 // AGREGAR VIAJES AL CARRITO
 const botonComprarViajes = document.querySelectorAll("#buy-item")
@@ -97,9 +100,7 @@ let agregaViaje = 0
 // ELIMINAR VIAJES DEL CARRITO
 const trashMiniatura = document.querySelectorAll("#id-trash-miniatura")
 
-// DESPLIEGA FILTROS EN RESPONSIVE
-const lupaDropdown = document.getElementById("despliega-filtros")
-const contenedorFiltrosDeBusqueda = document.querySelector(".formulario-aside")
+
 
 /*----------------------------------------
         AGREGAR VIAJES AL CARRITO
