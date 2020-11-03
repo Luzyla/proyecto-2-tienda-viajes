@@ -39,8 +39,6 @@ const search = document.getElementById("search");
 const trash = document.getElementById("cleaning-filters");
 // TEXTO MOSTRANDO VIAJES BUSCADOS
 const mostrarViajes = document.getElementById("mostrando-busqueda-viajes");
-// LUPA
-const lupaDropdown = document.getElementById("despliega-filtros");
 
 // CHECKOUT COMPRA
 const cerrarCheckout = document.getElementById("cerrar-checkout");
