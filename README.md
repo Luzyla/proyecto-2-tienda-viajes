@@ -1,6 +1,6 @@
 # Tienda de Viajes / Trip Store ~ Getting there by Luzyla
 
-## URL: https://luzyla.github.io/proyecto-2/
+## URL: https://luzyla.github.io/proyecto-2-tienda-viajes/
 
 ## Descripción / Description:
 ### Español
